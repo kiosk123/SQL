@@ -10,7 +10,9 @@ sqlplus / as sysdba # sqlplus 접속
 ```
 
 ```sql
-CREATE TABLESPACE MYTS DATAFILE '/u02/tablespace/myts.dbf' SIZE 100M AUTOEXTEND ON NEXT 5M;
+-- 테이블 스페이스 용량 증가를 대비해 5M씩 자동증가 설정을 하였다
+CREATE TABLESPACE MYTS DATAFILE 
+'/u02/tablespace/myts.dbf' SIZE 100M AUTOEXTEND ON NEXT 5M;
 ```
 
 ## 2. 사용자 계정 생성
@@ -18,7 +20,8 @@ CREATE TABLESPACE MYTS DATAFILE '/u02/tablespace/myts.dbf' SIZE 100M AUTOEXTEND 
 계정이 사용할 테이블스페이스는 위에서 생성한 MYTS고 임시 테이블 스페이스는 TEMP로 설정하였다.  
 아이디는 test이며 비번은 123123이다.
 ```sql
-CREATE USER test IDENTIFIED BY 123123 DEFAULT TABLESPACE MYTS TEMPORARY TABLESPACE TEMP;
+CREATE USER test IDENTIFIED BY 123123 
+DEFAULT TABLESPACE MYTS TEMPORARY TABLESPACE TEMP;
 ```
 
 ## 3. 사용자 권한 
@@ -29,7 +32,7 @@ CREATE USER test IDENTIFIED BY 123123 DEFAULT TABLESPACE MYTS TEMPORARY TABLESPA
   -사용자가 데이터베이스에 접속 가능하도록 하기 위해서 가장 기본적인 시스템 권한 8가지를 묶어 놓음
 
 
-```
+```sql
 -- CONNECT 롤
 -- Release 9.0 버전
 
@@ -48,7 +51,7 @@ CREATE SESSION
 - RESOURCE 롤
   - 사용자가 객체(테이블, 뷰, 인덱스)를 생성할 수 있도록 하기 위해서 시스템 권한을 묶어 놓음
 
-```
+```sql
 CREATE CLUSTER, CREATE PROCEDURE, CREATE SEQUENCE, CREATE TABLE, CREATE TRIGGER
 ```
 
