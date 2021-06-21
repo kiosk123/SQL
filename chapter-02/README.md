@@ -69,3 +69,5 @@ GRANT CONNECT, RESOURCE TO test;
 -- user01 계정에 dba 롤 부여
 GRANT DBA TO user01
 ```
+
+## 5. 읽어 볼만한 것 - [tnsnames.ora과 listener.ora의 역할](https://blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=turtle0788&logNo=40092085230)
