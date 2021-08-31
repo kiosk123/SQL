@@ -61,3 +61,72 @@ SELECT 필드목록
 [WHERE 조건]
 [ORDER BY 정렬기준]
 ```
+
+# 3. SELECT 문으로 조회시 특정 문자를 이스케이프
+```sql
+SELECT * FROM PRODUCT WHERE SALE LIKE '%30#%' -- 앞의 %는 와일드 카드 #뒤의 %는 백문율기호로 인식 즉 SALE 컬럼의 30%인 값을 찾는다
+```
+
+# 4-1. 특정 로우 번호에 해당하는 데이터만 가져오기 - 오라클
+```sql
+-- ROW_NUMBER 함수를 활용한 방식
+SELECT RN, NAME
+FROM (
+    SELECT  ROW_NUMBER() OVER(ORDER BY AREA DESC) AS RN
+          , NAME
+          , AREA
+          , POPU
+          , METRO
+          , REGION
+    FROM TCITY
+    ORDER BY AREA DESC
+) A
+WHERE RN <= 4
+;
+
+-- 서브쿼리에서 ORDER BY로 정렬 후 ROWNUM 의사 컬럼을 이용한 방식
+SELECT ROWNUM, A.*
+FROM
+(
+    SELECT  NAME
+        , AREA
+        , POPU
+        , METRO
+        , REGION
+    FROM TCITY
+    ORDER BY AREA DESC
+) A
+WHERE ROWNUM <= 4
+```
+
+# 4-2. 특정 로우 번호에 해당하는 데이터만 가져오기 - 마리아DB
+기본 구조
+```sql
+SELECT ... LIMIT [건너뛸 개수], 총개수
+```
+총 개수를 생략하면 0으로 적용하여 첫 행부터 출력한다.
+```sql
+-- 면적이 넓은 상위 4개 도시 구한다.
+SELECT * FROM tCity ORDER BY area DESC LIMIT 4;
+
+-- 앞쪽 2개의 레코드는 건너뛰고 3개의 행을 구한다.
+SELECT * FROM tCity ORDER BY area DESC LIMIT 2, 3;
+```
+
+# 4-3. 특정 로우 번호에 해당하는 데이터만 가져오기 DBMS공통
+SQL 표준이 새로 만든 OFFSET FETCH 문법으로 DBMS마다 해당로우에 대한 데이터를 조회하는 방식을  
+통일할 수 있다.  일부분을 특정하려면 순서가 지정되어야 하므로 **ORDER BY 문이 반드시 존재해야 한다.**  
+OFFSET FETCH는 별도의 구문이 아니라 ORDER BY의 옵션이다
+```sql
+ORDER BY 기준필드 OFFSET 건너뛸행수 ROWS FETCH NEXT 출력할행수 ROWS ONLY
+```
+
+예제
+```sql
+-- 면적이 넓은 상위 4개 도시 구한다.
+SELECT * FROM tCity ORDER BY area DESC OFFSET 0 ROWS FETCH NEXT 4 ROWS ONLY;
+-- 앞쪽 2개의 레코드는 건너뛰고 3개의 행을 구한다.
+SELECT * FROM tCity ORDER BY area DESC OFFSET 2 ROWS FETCH NEXT 3 ROWS ONLY;
+-- 광역시를 제외하고 순위를 매겨 2등 부터 5등까지 출력
+SELECT * FROM tCity WHERE metro = 'n' ORDER BY area DESC OFFSET 2 ROWS FETCH NEXT 3 ROWS ONLY;
+```
