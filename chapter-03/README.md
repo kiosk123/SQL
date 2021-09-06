@@ -130,3 +130,14 @@ SELECT * FROM tCity ORDER BY area DESC OFFSET 2 ROWS FETCH NEXT 3 ROWS ONLY;
 -- 광역시를 제외하고 순위를 매겨 2등 부터 5등까지 출력
 SELECT * FROM tCity WHERE metro = 'n' ORDER BY area DESC OFFSET 2 ROWS FETCH NEXT 3 ROWS ONLY;
 ```
+
+# CREATE SELECT 문
+`INSERT INTO 대상테이블(필드목록) SELECT 필드목록 FROM 원본테이블`와 비슷하지만 새로 테이블을 만들어 결과셋을 삽입한다.  
+단 결과셋은 기존 테이블의 사본 데이터 이며 기본키나 외래키 같은 제약 조건까지 복사하지는 않는다.  
+  
+사본 테이블은 학습용이나 예비 처리의 타당성 점검등 자유롭게 사용하고 지우거나 백업 떠 놓는 용도로 쓰면된다.  
+```SQL
+CREATE TABLE 대상 테이블 AS SELECT 필드목록 FROM 원본테이블
+
+CREATE TABLE TSTAFF_8월20일 AS SELECT FROM TSTAFF
+``` 
