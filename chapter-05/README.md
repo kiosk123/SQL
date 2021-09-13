@@ -78,4 +78,6 @@ CREATE TABLE tProject {
 UPDATE tEmployee SET name = '문사장' WHERE name = '문종민' 
 ```
 
+테이블을 drop 할때는 참조 무결성 유지를 위해 프로젝트 -> 직원 순으로 실행한다.
+
 
