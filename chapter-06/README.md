@@ -92,3 +92,13 @@ SELECT A.NAME AS NAME
 FROM TCITY A 
 WHERE EXISTS ( SELECT * FROM TCITY WHERE AREA > 1000 AND NAME = A.NAME)
 ```
+
+8. 인라인 뷰
+FROM 절에 서브 쿼리로 임시 테이블을 만드는 것을 뜻한다.  
+인라인 뷰의 컬럼을 활용하기 위해서는 인라인 뷰에 별명을 붙인다.
+```sql
+SELECT * FROM (SELECT * FROM TCITY WHERE METRO = 'Y') A;
+
+-- SQL Server나 Maria DB는 AS 키워드를 이용한 인라인 뷰 허용, 오라클은 에러처리
+SELECT * FROM (SELECT * FROM TCITY WHERE METRO = 'Y') AS A;
+```
