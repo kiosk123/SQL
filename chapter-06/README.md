@@ -76,3 +76,19 @@ SELECT NAME FROM TSTAFF WHERE SALARY >
 SELECT ITEM, PRICE FROM TITEM WHERE ITEM = ANY
 (SELECT ITEM FROM TORDER WHERE MEMBER = '향단');
 ```
+
+7. EXISTS
+EXISTS는 결과셋이 있는지 없는지만 조사한다.  
+쿼리의 결과셋이 있으면 true이고 그렇지 않으면 false다.  
+  
+표현식은 단독으로 사용할 수 없으며 IF문과 함께 사용하여 실행할 명령을 선택하거나  
+쿼리의 WHERE 절에 사용하여 선택할 레코드를 결정한다.
+```SQL
+-- AREA가 1000이 넘는 AREA가 존재하면 무조건 true이므로 모든 도시면이 출력된다.
+SELECT NAME FROM TCITY WHERE EXISTS (SELECT * FROM TCITY WHERE AREA > 1000)
+
+-- AREA가 1000이 넘는 도시를 EXISTS를 이용해 찾고 싶으면 다음과 같이 실행한다.
+SELECT A.NAME AS NAME 
+FROM TCITY A 
+WHERE EXISTS ( SELECT * FROM TCITY WHERE AREA > 1000 AND NAME = A.NAME)
+```
