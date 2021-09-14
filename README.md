@@ -7,3 +7,5 @@
 4. 시퀀스  
 5. 외래키 제약  
 6. 서브쿼리  
+7. 테이블 조합 (UNION, INTERSECT, MINUS)
+8. 테이블 병합 (MERGE)

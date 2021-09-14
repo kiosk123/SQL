@@ -29,7 +29,7 @@ SELECT ITEM, PRICE FROM TITEM WHERE ITEM IN
 (SELECT ITEM FROM TORDER WHERE MEMBER = '향단');
 ```
 
-4. 다중열 서브쿼리
+4. 다중열 서브쿼리  
 다중열 서브쿼리는 결과셋의 컬럼이 하나밖에 없으며 그래서 특정값과 비교할 수 있다.  
 이에 비해 다중열 서브쿼리는 결과셋의 컬럼이 여러 개이며 한꺼번에 여러값과 비교한다.  
   
@@ -77,7 +77,7 @@ SELECT ITEM, PRICE FROM TITEM WHERE ITEM = ANY
 (SELECT ITEM FROM TORDER WHERE MEMBER = '향단');
 ```
 
-7. EXISTS
+7. EXISTS  
 EXISTS는 결과셋이 있는지 없는지만 조사한다.  
 쿼리의 결과셋이 있으면 true이고 그렇지 않으면 false다.  
   
@@ -93,7 +93,7 @@ FROM TCITY A
 WHERE EXISTS ( SELECT * FROM TCITY WHERE AREA > 1000 AND NAME = A.NAME)
 ```
 
-8. 인라인 뷰
+8. 인라인 뷰  
 FROM 절에 서브 쿼리로 임시 테이블을 만드는 것을 뜻한다.  
 인라인 뷰의 컬럼을 활용하기 위해서는 인라인 뷰에 별명을 붙인다.
 ```sql
