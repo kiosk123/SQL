@@ -33,7 +33,7 @@ MERGE INTO TCITY T USING TCITYNEW S ON (S.NAME = T.NAME AND S.REGION = '경기')
 ```
 
 다른 테이블에서 직접 데이터를 가져오는 게 아니라, 직접 값을 넣고자 한다면  
-DUAL을 사용하여 차리할 수 있다.
+DUAL을 사용하여 처리할 수 있다.
 ```SQL
 MERGE INTO TB_SCORE S
     USING DUAL ON (S.COURSE_ID = 'C1' AND S.STUDENT_ID = 'S1')
