@@ -65,7 +65,7 @@ CREATE TABLE tProject {
 }
 ```
   
-다음과 같이 ON UPDATE를 추가**(SQL Server, MariaDB에서만 가능)**하면 프로젝트 테이블이 참조하고 있는
+다음과 같이 ON UPDATE를 추가(**SQL Server, MariaDB에서만 가능**)하면 프로젝트 테이블이 참조하고 있는
 직원 테이블의 이름 컬럼 값이 변경될 경우 프로젝트 테이블의 외래키 컬럼 값도 변경된다.
 ```sql
 CREATE TABLE tProject {
