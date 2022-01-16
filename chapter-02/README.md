@@ -38,9 +38,7 @@ DEFAULT TABLESPACE MYTS TEMPORARY TABLESPACE TEMP;
 
 ALTER SESSION, CREATE CLUSTER, CREATE DATABASE LINK, CREATE SEQUENCE, CREATE SESSION,
 
-CREATE SYNONYM, CREATE TABLE, CREATE VIEW
-
--- Release 11.2 버전
+CREATE SYNONYM, CREATE[테이블소유자].[테이블명] TO [다른소유자]- Release 11.2 버전
 
 CREATE SESSION
 ```
@@ -52,7 +50,7 @@ CREATE SESSION
   - 사용자가 객체(테이블, 뷰, 인덱스)를 생성할 수 있도록 하기 위해서 시스템 권한을 묶어 놓음
 
 ```sql
-CREATE CLUSTER, CREATE PROCEDURE, CREATE SEQUENCE, CREATE TABLE, CREATE TRIGGER
+CREATE CLUSTER, CREATE PROCEDURE, CREATE SEQUENCE, CREATE[테이블소유자].[테이블명] TO [다른소유자]
 ```
 
 - DBA 롤
@@ -70,4 +68,15 @@ GRANT CONNECT, RESOURCE TO test;
 GRANT DBA TO user01
 ```
 
-## 5. 읽어 볼만한 것 - [tnsnames.ora과 listener.ora의 역할](https://blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=turtle0788&logNo=40092085230)
+## 5. 테이블 접근 권한 부여
+```sql
+GRANT SELECT ON [테이블소유자].[테이블명] TO [다른소유자];
+GRANT INSERT ON [테이블소유자].[테이블명] TO [다른소유자];
+GRANT DELETE ON [테이블소유자].[테이블명] TO [다른소유자];
+GRANT UPDATE ON [테이블소유자].[테이블명] TO [다른소유자];
+
+-- 또는
+GRANT SELECT, INSERT, DELETE, UPDATE ON [테이블소유자].[테이블명] TO [다른소유자];
+```
+
+## 6. 읽어 볼만한 것 - [tnsnames.ora과 listener.ora의 역할](https://blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=turtle0788&logNo=40092085230)
