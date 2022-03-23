@@ -5,1385 +5,1385 @@ SQL 정복 쿼리 예제 모음집
 -------------------------------------------------
 -- 2장
 
-CREATE TABLE tCity
+CREATE TABLE TCITY
 (
-	name CHAR(10) PRIMARY KEY,
-	area INT NULL ,
-	popu INT NULL ,
-	metro CHAR(1) NOT NULL,
-	region CHAR(6) NOT NULL
+	NAME CHAR(10) PRIMARY KEY,
+	AREA INT NULL ,
+	POPU INT NULL ,
+	METRO CHAR(1) NOT NULL,
+	REGION CHAR(6) NOT NULL
 );
 
-INSERT INTO tCity VALUES ('서울',605,974,'y','경기');
-INSERT INTO tCity VALUES ('부산',765,342,'y','경상');
-INSERT INTO tCity VALUES ('오산',42,21,'n','경기');
-INSERT INTO tCity VALUES ('청주',940,83,'n','충청');
-INSERT INTO tCity VALUES ('전주',205,65,'n','전라');
-INSERT INTO tCity VALUES ('순천',910,27,'n','전라');
-INSERT INTO tCity VALUES ('춘천',1116,27,'n','강원');
-INSERT INTO tCity VALUES ('홍천',1819,7,'n','강원');
+INSERT INTO TCITY VALUES ('서울',605,974,'Y','경기');
+INSERT INTO TCITY VALUES ('부산',765,342,'Y','경상');
+INSERT INTO TCITY VALUES ('오산',42,21,'N','경기');
+INSERT INTO TCITY VALUES ('청주',940,83,'N','충청');
+INSERT INTO TCITY VALUES ('전주',205,65,'N','전라');
+INSERT INTO TCITY VALUES ('순천',910,27,'N','전라');
+INSERT INTO TCITY VALUES ('춘천',1116,27,'N','강원');
+INSERT INTO TCITY VALUES ('홍천',1819,7,'N','강원');
 
-SELECT * FROM tCity;
+SELECT * FROM TCITY;
 
-CREATE TABLE tStaff
+CREATE TABLE TSTAFF
 (
-	name CHAR (15) PRIMARY KEY,
-	depart CHAR (10) NOT NULL,
-	gender CHAR(3) NOT NULL,
-	joindate CHAR(10) NOT NULL,
-	grade CHAR(10) NOT NULL,
-	salary INT NOT NULL,
-	score DECIMAL(5,2) NULL
+	NAME CHAR (15) PRIMARY KEY,
+	DEPART CHAR (10) NOT NULL,
+	GENDER CHAR(3) NOT NULL,
+	JOINDATE CHAR(10) NOT NULL,
+	GRADE CHAR(10) NOT NULL,
+	SALARY INT NOT NULL,
+	SCORE DECIMAL(5,2) NULL
 );
 
-INSERT INTO tStaff VALUES ('김유신','총무부','남','2000-2-3','이사',420,88.8);
-INSERT INTO tStaff VALUES ('유관순','영업부','여','2009-3-1','과장',380,NULL);
-INSERT INTO tStaff VALUES ('안중근','인사과','남','2012-5-5','대리',256,76.5);
-INSERT INTO tStaff VALUES ('윤봉길','영업부','남','2015-8-15','과장',350,71.25);
-INSERT INTO tStaff VALUES ('강감찬','영업부','남','2018-10-9','사원',320,56.0);
-INSERT INTO tStaff VALUES ('정몽주','총무부','남','2010-9-16','대리',370,89.5);
-INSERT INTO tStaff VALUES ('허난설헌','인사과','여','2020-1-5','사원',285,44.5);
-INSERT INTO tStaff VALUES ('신사임당','영업부','여','2013-6-19','부장',400,92.0);
-INSERT INTO tStaff VALUES ('성삼문','영업부','남','2014-6-8','대리',285,87.75);
-INSERT INTO tStaff VALUES ('논개','인사과','여','2010-9-16','대리',340,46.2);
-INSERT INTO tStaff VALUES ('황진이','인사과','여','2012-5-5','사원',275,52.5);
-INSERT INTO tStaff VALUES ('이율곡','총무부','남','2016-3-8','과장',385,65.4);
-INSERT INTO tStaff VALUES ('이사부','총무부','남','2000-2-3','대리',375,50);
-INSERT INTO tStaff VALUES ('안창호','영업부','남','2015-8-15','사원',370,74.2);
-INSERT INTO tStaff VALUES ('을지문덕','영업부','남','2019-6-29','사원',330,NULL);
-INSERT INTO tStaff VALUES ('정약용','총무부','남','2020-3-14','과장',380,69.8);
-INSERT INTO tStaff VALUES ('홍길동','인사과','남','2019-8-8','차장',380,77.7);
-INSERT INTO tStaff VALUES ('대조영','총무부','남','2020-7-7','차장',290,49.9);
-INSERT INTO tStaff VALUES ('장보고','인사과','남','2005-4-1','부장',440,58.3);
-INSERT INTO tStaff VALUES ('선덕여왕','인사과','여','2017-8-3','사원',315,45.1);
+INSERT INTO TSTAFF VALUES ('김유신','총무부','남','2000-2-3','이사',420,88.8);
+INSERT INTO TSTAFF VALUES ('유관순','영업부','여','2009-3-1','과장',380,NULL);
+INSERT INTO TSTAFF VALUES ('안중근','인사과','남','2012-5-5','대리',256,76.5);
+INSERT INTO TSTAFF VALUES ('윤봉길','영업부','남','2015-8-15','과장',350,71.25);
+INSERT INTO TSTAFF VALUES ('강감찬','영업부','남','2018-10-9','사원',320,56.0);
+INSERT INTO TSTAFF VALUES ('정몽주','총무부','남','2010-9-16','대리',370,89.5);
+INSERT INTO TSTAFF VALUES ('허난설헌','인사과','여','2020-1-5','사원',285,44.5);
+INSERT INTO TSTAFF VALUES ('신사임당','영업부','여','2013-6-19','부장',400,92.0);
+INSERT INTO TSTAFF VALUES ('성삼문','영업부','남','2014-6-8','대리',285,87.75);
+INSERT INTO TSTAFF VALUES ('논개','인사과','여','2010-9-16','대리',340,46.2);
+INSERT INTO TSTAFF VALUES ('황진이','인사과','여','2012-5-5','사원',275,52.5);
+INSERT INTO TSTAFF VALUES ('이율곡','총무부','남','2016-3-8','과장',385,65.4);
+INSERT INTO TSTAFF VALUES ('이사부','총무부','남','2000-2-3','대리',375,50);
+INSERT INTO TSTAFF VALUES ('안창호','영업부','남','2015-8-15','사원',370,74.2);
+INSERT INTO TSTAFF VALUES ('을지문덕','영업부','남','2019-6-29','사원',330,NULL);
+INSERT INTO TSTAFF VALUES ('정약용','총무부','남','2020-3-14','과장',380,69.8);
+INSERT INTO TSTAFF VALUES ('홍길동','인사과','남','2019-8-8','차장',380,77.7);
+INSERT INTO TSTAFF VALUES ('대조영','총무부','남','2020-7-7','차장',290,49.9);
+INSERT INTO TSTAFF VALUES ('장보고','인사과','남','2005-4-1','부장',440,58.3);
+INSERT INTO TSTAFF VALUES ('선덕여왕','인사과','여','2017-8-3','사원',315,45.1);
 
-SELECT * FROM tStaff;
+SELECT * FROM TSTAFF;
 
 -------------------------------------------------
 -- 4장
 
-SELECT name, area, popu, metro, region FROM tCity;
-SELECT * FROM tCity;
+SELECT NAME, AREA, POPU, METRO, REGION FROM TCITY;
+SELECT * FROM TCITY;
 
-SELECT name AS 도시명, area AS "면적(제곱Km)", popu AS "인구(만명)" FROM tCity;
+SELECT NAME AS 도시명, AREA AS "면적(제곱KM)", POPU AS "인구(만명)" FROM TCITY;
 
-SELECT 도시명 = name, area '면적(제곱Km)', popu [인구(만명)] FROM tCity;
+SELECT 도시명 = NAME, AREA '면적(제곱KM)', POPU [인구(만명)] FROM TCITY;
 
-SELECT name, popu * 10000 AS "인구(명)" FROM tCity;
+SELECT NAME, POPU * 10000 AS "인구(명)" FROM TCITY;
 
-SELECT name, area, popu, popu * 10000 / area AS "인구밀도" FROM tCity;
+SELECT NAME, AREA, POPU, POPU * 10000 / AREA AS "인구밀도" FROM TCITY;
 
-SELECT 60 * 60 * 24 AS "하루" FROM dual;
+SELECT 60 * 60 * 24 AS "하루" FROM DUAL;
 
 SELECT 60 * 60 * 24;
 
-SELECT * FROM tCity WHERE area > 1000;
+SELECT * FROM TCITY WHERE AREA > 1000;
 
-SELECT name, area FROM tCity WHERE area > 1000;
+SELECT NAME, AREA FROM TCITY WHERE AREA > 1000;
 
-SELECT * FROM tCity WHERE name = '서울'			-- 맞음
-SELECT * FROM tCity WHERE name = 서울				-- 틀림
-SELECT * FROM tCity WHERE name = "서울"			-- 틀림. 단, 마리아는 인정한다.
+SELECT * FROM TCITY WHERE NAME = '서울'			-- 맞음
+SELECT * FROM TCITY WHERE NAME = 서울				-- 틀림
+SELECT * FROM TCITY WHERE NAME = "서울"			-- 틀림. 단, 마리아는 인정한다.
 
-SELECT * FROM tStaff WHERE score = NULL;
+SELECT * FROM TSTAFF WHERE SCORE = NULL;
 
-SELECT * FROM tStaff WHERE score IS NULL;
+SELECT * FROM TSTAFF WHERE SCORE IS NULL;
 
-SELECT * FROM tStaff WHERE score IS NOT NULL;
+SELECT * FROM TSTAFF WHERE SCORE IS NOT NULL;
 
-SELECT * FROM tCity WHERE popu >= 100 AND area >= 700;
+SELECT * FROM TCITY WHERE POPU >= 100 AND AREA >= 700;
 
-SELECT * FROM tCity WHERE region = '경기' AND popu >= 50 OR area >= 500;
-SELECT * FROM tCity WHERE region = '경기' AND (popu >= 50 OR area >= 500);
+SELECT * FROM TCITY WHERE REGION = '경기' AND POPU >= 50 OR AREA >= 500;
+SELECT * FROM TCITY WHERE REGION = '경기' AND (POPU >= 50 OR AREA >= 500);
 
-SELECT * FROM tCity WHERE region != '경기';
-SELECT * FROM tCity WHERE NOT(region = '경기');
+SELECT * FROM TCITY WHERE REGION != '경기';
+SELECT * FROM TCITY WHERE NOT(REGION = '경기');
 
-SELECT * FROM tCity WHERE region = '전라' OR metro = 'y';
+SELECT * FROM TCITY WHERE REGION = '전라' OR METRO = 'Y';
 
-SELECT * FROM tCity WHERE region != '전라' AND metro != 'y';
+SELECT * FROM TCITY WHERE REGION != '전라' AND METRO != 'Y';
 
-SELECT * FROM tCity WHERE NOT(region = '전라' OR metro = 'y');
+SELECT * FROM TCITY WHERE NOT(REGION = '전라' OR METRO = 'Y');
 
-SELECT * FROM tCity WHERE name LIKE '%천%';
+SELECT * FROM TCITY WHERE NAME LIKE '%천%';
 
-SELECT * FROM tCity WHERE name NOT LIKE '%천%';
+SELECT * FROM TCITY WHERE NAME NOT LIKE '%천%';
 
-SELECT * FROM tCity WHERE name LIKE '천%';
-SELECT * FROM tCity WHERE name LIKE '%천';
+SELECT * FROM TCITY WHERE NAME LIKE '천%';
+SELECT * FROM TCITY WHERE NAME LIKE '%천';
 
-SELECT * FROM tCity WHERE TRIM(name) LIKE '%천';
+SELECT * FROM TCITY WHERE TRIM(NAME) LIKE '%천';
 
-SELECT * FROM tCity WHERE popu BETWEEN 50 AND 100;
+SELECT * FROM TCITY WHERE POPU BETWEEN 50 AND 100;
 
-SELECT * FROM tCity WHERE popu >= 50 AND popu <= 100;
+SELECT * FROM TCITY WHERE POPU >= 50 AND POPU <= 100;
 
-SELECT * FROM tStaff WHERE name BETWEEN '가' AND '사';
-SELECT * FROM tStaff WHERE joindate BETWEEN '20150101' AND '20180101';
+SELECT * FROM TSTAFF WHERE NAME BETWEEN '가' AND '사';
+SELECT * FROM TSTAFF WHERE JOINDATE BETWEEN '20150101' AND '20180101';
 
-SELECT * FROM tCity WHERE region IN ('경상', '전라');
+SELECT * FROM TCITY WHERE REGION IN ('경상', '전라');
 
-SELECT * FROM tCity WHERE region = '경상' OR region = '전라';
+SELECT * FROM TCITY WHERE REGION = '경상' OR REGION = '전라';
 
-SELECT * FROM tCity WHERE region NOT IN ('경상', '전라');
+SELECT * FROM TCITY WHERE REGION NOT IN ('경상', '전라');
 
-SELECT * FROM tStaff WHERE name LIKE IN ('이%', '안%');
+SELECT * FROM TSTAFF WHERE NAME LIKE IN ('이%', '안%');
 
-SELECT * FROM tStaff WHERE name LIKE '이%' OR name LIKE '안%';
+SELECT * FROM TSTAFF WHERE NAME LIKE '이%' OR NAME LIKE '안%';
 
-SELECT * FROM tCity ORDER BY popu;
-SELECT * FROM tCity ORDER BY popu DESC;
+SELECT * FROM TCITY ORDER BY POPU;
+SELECT * FROM TCITY ORDER BY POPU DESC;
 
-SELECT region, name, area, popu FROM tCity ORDER BY region, name DESC;
+SELECT REGION, NAME, AREA, POPU FROM TCITY ORDER BY REGION, NAME DESC;
 
-SELECT * FROM tCity ORDER BY area;
-SELECT * FROM tCity ORDER BY 2;
+SELECT * FROM TCITY ORDER BY AREA;
+SELECT * FROM TCITY ORDER BY 2;
 
-SELECT name FROM tCity ORDER BY popu;
+SELECT NAME FROM TCITY ORDER BY POPU;
 
-SELECT name, popu * 10000 / area FROM tCity ORDER BY popu * 10000 / area;
+SELECT NAME, POPU * 10000 / AREA FROM TCITY ORDER BY POPU * 10000 / AREA;
 
-SELECT * FROM tCity WHERE region = '경기' ORDER BY area;
+SELECT * FROM TCITY WHERE REGION = '경기' ORDER BY AREA;
 
-SELECT * FROM tCity ORDER BY area WHERE region = '경기';
+SELECT * FROM TCITY ORDER BY AREA WHERE REGION = '경기';
 
-SELECT region FROM tCity;
-SELECT DISTINCT region FROM tCity;
-SELECT DISTINCT region FROM tCity ORDER BY region;
+SELECT REGION FROM TCITY;
+SELECT DISTINCT REGION FROM TCITY;
+SELECT DISTINCT REGION FROM TCITY ORDER BY REGION;
 
-SELECT ALL depart FROM tStaff;
-SELECT DISTINCT depart FROM tStaff;
+SELECT ALL DEPART FROM TSTAFF;
+SELECT DISTINCT DEPART FROM TSTAFF;
 
-SELECT name, rowid, rownum FROM tCity;
+SELECT NAME, ROWID, ROWNUM FROM TCITY;
 
-SELECT * FROM tCity WHERE rownum <= 4;
+SELECT * FROM TCITY WHERE ROWNUM <= 4;
 
-SELECT * FROM tCity ORDER BY area DESC WHERE rownum <= 4;
+SELECT * FROM TCITY ORDER BY AREA DESC WHERE ROWNUM <= 4;
 
-SELECT * FROM tCity WHERE rownum <= 4 ORDER BY area DESC;
+SELECT * FROM TCITY WHERE ROWNUM <= 4 ORDER BY AREA DESC;
 
-SELECT * FROM (SELECT * FROM tCity ORDER BY area DESC) WHERE rownum <= 4;
+SELECT * FROM (SELECT * FROM TCITY ORDER BY AREA DESC) WHERE ROWNUM <= 4;
 
-SELECT TOP 4 * FROM tCity ORDER BY area DESC;
+SELECT TOP 4 * FROM TCITY ORDER BY AREA DESC;
 
-SELECT TOP 20 PERCENT * FROM tCity ORDER BY popu DESC;
+SELECT TOP 20 PERCENT * FROM TCITY ORDER BY POPU DESC;
 
-SELECT * FROM tExam ORDER BY Score DESC;
+SELECT * FROM TEXAM ORDER BY SCORE DESC;
 
-SELECT TOP 100 * FROM tExam ORDER BY Score DESC;
+SELECT TOP 100 * FROM TEXAM ORDER BY SCORE DESC;
 
-SELECT TOP 1 PERCENT WITH TIES * FROM tExam ORDER BY Score DESC;
+SELECT TOP 1 PERCENT WITH TIES * FROM TEXAM ORDER BY SCORE DESC;
 
-SELECT * FROM tCity ORDER BY area DESC LIMIT 4;
+SELECT * FROM TCITY ORDER BY AREA DESC LIMIT 4;
 
-SELECT * FROM tCity ORDER BY area DESC LIMIT 2, 3;
+SELECT * FROM TCITY ORDER BY AREA DESC LIMIT 2, 3;
 
-SELECT * FROM tCity ORDER BY area DESC OFFSET 0 ROWS FETCH NEXT 4 ROWS ONLY;
+SELECT * FROM TCITY ORDER BY AREA DESC OFFSET 0 ROWS FETCH NEXT 4 ROWS ONLY;
 
-SELECT * FROM tCity ORDER BY area DESC OFFSET 2 ROWS FETCH NEXT 3 ROWS ONLY;
+SELECT * FROM TCITY ORDER BY AREA DESC OFFSET 2 ROWS FETCH NEXT 3 ROWS ONLY;
 
-SELECT * FROM tCity WHERE metro = 'n' ORDER BY area DESC OFFSET 2 ROWS FETCH NEXT 3 ROWS ONLY;
+SELECT * FROM TCITY WHERE METRO = 'N' ORDER BY AREA DESC OFFSET 2 ROWS FETCH NEXT 3 ROWS ONLY;
 
 -------------------------------------------------
 -- 5장
 
-SELECT COUNT(*) FROM tStaff;
+SELECT COUNT(*) FROM TSTAFF;
 
-SELECT COUNT(*) AS "총 직원수" FROM tStaff;
+SELECT COUNT(*) AS "총 직원수" FROM TSTAFF;
 
-SELECT COUNT(*) FROM tStaff WHERE salary >= 400;
+SELECT COUNT(*) FROM TSTAFF WHERE SALARY >= 400;
 
-SELECT COUNT(*) FROM tStaff WHERE salary >= 10000;
+SELECT COUNT(*) FROM TSTAFF WHERE SALARY >= 10000;
 
-SELECT name FROM tStaff WHERE salary >= 400;
+SELECT NAME FROM TSTAFF WHERE SALARY >= 400;
 
-SELECT COUNT(name) FROM tStaff;
-SELECT COUNT(depart) FROM tStaff;
+SELECT COUNT(NAME) FROM TSTAFF;
+SELECT COUNT(DEPART) FROM TSTAFF;
 
-SELECT COUNT(DISTINCT depart) FROM tStaff;
+SELECT COUNT(DISTINCT DEPART) FROM TSTAFF;
 
-SELECT COUNT(score) FROM tStaff;
+SELECT COUNT(SCORE) FROM TSTAFF;
 
-SELECT COUNT(*) - COUNT(score) FROM tStaff;
-SELECT COUNT(*) FROM tStaff WHERE score IS NULL;
+SELECT COUNT(*) - COUNT(SCORE) FROM TSTAFF;
+SELECT COUNT(*) FROM TSTAFF WHERE SCORE IS NULL;
 
-SELECT SUM(popu), AVG(popu) FROM tCity;
+SELECT SUM(POPU), AVG(POPU) FROM TCITY;
 
-SELECT MIN(area), MAX(area) FROM tCity;
+SELECT MIN(AREA), MAX(AREA) FROM TCITY;
 
-SELECT SUM(score), AVG(score) FROM tStaff WHERE depart = '인사과';
-SELECT MIN(salary), MAX(salary) FROM tStaff WHERE depart = '영업부';
+SELECT SUM(SCORE), AVG(SCORE) FROM TSTAFF WHERE DEPART = '인사과';
+SELECT MIN(SALARY), MAX(SALARY) FROM TSTAFF WHERE DEPART = '영업부';
 
-SELECT SUM(name) FROM tStaff;		-- 에러
+SELECT SUM(NAME) FROM TSTAFF;		-- 에러
 
-SELECT MIN(name) FROM tStaff;
+SELECT MIN(NAME) FROM TSTAFF;
 
-SELECT MAX(popu), name FROM tCity;
+SELECT MAX(POPU), NAME FROM TCITY;
 
-SELECT AVG(salary) FROM tStaff;
-SELECT SUM(salary)/COUNT(*) FROM tStaff;
+SELECT AVG(SALARY) FROM TSTAFF;
+SELECT SUM(SALARY)/COUNT(*) FROM TSTAFF;
 
-SELECT AVG(score) FROM tStaff;
-SELECT SUM(score)/COUNT(*) FROM tStaff;
+SELECT AVG(SCORE) FROM TSTAFF;
+SELECT SUM(SCORE)/COUNT(*) FROM TSTAFF;
 
-SELECT COUNT(*) FROM tStaff WHERE depart = '비서실';
-SELECT MAX(salary) FROM tStaff WHERE depart = '비서실';
+SELECT COUNT(*) FROM TSTAFF WHERE DEPART = '비서실';
+SELECT MAX(SALARY) FROM TSTAFF WHERE DEPART = '비서실';
 
-SELECT '영업부', AVG(salary) FROM tStaff WHERE depart='영업부';
-SELECT '총무부', AVG(salary) FROM tStaff WHERE depart='총무부';
-SELECT '인사과', AVG(salary) FROM tStaff WHERE depart='인사과';
+SELECT '영업부', AVG(SALARY) FROM TSTAFF WHERE DEPART='영업부';
+SELECT '총무부', AVG(SALARY) FROM TSTAFF WHERE DEPART='총무부';
+SELECT '인사과', AVG(SALARY) FROM TSTAFF WHERE DEPART='인사과';
 
-SELECT depart, AVG(salary) FROM tStaff GROUP BY depart;
+SELECT DEPART, AVG(SALARY) FROM TSTAFF GROUP BY DEPART;
 
-SELECT depart, COUNT(*), MAX(joindate), AVG(score) FROM tStaff GROUP BY depart; 
+SELECT DEPART, COUNT(*), MAX(JOINDATE), AVG(SCORE) FROM TSTAFF GROUP BY DEPART; 
 
-SELECT gender, AVG(salary) FROM tStaff GROUP BY gender;
+SELECT GENDER, AVG(SALARY) FROM TSTAFF GROUP BY GENDER;
 
-SELECT name, SUM(salary) FROM tStaff GROUP BY name;
+SELECT NAME, SUM(SALARY) FROM TSTAFF GROUP BY NAME;
 
-SELECT depart, gender, COUNT(*) FROM tStaff GROUP BY depart, gender;
+SELECT DEPART, GENDER, COUNT(*) FROM TSTAFF GROUP BY DEPART, GENDER;
 
-SELECT gender, depart, COUNT(*) FROM tStaff GROUP BY gender, depart;
+SELECT GENDER, DEPART, COUNT(*) FROM TSTAFF GROUP BY GENDER, DEPART;
 
-SELECT depart, gender, COUNT(*) FROM tStaff GROUP BY depart, gender 
-ORDER BY depart, gender;
+SELECT DEPART, GENDER, COUNT(*) FROM TSTAFF GROUP BY DEPART, GENDER 
+ORDER BY DEPART, GENDER;
 
-SELECT depart, salary FROM tStaff GROUP BY depart;
+SELECT DEPART, SALARY FROM TSTAFF GROUP BY DEPART;
 
-SELECT SUM(salary) FROM tStaff GROUP BY depart;
+SELECT SUM(SALARY) FROM TSTAFF GROUP BY DEPART;
 
-SELECT depart, SUM(salary) FROM tStaff;
+SELECT DEPART, SUM(SALARY) FROM TSTAFF;
 
-SELECT depart, SUM(salary) FROM tStaff GROUP BY depart;
-SELECT SUM(salary) FROM tStaff;
+SELECT DEPART, SUM(SALARY) FROM TSTAFF GROUP BY DEPART;
+SELECT SUM(SALARY) FROM TSTAFF;
 
-SELECT depart, AVG(salary) FROM tStaff GROUP BY depart HAVING AVG(salary) >= 340;
+SELECT DEPART, AVG(SALARY) FROM TSTAFF GROUP BY DEPART HAVING AVG(SALARY) >= 340;
 
-SELECT depart, AVG(salary) FROM tStaff GROUP BY depart HAVING AVG(salary) >= 340 
-ORDER BY AVG(salary);
+SELECT DEPART, AVG(SALARY) FROM TSTAFF GROUP BY DEPART HAVING AVG(SALARY) >= 340 
+ORDER BY AVG(SALARY);
 
-SELECT depart, AVG(salary) FROM tStaff WHERE salary > 300 GROUP BY depart ;
+SELECT DEPART, AVG(SALARY) FROM TSTAFF WHERE SALARY > 300 GROUP BY DEPART ;
 
-SELECT depart, AVG(salary) FROM tStaff WHERE salary > 300 
-GROUP BY depart HAVING AVG(salary) >= 360 ORDER BY depart;
+SELECT DEPART, AVG(SALARY) FROM TSTAFF WHERE SALARY > 300 
+GROUP BY DEPART HAVING AVG(SALARY) >= 360 ORDER BY DEPART;
 
-SELECT depart, MAX(salary) FROM tStaff WHERE depart IN ('인사과', '영업부') GROUP BY depart;
-SELECT depart, MAX(salary) FROM tStaff GROUP BY depart HAVING depart IN ('인사과', '영업부');
+SELECT DEPART, MAX(SALARY) FROM TSTAFF WHERE DEPART IN ('인사과', '영업부') GROUP BY DEPART;
+SELECT DEPART, MAX(SALARY) FROM TSTAFF GROUP BY DEPART HAVING DEPART IN ('인사과', '영업부');
 
 -------------------------------------------------
 -- 6장
 
-INSERT INTO tCity (name, area, popu, metro, region) 
-VALUES ('서울', 605, 974, 'y', '경기');
+INSERT INTO TCITY (NAME, AREA, POPU, METRO, REGION) 
+VALUES ('서울', 605, 974, 'Y', '경기');
 
-INSERT INTO tCity VALUES ('서울', 605, 974, 'y', '경기');
+INSERT INTO TCITY VALUES ('서울', 605, 974, 'Y', '경기');
 
-INSERT INTO tCity VALUES ('평택', 453, 51, 'n', '경기');
+INSERT INTO TCITY VALUES ('평택', 453, 51, 'N', '경기');
 
-INSERT INTO tCity VALUES ('평택', 51, 453, 'n', '경기');		// area와 popu가 바뀜
-INSERT INTO tCity VALUES ('평택', 453, 'n', 51, '경기');		// popu와 metro 순서가 바뀜
-INSERT INTO tCity VALUES ('평택', 453, 'n', '경기');		// popu 필드값 누락
+INSERT INTO TCITY VALUES ('평택', 51, 453, 'N', '경기');		// AREA와 POPU가 바뀜
+INSERT INTO TCITY VALUES ('평택', 453, 'N', 51, '경기');		// POPU와 METRO 순서가 바뀜
+INSERT INTO TCITY VALUES ('평택', 453, 'N', '경기');		// POPU 필드값 누락
 
-INSERT INTO tCity (area, popu, metro, region, name) 
-VALUES (453, 51, 'n', '경기', '평택');
+INSERT INTO TCITY (AREA, POPU, METRO, REGION, NAME) 
+VALUES (453, 51, 'N', '경기', '평택');
 
-TRUNCATE TABLE tCity;
+TRUNCATE TABLE TCITY;
 
-INSERT INTO tCity (name, area, popu, metro, region) VALUES 
-('서울',605,974,'y','경기'), 
-('부산',765,342,'y','경상'),
-('오산',42,21,'n','경기'),
-('청주',940,83,'n','충청'),
-('전주',205,65,'n','전라'),
-('순천',910,27,'n','전라'),
-('춘천',1116,27,'n','강원'),
-('홍천',1819,7,'n','강원');
+INSERT INTO TCITY (NAME, AREA, POPU, METRO, REGION) VALUES 
+('서울',605,974,'Y','경기'), 
+('부산',765,342,'Y','경상'),
+('오산',42,21,'N','경기'),
+('청주',940,83,'N','충청'),
+('전주',205,65,'N','전라'),
+('순천',910,27,'N','전라'),
+('춘천',1116,27,'N','강원'),
+('홍천',1819,7,'N','강원');
 
-INSERT INTO tStaff(name, depart, gender, joindate, grade, salary, score)
-SELECT name, region, metro, '20210629', '신입', area, popu FROM tCity WHERE region = '경기';
+INSERT INTO TSTAFF(NAME, DEPART, GENDER, JOINDATE, GRADE, SALARY, SCORE)
+SELECT NAME, REGION, METRO, '20210629', '신입', AREA, POPU FROM TCITY WHERE REGION = '경기';
 
-INSERT INTO tStaff(name, depart, gender, joindate, grade, salary, score)
-SELECT name, 지원부서, gender, 오늘, '수습', 230, score * 0.1 FROM tCandidate 
-WHERE result = '합격';
+INSERT INTO TSTAFF(NAME, DEPART, GENDER, JOINDATE, GRADE, SALARY, SCORE)
+SELECT NAME, 지원부서, GENDER, 오늘, '수습', 230, SCORE * 0.1 FROM TCANDIDATE 
+WHERE RESULT = '합격';
 
-CREATE TABLE tSudo AS SELECT name, area, popu FROM tCity WHERE region = '경기';
-SELECT * FROM tSudo;
+CREATE TABLE TSUDO AS SELECT NAME, AREA, POPU FROM TCITY WHERE REGION = '경기';
+SELECT * FROM TSUDO;
 
-SELECT * INTO tCityCopy FROM tCity;
+SELECT * INTO TCITYCOPY FROM TCITY;
 
-CREATE TABLE tStaff_8월20일 AS SELECT * FROM tStaff;
+CREATE TABLE TSTAFF_8월20일 AS SELECT * FROM TSTAFF;
 
-DELETE FROM tCity WHERE name = '부산';
+DELETE FROM TCITY WHERE NAME = '부산';
 
-DELETE FROM tCity WHERE region = '경기';
+DELETE FROM TCITY WHERE REGION = '경기';
 
-DELETE FROM tCity;
+DELETE FROM TCITY;
 
-SELECT * FROM tCity WHERE popu > 50;
+SELECT * FROM TCITY WHERE POPU > 50;
 
 -- DELETE
 -- SELECT *
-FROM tStaff WHERE grade = '과장';
+FROM TSTAFF WHERE GRADE = '과장';
 
-UPDATE tCity SET popu = 1000, region = '충청' WHERE name = '서울';
+UPDATE TCITY SET POPU = 1000, REGION = '충청' WHERE NAME = '서울';
 
-UPDATE tCity SET popu = 1000, region = '충청';
+UPDATE TCITY SET POPU = 1000, REGION = '충청';
 
-UPDATE tCity SET popu = popu * 2 WHERE name = '오산';
+UPDATE TCITY SET POPU = POPU * 2 WHERE NAME = '오산';
 
 -------------------------------------------------
 -- 7장
 
-INSERT INTO tCity VALUES ('평양','엄청 넓음','꽤 많을걸','n','조선인민민주주의공화국');
+INSERT INTO TCITY VALUES ('평양','엄청 넓음','꽤 많을걸','N','조선인민민주주의공화국');
 
-INSERT INTO tCity (name, popu, metro, region) VALUES ('울산', 114, 'y', '경상');
-INSERT INTO tCity (name, metro, region) VALUES ('삼척', 'n', '강원');
+INSERT INTO TCITY (NAME, POPU, METRO, REGION) VALUES ('울산', 114, 'Y', '경상');
+INSERT INTO TCITY (NAME, METRO, REGION) VALUES ('삼척', 'N', '강원');
 
-INSERT INTO tCity (area, popu, metro, region) VALUES (456, 123, 'n', '충청');
-INSERT INTO tCity (name, area, popu) VALUES ('의정부', 456,123);
+INSERT INTO TCITY (AREA, POPU, METRO, REGION) VALUES (456, 123, 'N', '충청');
+INSERT INTO TCITY (NAME, AREA, POPU) VALUES ('의정부', 456,123);
 
-CREATE TABLE tNullable
+CREATE TABLE TNULLABLE
 (
-    name CHAR(10) NOT NULL,
-    age INT
+    NAME CHAR(10) NOT NULL,
+    AGE INT
 );
 
-CREATE TABLE tCityDefault
+CREATE TABLE TCITYDEFAULT
 (
-	name CHAR(10) PRIMARY KEY,
-	area INT NULL ,
-	popu INT NULL ,
-	metro CHAR(1) DEFAULT 'n' NOT NULL,
-	region CHAR(6) NOT NULL
+	NAME CHAR(10) PRIMARY KEY,
+	AREA INT NULL ,
+	POPU INT NULL ,
+	METRO CHAR(1) DEFAULT 'N' NOT NULL,
+	REGION CHAR(6) NOT NULL
 );
 
-INSERT INTO tCityDefault (name, area, popu, region) VALUES ('진주', 712, 34, '경상');
-INSERT INTO tCityDefault (name, area, popu, metro, region) VALUES ('인천', 1063, 295, 'y', '경기');
+INSERT INTO TCITYDEFAULT (NAME, AREA, POPU, REGION) VALUES ('진주', 712, 34, '경상');
+INSERT INTO TCITYDEFAULT (NAME, AREA, POPU, METRO, REGION) VALUES ('인천', 1063, 295, 'Y', '경기');
 
-INSERT INTO tCityDefault VALUES ('강릉', 1111, 22, '강원');			-- 에러
-INSERT INTO tCityDefault VALUES ('강릉', 1111, 22, DEFAULT, '강원');	-- 정상 실행
+INSERT INTO TCITYDEFAULT VALUES ('강릉', 1111, 22, '강원');			-- 에러
+INSERT INTO TCITYDEFAULT VALUES ('강릉', 1111, 22, DEFAULT, '강원');	-- 정상 실행
 
-UPDATE tCity_Default SET metro = DEFAULT WHERE name = '인천'
+UPDATE TCITY_DEFAULT SET METRO = DEFAULT WHERE NAME = '인천'
 
-CREATE TABLE tCheckTest
+CREATE TABLE TCHECKTEST
 (
-	gender CHAR(3) NULL CHECK(gender = '남' OR gender = '여'),
-	grade INT NULL CHECK (grade >= 1 AND grade <= 3),
-	origin CHAR(3) NULL CHECK(origin IN ('동','서','남','북')),
-	name CHAR(10) NULL CHECK(name LIKE '김%')
+	GENDER CHAR(3) NULL CHECK(GENDER = '남' OR GENDER = '여'),
+	GRADE INT NULL CHECK (GRADE >= 1 AND GRADE <= 3),
+	ORIGIN CHAR(3) NULL CHECK(ORIGIN IN ('동','서','남','북')),
+	NAME CHAR(10) NULL CHECK(NAME LIKE '김%')
 );
 
-INSERT INTO tCheckTest (gender) VALUES ('여');
-INSERT INTO tCheckTest (grade) VALUES (1);
-INSERT INTO tCheckTest (origin) VALUES ('동');
-INSERT INTO tCheckTest (name) VALUES ('김좌진');
+INSERT INTO TCHECKTEST (GENDER) VALUES ('여');
+INSERT INTO TCHECKTEST (GRADE) VALUES (1);
+INSERT INTO TCHECKTEST (ORIGIN) VALUES ('동');
+INSERT INTO TCHECKTEST (NAME) VALUES ('김좌진');
 
-INSERT INTO tCheckTest (gender) VALUES ('노');
-INSERT INTO tCheckTest (grade) VALUES (0);
-INSERT INTO tCheckTest (origin) VALUES ('중');
-INSERT INTO tCheckTest (name) VALUES ('청산리');
+INSERT INTO TCHECKTEST (GENDER) VALUES ('노');
+INSERT INTO TCHECKTEST (GRADE) VALUES (0);
+INSERT INTO TCHECKTEST (ORIGIN) VALUES ('중');
+INSERT INTO TCHECKTEST (NAME) VALUES ('청산리');
 
-UPDATE tCheckTest SET grade = 4 WHERE grade IS NOT NULL;
+UPDATE TCHECKTEST SET GRADE = 4 WHERE GRADE IS NOT NULL;
 
-region CHAR(6) NOT NULL CHECK (region IN ('경기', '충청', '강원', '경상', '전라', '제주'))
-INSERT INTO tCity3 VALUES ('울릉',72,1,'n','우산');
+REGION CHAR(6) NOT NULL CHECK (REGION IN ('경기', '충청', '강원', '경상', '전라', '제주'))
+INSERT INTO TCITY3 VALUES ('울릉',72,1,'N','우산');
 
-INSERT INTO tCity VALUES ('춘천',1116,27,'n','강원');
+INSERT INTO TCITY VALUES ('춘천',1116,27,'N','강원');
 
-CREATE TABLE tCity
+CREATE TABLE TCITY
 (
-	name CHAR(10),
-	area INT NULL ,
-	popu INT NULL ,
-	metro CHAR(1) NOT NULL,
-	region CHAR(6) NOT NULL,
-	CONSTRAINT PK_tCity_name PRIMARY KEY(name)
+	NAME CHAR(10),
+	AREA INT NULL ,
+	POPU INT NULL ,
+	METRO CHAR(1) NOT NULL,
+	REGION CHAR(6) NOT NULL,
+	CONSTRAINT PK_TCITY_NAME PRIMARY KEY(NAME)
 ); 
 
-CREATE TABLE tCity
+CREATE TABLE TCITY
 (
-	name CHAR(10) PRIMARY KEY,
-	region CHAR(6) PRIMARY KEY,
-	area INT NULL ,
-	popu INT NULL ,
-	metro CHAR(1) NOT NULL
+	NAME CHAR(10) PRIMARY KEY,
+	REGION CHAR(6) PRIMARY KEY,
+	AREA INT NULL ,
+	POPU INT NULL ,
+	METRO CHAR(1) NOT NULL
 );
 
-CREATE TABLE tCityCompoKey
+CREATE TABLE TCITYCOMPOKEY
 (
-	name CHAR(10) NOT NULL,
-	region CHAR(6) NOT NULL,
-	area INT NULL ,
-	popu INT NULL ,
-	metro CHAR(1) NOT NULL,
-	CONSTRAINT PK_tCity_name_region PRIMARY KEY (name, region)
+	NAME CHAR(10) NOT NULL,
+	REGION CHAR(6) NOT NULL,
+	AREA INT NULL ,
+	POPU INT NULL ,
+	METRO CHAR(1) NOT NULL,
+	CONSTRAINT PK_TCITY_NAME_REGION PRIMARY KEY (NAME, REGION)
 );
 
-INSERT INTO tCityCompoKey VALUES ('광주', '전라', 123, 456, 'y');
-INSERT INTO tCityCompoKey VALUES ('광주', '경기', 123, 456, 'n');
+INSERT INTO TCITYCOMPOKEY VALUES ('광주', '전라', 123, 456, 'Y');
+INSERT INTO TCITYCOMPOKEY VALUES ('광주', '경기', 123, 456, 'N');
 
-CREATE TABLE tCityUnique
+CREATE TABLE TCITYUNIQUE
 (
-	name CHAR(10) PRIMARY KEY,
-	area INT NULL ,
-	popu INT UNIQUE NULL,
-	metro CHAR(1) NOT NULL,
-	region CHAR(6) NOT NULL
+	NAME CHAR(10) PRIMARY KEY,
+	AREA INT NULL ,
+	POPU INT UNIQUE NULL,
+	METRO CHAR(1) NOT NULL,
+	REGION CHAR(6) NOT NULL
 );
 
-CREATE TABLE tCityUnique
+CREATE TABLE TCITYUNIQUE
 (
-	name CHAR(10) PRIMARY KEY,
-	area INT NULL ,
-	popu INT NULL,
-	metro CHAR(1) NOT NULL,
-	region CHAR(6) NOT NULL,
-	CONSTRAINT Unique_tCity_area_popu UNIQUE(area, popu)
+	NAME CHAR(10) PRIMARY KEY,
+	AREA INT NULL ,
+	POPU INT NULL,
+	METRO CHAR(1) NOT NULL,
+	REGION CHAR(6) NOT NULL,
+	CONSTRAINT UNIQUE_TCITY_AREA_POPU UNIQUE(AREA, POPU)
 );
 
-CREATE SEQUENCE seqSale START WITH 1 INCREMENT BY 1;
+CREATE SEQUENCE SEQSALE START WITH 1 INCREMENT BY 1;
 
-CREATE TABLE tSale
+CREATE TABLE TSALE
 (
-	saleno INT PRIMARY KEY,
-	customer VARCHAR(20),
-	product VARCHAR(30)
+	SALENO INT PRIMARY KEY,
+	CUSTOMER VARCHAR(20),
+	PRODUCT VARCHAR(30)
 );
 
-INSERT INTO tSale VALUES (seqSale.NEXTVAL, '단군', '지팡이');
-INSERT INTO tSale VALUES (seqSale.NEXTVAL, '고주몽', '고등어');
+INSERT INTO TSALE VALUES (SEQSALE.NEXTVAL, '단군', '지팡이');
+INSERT INTO TSALE VALUES (SEQSALE.NEXTVAL, '고주몽', '고등어');
 
-INSERT INTO tSale VALUES (NEXT VALUE FOR seqSale, '단군', '지팡이');
-INSERT INTO tSale VALUES (NEXT VALUE FOR seqSale, '고주몽', '고등어');
+INSERT INTO TSALE VALUES (NEXT VALUE FOR SEQSALE, '단군', '지팡이');
+INSERT INTO TSALE VALUES (NEXT VALUE FOR SEQSALE, '고주몽', '고등어');
 
-DELETE FROM tSale WHERE saleno = 2;
+DELETE FROM TSALE WHERE SALENO = 2;
 
-오라클 : INSERT INTO tSale VALUES (seqSale.NEXTVAL, '박혁거세', '계란');
-MSSQL : INSERT INTO tSale VALUES (NEXT VALUE FOR seqSale, '박혁거세', '계란');
+오라클 : INSERT INTO TSALE VALUES (SEQSALE.NEXTVAL, '박혁거세', '계란');
+MSSQL : INSERT INTO TSALE VALUES (NEXT VALUE FOR SEQSALE, '박혁거세', '계란');
 
-INSERT INTO tSale VALUES (2, '고주몽', '고등어');
+INSERT INTO TSALE VALUES (2, '고주몽', '고등어');
 
-CREATE TABLE tSaleSeq
+CREATE TABLE TSALESEQ
 (
-	saleno INT GENERATED AS IDENTITY PRIMARY KEY,
-	customer VARCHAR(20),
-	product VARCHAR(30)
+	SALENO INT GENERATED AS IDENTITY PRIMARY KEY,
+	CUSTOMER VARCHAR(20),
+	PRODUCT VARCHAR(30)
 );
 
-INSERT INTO tSaleSeq (customer, product) VALUES ('단군', '지팡이');
-INSERT INTO tSaleSeq (customer, product) VALUES ('고주몽', '고등어');
+INSERT INTO TSALESEQ (CUSTOMER, PRODUCT) VALUES ('단군', '지팡이');
+INSERT INTO TSALESEQ (CUSTOMER, PRODUCT) VALUES ('고주몽', '고등어');
 
-saleno INT GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
-saleno INT GENERATED BY DEFAULT ON NULL AS IDENTITY PRIMARY KEY,
+SALENO INT GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
+SALENO INT GENERATED BY DEFAULT ON NULL AS IDENTITY PRIMARY KEY,
 
-INSERT INTO tSale (saleno, customer, product) VALUES (5, '단군', '지팡이');	-- 가능
-INSERT INTO tSale (saleno, customer, product) VALUES (NULL, '고주몽', '고등어');	-- 에러
+INSERT INTO TSALE (SALENO, CUSTOMER, PRODUCT) VALUES (5, '단군', '지팡이');	-- 가능
+INSERT INTO TSALE (SALENO, CUSTOMER, PRODUCT) VALUES (NULL, '고주몽', '고등어');	-- 에러
 
-CREATE TABLE tSaleId
+CREATE TABLE TSALEID
 (
-	saleno INT IDENTITY PRIMARY KEY,
-	customer VARCHAR(20),
-	product VARCHAR(30)
+	SALENO INT IDENTITY PRIMARY KEY,
+	CUSTOMER VARCHAR(20),
+	PRODUCT VARCHAR(30)
 );
 
-INSERT INTO tSaleId (customer, product) VALUES ('단군', '지팡이');
-INSERT INTO tSaleId (customer, product) VALUES ('고주몽', '고등어');
+INSERT INTO TSALEID (CUSTOMER, PRODUCT) VALUES ('단군', '지팡이');
+INSERT INTO TSALEID (CUSTOMER, PRODUCT) VALUES ('고주몽', '고등어');
 
-DELETE FROM tSaleId WHERE saleno = 2;
-INSERT INTO tSaleId (customer, product) VALUES ('박혁거세', '계란');
+DELETE FROM TSALEID WHERE SALENO = 2;
+INSERT INTO TSALEID (CUSTOMER, PRODUCT) VALUES ('박혁거세', '계란');
 
-INSERT INTO tSaleId (saleno, customer, product) VALUES (2, '고주몽', '고등어');
+INSERT INTO TSALEID (SALENO, CUSTOMER, PRODUCT) VALUES (2, '고주몽', '고등어');
 
-SET IDENTITY_INSERT tSaleId ON;
-INSERT INTO tSaleId (saleno, customer, product) VALUES (2, '고주몽', '고등어');
-SET IDENTITY_INSERT tSaleId OFF;
+SET IDENTITY_INSERT TSALEID ON;
+INSERT INTO TSALEID (SALENO, CUSTOMER, PRODUCT) VALUES (2, '고주몽', '고등어');
+SET IDENTITY_INSERT TSALEID OFF;
 
-INSERT INTO tSaleId VALUES ('왕건', '너구리');
+INSERT INTO TSALEID VALUES ('왕건', '너구리');
 
-UPDATE tSaleId SET product = '짜파게티' WHERE saleno = @@IDENTITY;
+UPDATE TSALEID SET PRODUCT = '짜파게티' WHERE SALENO = @@IDENTITY;
 
-CREATE TABLE tSale
+CREATE TABLE TSALE
 (
-	saleno INT AUTO_INCREMENT PRIMARY KEY,
-	customer NCHAR(10),
-	product NCHAR(30)
+	SALENO INT AUTO_INCREMENT PRIMARY KEY,
+	CUSTOMER NCHAR(10),
+	PRODUCT NCHAR(30)
 );
 
-INSERT INTO tSale (customer, product) VALUES ('단군', '지팡이');
-INSERT INTO tSale (customer, product) VALUES ('고주몽', '고등어');
+INSERT INTO TSALE (CUSTOMER, PRODUCT) VALUES ('단군', '지팡이');
+INSERT INTO TSALE (CUSTOMER, PRODUCT) VALUES ('고주몽', '고등어');
 
-DELETE FROM tSale WHERE saleno = 2;
-INSERT INTO tSale (customer, product) VALUES ('박혁거세', '계란');
+DELETE FROM TSALE WHERE SALENO = 2;
+INSERT INTO TSALE (CUSTOMER, PRODUCT) VALUES ('박혁거세', '계란');
 
-INSERT INTO tSale (saleno, customer, product) VALUES (2, '고주몽', '고등어');
+INSERT INTO TSALE (SALENO, CUSTOMER, PRODUCT) VALUES (2, '고주몽', '고등어');
 
-ALTER TABLE tSale AUTO_INCREMENT = 100;
+ALTER TABLE TSALE AUTO_INCREMENT = 100;
 
-INSERT INTO tSale (customer, product) VALUES ('왕건', '너구리');
-UPDATE tSale SET product = '짜파게티' WHERE saleno = LAST_INSERT_ID();
+INSERT INTO TSALE (CUSTOMER, PRODUCT) VALUES ('왕건', '너구리');
+UPDATE TSALE SET PRODUCT = '짜파게티' WHERE SALENO = LAST_INSERT_ID();
 
 -------------------------------------------------
 -- 8장
 
-UPDATE tProject SET 담당자='문종민' WHERE 프로젝트='TV 광고건';
+UPDATE TPROJECT SET 담당자='문종민' WHERE 프로젝트='TV 광고건';
 
-SELECT 프로젝트명 FROM tProject WHERE 담당자 = '김상형';
+SELECT 프로젝트명 FROM TPROJECT WHERE 담당자 = '김상형';
 
-CREATE TABLE tEmployee
+CREATE TABLE TEMPLOYEE
 (
-	name CHAR(10) PRIMARY KEY,
-	salary INT NOT NULL,
-	addr VARCHAR(30) NOT NULL
+	NAME CHAR(10) PRIMARY KEY,
+	SALARY INT NOT NULL,
+	ADDR VARCHAR(30) NOT NULL
 );
 
-INSERT INTO tEmployee VALUES ('김상형', 650, '이천시');
-INSERT INTO tEmployee VALUES ('문종민', 480, '대구시');
-INSERT INTO tEmployee VALUES ('권성직', 625, '안동시');
+INSERT INTO TEMPLOYEE VALUES ('김상형', 650, '이천시');
+INSERT INTO TEMPLOYEE VALUES ('문종민', 480, '대구시');
+INSERT INTO TEMPLOYEE VALUES ('권성직', 625, '안동시');
 
-CREATE TABLE tProject
+CREATE TABLE TPROJECT
 (
-	projectID INT PRIMARY KEY,
-	employee CHAR(10) NOT NULL,
-	project VARCHAR(30) NOT NULL,
-	cost INT
+	PROJECTID INT PRIMARY KEY,
+	EMPLOYEE CHAR(10) NOT NULL,
+	PROJECT VARCHAR(30) NOT NULL,
+	COST INT
 );
 
-INSERT INTO tProject VALUES (1, '김상형', '홍콩 수출건', 800);
-INSERT INTO tProject VALUES (2, '김상형', 'TV 광고건', 3400);
-INSERT INTO tProject VALUES (3, '김상형', '매출분석건', 200);
-INSERT INTO tProject VALUES (4, '문종민', '경영 혁신안 작성', 120);
-INSERT INTO tProject VALUES (5, '문종민', '대리점 계획', 85);
-INSERT INTO tProject VALUES (6, '권성직', '노조 협상건', 24);
+INSERT INTO TPROJECT VALUES (1, '김상형', '홍콩 수출건', 800);
+INSERT INTO TPROJECT VALUES (2, '김상형', 'TV 광고건', 3400);
+INSERT INTO TPROJECT VALUES (3, '김상형', '매출분석건', 200);
+INSERT INTO TPROJECT VALUES (4, '문종민', '경영 혁신안 작성', 120);
+INSERT INTO TPROJECT VALUES (5, '문종민', '대리점 계획', 85);
+INSERT INTO TPROJECT VALUES (6, '권성직', '노조 협상건', 24);
 
-INSERT INTO tProject VALUES (7, '홍길동', '원자재 매입', 900);
+INSERT INTO TPROJECT VALUES (7, '홍길동', '원자재 매입', 900);
 
-DELETE FROM tEmployee WHERE name = '김상형';
+DELETE FROM TEMPLOYEE WHERE NAME = '김상형';
 
-CREATE TABLE tProject
+CREATE TABLE TPROJECT
 (
-	projectID ... ,
-	employee ... ,
-	project ... ,
-	cost ... ,
-	CONSTRAINT FK_emp FOREIGN KEY(employee) REFERENCES tEmployee(name)
+	PROJECTID ... ,
+	EMPLOYEE ... ,
+	PROJECT ... ,
+	COST ... ,
+	CONSTRAINT FK_EMP FOREIGN KEY(EMPLOYEE) REFERENCES TEMPLOYEE(NAME)
 );
 
-INSERT INTO tEmployee VALUES ('홍길동', 330, '장성');
-INSERT INTO tProject VALUES (7, '홍길동', '원자재 매입', 900);
+INSERT INTO TEMPLOYEE VALUES ('홍길동', 330, '장성');
+INSERT INTO TPROJECT VALUES (7, '홍길동', '원자재 매입', 900);
 
-DELETE FROM tProject WHERE employee = '김상형';
-DELETE FROM tEmployee WHERE name = '김상형';
+DELETE FROM TPROJECT WHERE EMPLOYEE = '김상형';
+DELETE FROM TEMPLOYEE WHERE NAME = '김상형';
 
-DROP TABLE tEmployee;
+DROP TABLE TEMPLOYEE;
 
-CREATE TABLE tProject
+CREATE TABLE TPROJECT
 (
 	....
-	CONSTRAINT FK_emp FOREIGN KEY(employee) REFERENCES tEmployee(name)
+	CONSTRAINT FK_EMP FOREIGN KEY(EMPLOYEE) REFERENCES TEMPLOYEE(NAME)
 	ON DELETE CASCADE
 );
 
-DELETE FROM tEmployee WHERE name = '김상형';
+DELETE FROM TEMPLOYEE WHERE NAME = '김상형';
 
-CREATE TABLE tProject
+CREATE TABLE TPROJECT
 (
 	....
-	CONSTRAINT FK_emp FOREIGN KEY(employee) REFERENCES tEmployee(name)
+	CONSTRAINT FK_EMP FOREIGN KEY(EMPLOYEE) REFERENCES TEMPLOYEE(NAME)
 	ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-UPDATE tEmployee SET name = '문사장' WHERE Name = '문종민';
+UPDATE TEMPLOYEE SET NAME = '문사장' WHERE NAME = '문종민';
 
 -- 회원 테이블
-CREATE TABLE tMember
+CREATE TABLE TMEMBER
 (
-    member VARCHAR(20) PRIMARY KEY, 	-- 아이디
-    age INT NOT NULL,                      	-- 나이 
-    email VARCHAR(30) NOT NULL,           	-- 이메일
-    addr VARCHAR(50) NOT NULL,            	-- 주소
-    money INT DEFAULT 1000 NOT NULL,     	-- 예치금
-    grade INT DEFAULT 1 NOT NULL,         	-- 고객등급. 1=준회원, 2=정회원, 3=우수회원
-    remark VARCHAR(100) NULL             	-- 메모 사항
+    MEMBER VARCHAR(20) PRIMARY KEY, 	-- 아이디
+    AGE INT NOT NULL,                      	-- 나이 
+    EMAIL VARCHAR(30) NOT NULL,           	-- 이메일
+    ADDR VARCHAR(50) NOT NULL,            	-- 주소
+    MONEY INT DEFAULT 1000 NOT NULL,     	-- 예치금
+    GRADE INT DEFAULT 1 NOT NULL,         	-- 고객등급. 1=준회원, 2=정회원, 3=우수회원
+    REMARK VARCHAR(100) NULL             	-- 메모 사항
 );
 
 -- 회원 데이터
-INSERT INTO tMember VALUES ('춘향',16,'1004@naver.com','전남 남원시',20000, 2, '');
-INSERT INTO tMember VALUES ('이도령',18,'wolf@gmail.com','서울 신사동',150000, 3, '');
-INSERT INTO tMember VALUES ('향단',25,'candy@daum.net','전남 남원시',5000, 2, '');
-INSERT INTO tMember VALUES ('방자',28,'devlin@ssang.co.kr','서울 개포동',1000, 1, '요주의 고객');
+INSERT INTO TMEMBER VALUES ('춘향',16,'1004@NAVER.COM','전남 남원시',20000, 2, '');
+INSERT INTO TMEMBER VALUES ('이도령',18,'WOLF@GMAIL.COM','서울 신사동',150000, 3, '');
+INSERT INTO TMEMBER VALUES ('향단',25,'CANDY@DAUM.NET','전남 남원시',5000, 2, '');
+INSERT INTO TMEMBER VALUES ('방자',28,'DEVLIN@SSANG.CO.KR','서울 개포동',1000, 1, '요주의 고객');
 
 -- 상품 분류 테이블
-CREATE TABLE tCategory
+CREATE TABLE TCATEGORY
 (
-   category VARCHAR(10) PRIMARY KEY,	-- 분류명
-   discount INT NOT NULL,			-- 할인율
-   delivery INT NOT NULL,                   	-- 배송비
-   takeback CHAR(1)                         	-- 반품 가능성
+   CATEGORY VARCHAR(10) PRIMARY KEY,	-- 분류명
+   DISCOUNT INT NOT NULL,			-- 할인율
+   DELIVERY INT NOT NULL,                   	-- 배송비
+   TAKEBACK CHAR(1)                         	-- 반품 가능성
 );
 
 -- 분류 데이터
-INSERT INTO tCategory (category, discount, delivery, takeback) VALUES ('식품', 0, 3000, 'n');
-INSERT INTO tCategory (category, discount, delivery, takeback) VALUES ('패션', 10, 2000, 'y');
-INSERT INTO tCategory (category, discount, delivery, takeback) VALUES ('가전', 20, 2500, 'y');
-INSERT INTO tCategory (category, discount, delivery, takeback) VALUES ('성인', 5, 1000, 'n');
+INSERT INTO TCATEGORY (CATEGORY, DISCOUNT, DELIVERY, TAKEBACK) VALUES ('식품', 0, 3000, 'N');
+INSERT INTO TCATEGORY (CATEGORY, DISCOUNT, DELIVERY, TAKEBACK) VALUES ('패션', 10, 2000, 'Y');
+INSERT INTO TCATEGORY (CATEGORY, DISCOUNT, DELIVERY, TAKEBACK) VALUES ('가전', 20, 2500, 'Y');
+INSERT INTO TCATEGORY (CATEGORY, DISCOUNT, DELIVERY, TAKEBACK) VALUES ('성인', 5, 1000, 'N');
 
 -- 상품 테이블
-CREATE TABLE tItem
+CREATE TABLE TITEM
 (
-    item VARCHAR(20) PRIMARY KEY,   	-- 상품명
-    company VARCHAR(20) NULL,            	-- 제조사
-    num INT NOT NULL,                      	-- 재고
-    price INT NOT NULL,                     	-- 정가
-    category VARCHAR(10) NOT NULL,       	-- 분류
-    CONSTRAINT item_fk FOREIGN KEY(category) REFERENCES tCategory(category)
+    ITEM VARCHAR(20) PRIMARY KEY,   	-- 상품명
+    COMPANY VARCHAR(20) NULL,            	-- 제조사
+    NUM INT NOT NULL,                      	-- 재고
+    PRICE INT NOT NULL,                     	-- 정가
+    CATEGORY VARCHAR(10) NOT NULL,       	-- 분류
+    CONSTRAINT ITEM_FK FOREIGN KEY(CATEGORY) REFERENCES TCATEGORY(CATEGORY)
 );
 
 -- 상품 데이터
-INSERT INTO tItem (item,company,num,price,category) VALUES ('노트북', '샘성', 3, 820000, '가전');
-INSERT INTO tItem (item,company,num,price,category) VALUES ('청바지', '방방', 80, 32000, '패션');
-INSERT INTO tItem (item,company,num,price,category) VALUES ('사과', '문경농원', 24, 16000, '식품');
-INSERT INTO tItem (item,company,num,price,category) VALUES ('대추', '보은농원', 19, 15000, '식품');
-INSERT INTO tItem (item,company,num,price,category) VALUES ('전자담배', 'TNG', 4, 70000, '성인');
-INSERT INTO tItem (item,company,num,price,category) VALUES ('마우스', '논리텍', 3, 90000, '가전');
+INSERT INTO TITEM (ITEM,COMPANY,NUM,PRICE,CATEGORY) VALUES ('노트북', '샘성', 3, 820000, '가전');
+INSERT INTO TITEM (ITEM,COMPANY,NUM,PRICE,CATEGORY) VALUES ('청바지', '방방', 80, 32000, '패션');
+INSERT INTO TITEM (ITEM,COMPANY,NUM,PRICE,CATEGORY) VALUES ('사과', '문경농원', 24, 16000, '식품');
+INSERT INTO TITEM (ITEM,COMPANY,NUM,PRICE,CATEGORY) VALUES ('대추', '보은농원', 19, 15000, '식품');
+INSERT INTO TITEM (ITEM,COMPANY,NUM,PRICE,CATEGORY) VALUES ('전자담배', 'TNG', 4, 70000, '성인');
+INSERT INTO TITEM (ITEM,COMPANY,NUM,PRICE,CATEGORY) VALUES ('마우스', '논리텍', 3, 90000, '가전');
 
 -- 주문 테이블
 MSSQL :
-CREATE TABLE tOrder
+CREATE TABLE TORDER
 (
-  orderID INT IDENTITY PRIMARY KEY,		-- 주문 번호
-  member VARCHAR(20) NOT NULL,   		-- 주문자
-  item VARCHAR(20) NOT NULL,			-- 상품
-  orderDate DATE DEFAULT GETDATE() NOT NULL,	-- 주문 날자
-  num INT NOT NULL,				-- 개수
-  status INT DEFAULT 1 NOT NULL,			-- 1:주문, 2:배송중, 3:배송완료, 4:반품
-  remark VARCHAR(1000) NULL			-- 메모 사항
+  ORDERID INT IDENTITY PRIMARY KEY,		-- 주문 번호
+  MEMBER VARCHAR(20) NOT NULL,   		-- 주문자
+  ITEM VARCHAR(20) NOT NULL,			-- 상품
+  ORDERDATE DATE DEFAULT GETDATE() NOT NULL,	-- 주문 날자
+  NUM INT NOT NULL,				-- 개수
+  STATUS INT DEFAULT 1 NOT NULL,			-- 1:주문, 2:배송중, 3:배송완료, 4:반품
+  REMARK VARCHAR(1000) NULL			-- 메모 사항
 );
 
 오라클 :
-CREATE TABLE tOrder
+CREATE TABLE TORDER
 (
-  orderID INT GENERATED AS IDENTITY PRIMARY KEY,	-- 주문 번호
-  member VARCHAR(20) NOT NULL,   		-- 주문자
-  item VARCHAR(20) NOT NULL,			-- 상품
-  orderDate DATE DEFAULT SYSDATE NOT NULL,	-- 주문 날자
-  num INT NOT NULL,				-- 개수
-  status INT DEFAULT 1 NOT NULL,			-- 1:주문, 2:배송중, 3:배송완료, 4:반품
-  remark VARCHAR2(1000) NULL			-- 메모 사항
+  ORDERID INT GENERATED AS IDENTITY PRIMARY KEY,	-- 주문 번호
+  MEMBER VARCHAR(20) NOT NULL,   		-- 주문자
+  ITEM VARCHAR(20) NOT NULL,			-- 상품
+  ORDERDATE DATE DEFAULT SYSDATE NOT NULL,	-- 주문 날자
+  NUM INT NOT NULL,				-- 개수
+  STATUS INT DEFAULT 1 NOT NULL,			-- 1:주문, 2:배송중, 3:배송완료, 4:반품
+  REMARK VARCHAR2(1000) NULL			-- 메모 사항
 );
 
 마리아 :
-CREATE TABLE tOrder
+CREATE TABLE TORDER
 (
-  orderID INT AUTO_INCREMENT PRIMARY KEY,	-- 주문 번호
-  member VARCHAR(20) NOT NULL,   		-- 주문자
-  item VARCHAR(20) NOT NULL,			-- 상품
-  orderDate DATE DEFAULT CURDATE() NOT NULL,	-- 주문 날자
-  num INT NOT NULL,				-- 개수
-  status INT DEFAULT 1 NOT NULL,			-- 1:주문, 2:배송중, 3:배송완료, 4:반품
-  remark VARCHAR(1000) NULL			-- 메모 사항
+  ORDERID INT AUTO_INCREMENT PRIMARY KEY,	-- 주문 번호
+  MEMBER VARCHAR(20) NOT NULL,   		-- 주문자
+  ITEM VARCHAR(20) NOT NULL,			-- 상품
+  ORDERDATE DATE DEFAULT CURDATE() NOT NULL,	-- 주문 날자
+  NUM INT NOT NULL,				-- 개수
+  STATUS INT DEFAULT 1 NOT NULL,			-- 1:주문, 2:배송중, 3:배송완료, 4:반품
+  REMARK VARCHAR(1000) NULL			-- 메모 사항
 );
 
 -- 주문 데이터
-INSERT INTO tOrder (member,item,orderDate,num,status) VALUES ('춘향','청바지','2019-12-3',3,2);
-INSERT INTO tOrder (member,item,orderDate,num,status) VALUES ('향단','대추','2019-12-4',10,1);
-INSERT INTO tOrder (member,item,orderDate,num,status) VALUES ('방자','전자담배','2019-12-2',4,1);
-INSERT INTO tOrder (member,item,orderDate,num,status) VALUES ('향단','사과','2019-12-5',5,2);
-INSERT INTO tOrder (member,item,orderDate,num,status) VALUES ('흥부','노트북','2019-12-5',2,1);
-INSERT INTO tOrder (member,item,orderDate,num,status) VALUES ('방자','핸드폰','2019-11-1',1,3);
+INSERT INTO TORDER (MEMBER,ITEM,ORDERDATE,NUM,STATUS) VALUES ('춘향','청바지','2019-12-3',3,2);
+INSERT INTO TORDER (MEMBER,ITEM,ORDERDATE,NUM,STATUS) VALUES ('향단','대추','2019-12-4',10,1);
+INSERT INTO TORDER (MEMBER,ITEM,ORDERDATE,NUM,STATUS) VALUES ('방자','전자담배','2019-12-2',4,1);
+INSERT INTO TORDER (MEMBER,ITEM,ORDERDATE,NUM,STATUS) VALUES ('향단','사과','2019-12-5',5,2);
+INSERT INTO TORDER (MEMBER,ITEM,ORDERDATE,NUM,STATUS) VALUES ('흥부','노트북','2019-12-5',2,1);
+INSERT INTO TORDER (MEMBER,ITEM,ORDERDATE,NUM,STATUS) VALUES ('방자','핸드폰','2019-11-1',1,3);
 
-member VARCHAR(20) NOT NULL REFERENCES tMember(member),   	-- 주문자
-item VARCHAR(20) NOT NULL REFERENCES tItem(item),			-- 상품
+MEMBER VARCHAR(20) NOT NULL REFERENCES TMEMBER(MEMBER),   	-- 주문자
+ITEM VARCHAR(20) NOT NULL REFERENCES TITEM(ITEM),			-- 상품
 
-DROP TABLE tOrder, tItem, tCategory, tMember;
+DROP TABLE TORDER, TITEM, TCATEGORY, TMEMBER;
 
 -------------------------------------------------
 -- 9장
 
-SELECT MAX(popu), name FROM tCity;
+SELECT MAX(POPU), NAME FROM TCITY;
 
-SELECT name FROM tCity WHERE popu = MAX(popu);
+SELECT NAME FROM TCITY WHERE POPU = MAX(POPU);
 
-SELECT MAX(popu) FROM tCity;
+SELECT MAX(POPU) FROM TCITY;
 
-SELECT name FROM tCity WHERE popu = 974;
+SELECT NAME FROM TCITY WHERE POPU = 974;
 
-SELECT name FROM tCity WHERE popu = (SELECT MAX(popu) FROM tCity);
+SELECT NAME FROM TCITY WHERE POPU = (SELECT MAX(POPU) FROM TCITY);
 
-SELECT MAX(num) FROM tItem;
+SELECT MAX(NUM) FROM TITEM;
 
-SELECT item FROM tItem WHERE num = 80;
+SELECT ITEM FROM TITEM WHERE NUM = 80;
 
-SELECT item FROM tItem WHERE num = (SELECT MAX(num) FROM tItem);
+SELECT ITEM FROM TITEM WHERE NUM = (SELECT MAX(NUM) FROM TITEM);
 
-SELECT category FROM tItem WHERE item= '청바지';
+SELECT CATEGORY FROM TITEM WHERE ITEM= '청바지';
 
-SELECT delivery FROM tCategory WHERE category = '패션';
+SELECT DELIVERY FROM TCATEGORY WHERE CATEGORY = '패션';
 
-SELECT delivery FROM tCategory WHERE category = (SELECT category FROM tItem 
-WHERE item = '청바지');
+SELECT DELIVERY FROM TCATEGORY WHERE CATEGORY = (SELECT CATEGORY FROM TITEM 
+WHERE ITEM = '청바지');
 
-SELECT item FROM tItem WHERE price = 70000;
+SELECT ITEM FROM TITEM WHERE PRICE = 70000;
 
-SELECT member FROM tOrder WHERE item = 
-(SELECT item FROM tItem WHERE price = 70000);
+SELECT MEMBER FROM TORDER WHERE ITEM = 
+(SELECT ITEM FROM TITEM WHERE PRICE = 70000);
 
-SELECT age FROM tMember WHERE member = 
-(SELECT member FROM tOrder WHERE item = 
-(SELECT item FROM tItem WHERE price = 70000));
+SELECT AGE FROM TMEMBER WHERE MEMBER = 
+(SELECT MEMBER FROM TORDER WHERE ITEM = 
+(SELECT ITEM FROM TITEM WHERE PRICE = 70000));
 
-SELECT price FROM tItem WHERE item = 
-(SELECT item FROM tOrder WHERE member = '향단');
+SELECT PRICE FROM TITEM WHERE ITEM = 
+(SELECT ITEM FROM TORDER WHERE MEMBER = '향단');
 
-SELECT price FROM tItem WHERE item = 
-(SELECT item FROM tOrder WHERE member = '향단' 
-ORDER BY item OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY);
+SELECT PRICE FROM TITEM WHERE ITEM = 
+(SELECT ITEM FROM TORDER WHERE MEMBER = '향단' 
+ORDER BY ITEM OFFSET 0 ROWS FETCH NEXT 1 ROWS ONLY);
 
-SELECT item, price FROM tItem WHERE item IN 
-(SELECT item FROM tOrder WHERE member = '향단');
+SELECT ITEM, PRICE FROM TITEM WHERE ITEM IN 
+(SELECT ITEM FROM TORDER WHERE MEMBER = '향단');
 
-SELECT item, price FROM tItem WHERE item IN ('대추', '사과');
+SELECT ITEM, PRICE FROM TITEM WHERE ITEM IN ('대추', '사과');
 
-SELECT price FROM tItem WHERE item = (SELECT item FROM tOrder WHERE member = '이도령');
+SELECT PRICE FROM TITEM WHERE ITEM = (SELECT ITEM FROM TORDER WHERE MEMBER = '이도령');
 
-SELECT depart, gender FROM tStaff WHERE name = '윤봉길';
+SELECT DEPART, GENDER FROM TSTAFF WHERE NAME = '윤봉길';
 
-SELECT * FROM tStaff WHERE depart = '영업부' AND gender = '남';
+SELECT * FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '남';
 
-SELECT * FROM tStaff WHERE depart = 
-(SELECT depart FROM tStaff WHERE name = '안중근')
-AND gender = (SELECT gender FROM tStaff WHERE name = '안중근');
+SELECT * FROM TSTAFF WHERE DEPART = 
+(SELECT DEPART FROM TSTAFF WHERE NAME = '안중근')
+AND GENDER = (SELECT GENDER FROM TSTAFF WHERE NAME = '안중근');
 
-SELECT * FROM tStaff WHERE (depart, gender) = 
-(SELECT depart, gender FROM tStaff WHERE name = '안중근');
+SELECT * FROM TSTAFF WHERE (DEPART, GENDER) = 
+(SELECT DEPART, GENDER FROM TSTAFF WHERE NAME = '안중근');
 
-SELECT * FROM tStaff WHERE (depart, salary) IN 
-(SELECT depart, MAX(salary) FROM tStaff GROUP BY depart);
+SELECT * FROM TSTAFF WHERE (DEPART, SALARY) IN 
+(SELECT DEPART, MAX(SALARY) FROM TSTAFF GROUP BY DEPART);
 
-SELECT * FROM tStaff S WHERE salary = 
-(SELECT MAX(salary) FROM tStaff WHERE depart = S.depart);
+SELECT * FROM TSTAFF S WHERE SALARY = 
+(SELECT MAX(SALARY) FROM TSTAFF WHERE DEPART = S.DEPART);
 
-SELECT T.* FROM tStaff T
-INNER JOIN (SELECT depart, MAX(salary) ms FROM tStaff GROUP BY depart) M
-ON T.depart = M.depart AND T.salary = M.ms;
+SELECT T.* FROM TSTAFF T
+INNER JOIN (SELECT DEPART, MAX(SALARY) MS FROM TSTAFF GROUP BY DEPART) M
+ON T.DEPART = M.DEPART AND T.SALARY = M.MS;
 
-UPDATE tCity SET (area, popu) = (SELECT area, popu FROM tCity WHERE name='부산') 
-WHERE name = '서울';
+UPDATE TCITY SET (AREA, POPU) = (SELECT AREA, POPU FROM TCITY WHERE NAME='부산') 
+WHERE NAME = '서울';
 
-SELECT name FROM tStaff WHERE salary > ANY 
-(SELECT salary FROM tStaff WHERE depart = '영업부');
-SELECT name FROM tStaff WHERE salary > ALL 
-(SELECT salary FROM tStaff WHERE depart = '영업부');
+SELECT NAME FROM TSTAFF WHERE SALARY > ANY 
+(SELECT SALARY FROM TSTAFF WHERE DEPART = '영업부');
+SELECT NAME FROM TSTAFF WHERE SALARY > ALL 
+(SELECT SALARY FROM TSTAFF WHERE DEPART = '영업부');
 
-SELECT name FROM tStaff WHERE salary > 
-(SELECT MIN(salary) FROM tStaff WHERE depart = '영업부');
-SELECT name FROM tStaff WHERE salary > 
-(SELECT MAX(salary) FROM tStaff WHERE depart = '영업부');
+SELECT NAME FROM TSTAFF WHERE SALARY > 
+(SELECT MIN(SALARY) FROM TSTAFF WHERE DEPART = '영업부');
+SELECT NAME FROM TSTAFF WHERE SALARY > 
+(SELECT MAX(SALARY) FROM TSTAFF WHERE DEPART = '영업부');
 
-SELECT item, price FROM tItem WHERE item = ANY 
-(SELECT item FROM tOrder WHERE member = '향단');
+SELECT ITEM, PRICE FROM TITEM WHERE ITEM = ANY 
+(SELECT ITEM FROM TORDER WHERE MEMBER = '향단');
 
-SELECT member, item, (SELECT price FROM tItem WHERE tItem.item = tOrder.item) price 
-FROM tOrder;
+SELECT MEMBER, ITEM, (SELECT PRICE FROM TITEM WHERE TITEM.ITEM = TORDER.ITEM) PRICE 
+FROM TORDER;
 
-SELECT O.member, O.item, (SELECT price FROM tItem I WHERE I.item = O.item) price 
-FROM tOrder O;
+SELECT O.MEMBER, O.ITEM, (SELECT PRICE FROM TITEM I WHERE I.ITEM = O.ITEM) PRICE 
+FROM TORDER O;
 
-SELECT O.member, O.item, I.price FROM tOrder O JOIN tItem I ON I.item = O.item; 
+SELECT O.MEMBER, O.ITEM, I.PRICE FROM TORDER O JOIN TITEM I ON I.ITEM = O.ITEM; 
 
-EXISTS (SELECT * FROM tCity WHERE area > 1000)
+EXISTS (SELECT * FROM TCITY WHERE AREA > 1000)
 
-SELECT name FROM tCity WHERE EXISTS (SELECT * FROM tCity WHERE area > 1000);
+SELECT NAME FROM TCITY WHERE EXISTS (SELECT * FROM TCITY WHERE AREA > 1000);
 
-SELECT name FROM tCity C WHERE EXISTS (SELECT * FROM tCity WHERE C.area > 1000);
+SELECT NAME FROM TCITY C WHERE EXISTS (SELECT * FROM TCITY WHERE C.AREA > 1000);
 
-SELECT * FROM tMember M WHERE EXISTS 
-(SELECT * FROM tOrder O WHERE O.member = M.member);
+SELECT * FROM TMEMBER M WHERE EXISTS 
+(SELECT * FROM TORDER O WHERE O.MEMBER = M.MEMBER);
 
-SELECT * FROM tMember M WHERE NOT EXISTS 
-(SELECT * FROM tOrder O WHERE O.member = M.member);
+SELECT * FROM TMEMBER M WHERE NOT EXISTS 
+(SELECT * FROM TORDER O WHERE O.MEMBER = M.MEMBER);
 
-SELECT * FROM tMember WHERE member IN (SELECT DISTINCT member FROM tOrder);
+SELECT * FROM TMEMBER WHERE MEMBER IN (SELECT DISTINCT MEMBER FROM TORDER);
 
-....EXISTS (SELECT item FROM tOrder O WHERE O.member = M.member);
-....EXISTS (SELECT member FROM tOrder O WHERE O.member = M.member);
-....EXISTS (SELECT '얼씨구' FROM tOrder O WHERE O.member = M.member);
+....EXISTS (SELECT ITEM FROM TORDER O WHERE O.MEMBER = M.MEMBER);
+....EXISTS (SELECT MEMBER FROM TORDER O WHERE O.MEMBER = M.MEMBER);
+....EXISTS (SELECT '얼씨구' FROM TORDER O WHERE O.MEMBER = M.MEMBER);
 
-SELECT * FROM (SELECT * FROM tCity) A;
+SELECT * FROM (SELECT * FROM TCITY) A;
 
-SELECT * FROM (SELECT name, popu, area FROM tCity) A;
-SELECT * FROM (SELECT * FROM tCity WHERE metro = 'y') B;
+SELECT * FROM (SELECT NAME, POPU, AREA FROM TCITY) A;
+SELECT * FROM (SELECT * FROM TCITY WHERE METRO = 'Y') B;
 
-SELECT member, addr FROM (SELECT * FROM tMember WHERE age < 19) A 
-WHERE A.money >= 100000;
+SELECT MEMBER, ADDR FROM (SELECT * FROM TMEMBER WHERE AGE < 19) A 
+WHERE A.MONEY >= 100000;
 
-SELECT member, addr FROM tMember WHERE age < 19 AND money >= 100000;
+SELECT MEMBER, ADDR FROM TMEMBER WHERE AGE < 19 AND MONEY >= 100000;
 
-SELECT * FROM (SELECT * FROM tStaff WHERE grade = '과장' OR grade = '부장') A 
-WHERE A.score >= 70;
+SELECT * FROM (SELECT * FROM TSTAFF WHERE GRADE = '과장' OR GRADE = '부장') A 
+WHERE A.SCORE >= 70;
 
-SELECT * FROM tStaff WHERE grade = '과장' OR grade = '부장' AND score >= 70;
+SELECT * FROM TSTAFF WHERE GRADE = '과장' OR GRADE = '부장' AND SCORE >= 70;
 
-SELECT member, addr FROM (SELECT * FROM tMember WHERE age < 19) A 
-WHERE A.money >= 100000;
+SELECT MEMBER, ADDR FROM (SELECT * FROM TMEMBER WHERE AGE < 19) A 
+WHERE A.MONEY >= 100000;
 
-SELECT * FROM (SELECT * FROM tCity WHERE metro = 'y') A;
+SELECT * FROM (SELECT * FROM TCITY WHERE METRO = 'Y') A;
 
-SELECT * FROM (SELECT * FROM tCity WHERE metro = 'y') AS A;
+SELECT * FROM (SELECT * FROM TCITY WHERE METRO = 'Y') AS A;
 
-SELECT name, popu * 10000 AS ingu FROM tCity;
+SELECT NAME, POPU * 10000 AS INGU FROM TCITY;
 
-SELECT name, popu * 10000 AS ingu FROM tCity WHERE ingu > 1000000;
+SELECT NAME, POPU * 10000 AS INGU FROM TCITY WHERE INGU > 1000000;
 
 SELECT * FROM (
-	SELECT name, popu * 10000 AS ingu FROM tCity
+	SELECT NAME, POPU * 10000 AS INGU FROM TCITY
 ) A
-WHERE A.ingu > 1000000;
+WHERE A.INGU > 1000000;
 
 SELECT * FROM (
-	SELECT name, popu * 10000 AS ingu FROM tCity
+	SELECT NAME, POPU * 10000 AS INGU FROM TCITY
 )
-WHERE ingu > 1000000;
+WHERE INGU > 1000000;
 
-SELECT name, (popu * 10000 / area) AS dens FROM tCity;
+SELECT NAME, (POPU * 10000 / AREA) AS DENS FROM TCITY;
 
-SELECT name, (popu * 10000 / area) AS dens 
+SELECT NAME, (POPU * 10000 / AREA) AS DENS 
 	,CASE 
-		WHEN (popu * 10000 / area) > 1000 THEN '고밀도'
-		WHEN (popu * 10000 / area) > 100 THEN '중밀도'
+		WHEN (POPU * 10000 / AREA) > 1000 THEN '고밀도'
+		WHEN (POPU * 10000 / AREA) > 100 THEN '중밀도'
 		ELSE '저밀도'
-	END densgrade
-FROM tCity;
+	END DENSGRADE
+FROM TCITY;
 
-SELECT name, (popu * 10000 / area) AS dens 
+SELECT NAME, (POPU * 10000 / AREA) AS DENS 
 	,CASE 
-		WHEN dens > 1000 THEN '고밀도'
-		WHEN dens > 100 THEN '중밀도'
+		WHEN DENS > 1000 THEN '고밀도'
+		WHEN DENS > 100 THEN '중밀도'
 		ELSE '저밀도'
-	END densgrade
-FROM tCity;
+	END DENSGRADE
+FROM TCITY;
 
-SELECT name, dens 
+SELECT NAME, DENS 
 	,CASE 
-		WHEN dens > 1000 THEN '고밀도'
-		WHEN dens > 100 THEN '중밀도'
+		WHEN DENS > 1000 THEN '고밀도'
+		WHEN DENS > 100 THEN '중밀도'
 		ELSE '저밀도'
-	END densgrade
+	END DENSGRADE
 FROM
 (
-	SELECT name, (popu * 10000 / area) AS dens FROM tCity
+	SELECT NAME, (POPU * 10000 / AREA) AS DENS FROM TCITY
 ) CD;
 
-SELECT name, dens 
+SELECT NAME, DENS 
 	,CASE 
-		WHEN dens > 1000 THEN '고밀도'
-		WHEN dens > 100 THEN '중밀도'
+		WHEN DENS > 1000 THEN '고밀도'
+		WHEN DENS > 100 THEN '중밀도'
 		ELSE '저밀도'
-	END densgrade
+	END DENSGRADE
 	,
     CASE
     WHEN
         CASE 
-            WHEN dens > 1000 THEN '고밀도'
-            WHEN dens > 100 THEN '중밀도'
+            WHEN DENS > 1000 THEN '고밀도'
+            WHEN DENS > 100 THEN '중밀도'
             ELSE '저밀도'
         END = '고밀도' THEN '8차로'
     WHEN
         CASE 
-            WHEN dens > 1000 THEN '고밀도'
-            WHEN dens > 100 THEN '중밀도'
+            WHEN DENS > 1000 THEN '고밀도'
+            WHEN DENS > 100 THEN '중밀도'
             ELSE '저밀도'
         END = '중밀도' THEN '4차로'
     ELSE '2차로' 
-    END roadplan
+    END ROADPLAN
 FROM
 (
-	SELECT name, (popu * 10000 / area) AS dens FROM tCity
+	SELECT NAME, (POPU * 10000 / AREA) AS DENS FROM TCITY
 ) CD;
 
-SELECT name, dens, densgrade,
+SELECT NAME, DENS, DENSGRADE,
 CASE
-    WHEN densgrade = '고밀도' THEN '8차로'
-    WHEN densgrade = '중밀도' THEN '4차로'
+    WHEN DENSGRADE = '고밀도' THEN '8차로'
+    WHEN DENSGRADE = '중밀도' THEN '4차로'
     ELSE '2차로' 
-END roadplan
+END ROADPLAN
 FROM
 (
-    SELECT name, dens 
+    SELECT NAME, DENS 
         ,CASE 
-            WHEN dens > 1000 THEN '고밀도'
-            WHEN dens > 100 THEN '중밀도'
+            WHEN DENS > 1000 THEN '고밀도'
+            WHEN DENS > 100 THEN '중밀도'
             ELSE '저밀도'
-        END densgrade
+        END DENSGRADE
     FROM
     (
-        SELECT name, (popu * 10000 / area) AS dens FROM tCity
+        SELECT NAME, (POPU * 10000 / AREA) AS DENS FROM TCITY
     ) CD
 ) CR;
 
-SELECT * FROM tItem WHERE category = '식품' 
+SELECT * FROM TITEM WHERE CATEGORY = '식품' 
 UNION 
-SELECT * FROM tItem WHERE category = '가전';
+SELECT * FROM TITEM WHERE CATEGORY = '가전';
 
-SELECT DISTINCT depart FROM tStaff WHERE salary > 400 
+SELECT DISTINCT DEPART FROM TSTAFF WHERE SALARY > 400 
 UNION ALL
-SELECT DISTINCT depart FROM tStaff WHERE score > 80;
+SELECT DISTINCT DEPART FROM TSTAFF WHERE SCORE > 80;
 
-SELECT * FROM tItem WHERE category = '식품' OR category = '가전';
+SELECT * FROM TITEM WHERE CATEGORY = '식품' OR CATEGORY = '가전';
 
-SELECT * FROM tMember UNION SELECT * FROM tItem;
+SELECT * FROM TMEMBER UNION SELECT * FROM TITEM;
 
-SELECT member FROM tMember 
+SELECT MEMBER FROM TMEMBER 
 UNION
-SELECT name FROM tStaff 
+SELECT NAME FROM TSTAFF 
 UNION
-SELECT name FROM tEmployee;
+SELECT NAME FROM TEMPLOYEE;
 
 SELECT * FROM 부산대리점 UNION SELECT * FROM 서울대리점;
 
-SELECT name FROM tStaff WHERE depart = '영업부'
+SELECT NAME FROM TSTAFF WHERE DEPART = '영업부'
 INTERSECT 
-SELECT name FROM tStaff WHERE gender = '여';
+SELECT NAME FROM TSTAFF WHERE GENDER = '여';
 
-SELECT name FROM tStaff
+SELECT NAME FROM TSTAFF
 INTERSECT
-SELECT member FROM tMember;
+SELECT MEMBER FROM TMEMBER;
 
-SELECT name FROM tStaff WHERE depart = '영업부'
+SELECT NAME FROM TSTAFF WHERE DEPART = '영업부'
 MINUS 
-SELECT name FROM tStaff WHERE gender = '여';
+SELECT NAME FROM TSTAFF WHERE GENDER = '여';
 
-SELECT name FROM tStaff WHERE gender = '여'
+SELECT NAME FROM TSTAFF WHERE GENDER = '여'
 MINUS
-SELECT name FROM tStaff WHERE depart = '영업부';
+SELECT NAME FROM TSTAFF WHERE DEPART = '영업부';
 
-오라클, 마리아 : CREATE TABLE tStaff2 AS SELECT * FROM tStaff;
-MSSQL : SELECT * INTO tStaff2 FROM tStaff;
+오라클, 마리아 : CREATE TABLE TSTAFF2 AS SELECT * FROM TSTAFF;
+MSSQL : SELECT * INTO TSTAFF2 FROM TSTAFF;
 
-UPDATE tStaff2 SET salary = 500 WHERE name = '안창호';
-UPDATE tStaff2 SET depart = '인사과' WHERE name = '성삼문';
-DELETE FROM tStaff2 WHERE name = '홍길동';
-INSERT INTO tStaff2 VALUES ('어우동', '총무부', '여', '20220401', '신입', 450, 0);
+UPDATE TSTAFF2 SET SALARY = 500 WHERE NAME = '안창호';
+UPDATE TSTAFF2 SET DEPART = '인사과' WHERE NAME = '성삼문';
+DELETE FROM TSTAFF2 WHERE NAME = '홍길동';
+INSERT INTO TSTAFF2 VALUES ('어우동', '총무부', '여', '20220401', '신입', 450, 0);
 
-SELECT * FROM tStaff2
+SELECT * FROM TSTAFF2
 MINUS 
-SELECT * FROM tStaff;
+SELECT * FROM TSTAFF;
 
-오라클, 마리아 : CREATE TABLE tCityNew AS SELECT * FROM tCity;
-MSSQL : SELECT * INTO tCityNew FROM tCity;
+오라클, 마리아 : CREATE TABLE TCITYNEW AS SELECT * FROM TCITY;
+MSSQL : SELECT * INTO TCITYNEW FROM TCITY;
 
-UPDATE tCityNew SET popu = 1000 WHERE name = '서울';
-UPDATE tCityNew SET area = 900 WHERE name = '부산';
-DELETE FROM tCityNew WHERE name = '춘천';
-INSERT INTO tCityNew VALUES ('이천',461,21,'n','경기');
+UPDATE TCITYNEW SET POPU = 1000 WHERE NAME = '서울';
+UPDATE TCITYNEW SET AREA = 900 WHERE NAME = '부산';
+DELETE FROM TCITYNEW WHERE NAME = '춘천';
+INSERT INTO TCITYNEW VALUES ('이천',461,21,'N','경기');
 
-MERGE INTO tCity T USING tCityNew S ON (S.name = T.name)
+MERGE INTO TCITY T USING TCITYNEW S ON (S.NAME = T.NAME)
 WHEN MATCHED THEN
-	UPDATE SET T.area = S.area, T.popu = S.popu
+	UPDATE SET T.AREA = S.AREA, T.POPU = S.POPU
 WHEN NOT MATCHED THEN
-	INSERT VALUES (S.name, S.area, S.popu, S.metro, S.region);
+	INSERT VALUES (S.NAME, S.AREA, S.POPU, S.METRO, S.REGION);
 
-MERGE INTO tCity T USING (SELECT * FROM tCityNew WHERE region = '경기') S ON (S.name = T.name)
+MERGE INTO TCITY T USING (SELECT * FROM TCITYNEW WHERE REGION = '경기') S ON (S.NAME = T.NAME)
 ....
 
-MERGE INTO tCity T USING tCityNew S ON (S.name = T.name AND S.region = '경기')
+MERGE INTO TCITY T USING TCITYNEW S ON (S.NAME = T.NAME AND S.REGION = '경기')
 ....
 
-CREATE TABLE tCityPopu
+CREATE TABLE TCITYPOPU
 (
-	name CHAR(10) PRIMARY KEY,
-	popu INT NULL
+	NAME CHAR(10) PRIMARY KEY,
+	POPU INT NULL
 );
 
-INSERT INTO tCityPopu VALUES ('서울',1000);
-INSERT INTO tCityPopu VALUES ('부산',500);
-INSERT INTO tCityPopu VALUES ('춘천',100);
+INSERT INTO TCITYPOPU VALUES ('서울',1000);
+INSERT INTO TCITYPOPU VALUES ('부산',500);
+INSERT INTO TCITYPOPU VALUES ('춘천',100);
 
-MERGE INTO tCity C USING tCityPopu P ON (C.name = P.name)
-WHEN MATCHED THEN UPDATE SET C.popu = P.popu;
+MERGE INTO TCITY C USING TCITYPOPU P ON (C.NAME = P.NAME)
+WHEN MATCHED THEN UPDATE SET C.POPU = P.POPU;
 
-UPDATE tCity SET popu = tCityPopu.popu FROM tCityPopu WHERE tCity.name = tCityPopu.name;
+UPDATE TCITY SET POPU = TCITYPOPU.POPU FROM TCITYPOPU WHERE TCITY.NAME = TCITYPOPU.NAME;
 
-UPDATE tCity SET popu = S.popu FROM tCityPopu AS S WHERE tCity.name = S.name;
+UPDATE TCITY SET POPU = S.POPU FROM TCITYPOPU AS S WHERE TCITY.NAME = S.NAME;
 
-UPDATE tCity AS T SET T.popu = S.popu FROM tCityPopu AS S WHERE T.name = S.name;
+UPDATE TCITY AS T SET T.POPU = S.POPU FROM TCITYPOPU AS S WHERE T.NAME = S.NAME;
 
-UPDATE tCity SET popu = (SELECT popu FROM tCityPopu P WHERE P.name = tCity.name)
-WHERE name IN (SELECT name FROM tCityPopu)
+UPDATE TCITY SET POPU = (SELECT POPU FROM TCITYPOPU P WHERE P.NAME = TCITY.NAME)
+WHERE NAME IN (SELECT NAME FROM TCITYPOPU)
 
 -------------------------------------------------
 -- 10장
 
-CREATE TABLE tCar
+CREATE TABLE TCAR
 (
-	car VARCHAR(30) NOT NULL,		-- 이름
-	capacity INT NOT NULL,			-- 배기량
-	price INT NOT NULL,			-- 가격
-	maker VARCHAR(30) NOT NULL		-- 제조사
+	CAR VARCHAR(30) NOT NULL,		-- 이름
+	CAPACITY INT NOT NULL,			-- 배기량
+	PRICE INT NOT NULL,			-- 가격
+	MAKER VARCHAR(30) NOT NULL		-- 제조사
 );
 
-INSERT INTO tCar (car, capacity, price, maker) VALUES ('소나타', 2000, 2500, '현대');
-INSERT INTO tCar (car, capacity, price, maker) VALUES ('티볼리', 1600, 2300, '쌍용');
-INSERT INTO tCar (car, capacity, price, maker) VALUES ('A8', 3000, 4800, 'Audi');
-INSERT INTO tCar (car, capacity, price, maker) VALUES ('SM5', 2000, 2600, '삼성');
+INSERT INTO TCAR (CAR, CAPACITY, PRICE, MAKER) VALUES ('소나타', 2000, 2500, '현대');
+INSERT INTO TCAR (CAR, CAPACITY, PRICE, MAKER) VALUES ('티볼리', 1600, 2300, '쌍용');
+INSERT INTO TCAR (CAR, CAPACITY, PRICE, MAKER) VALUES ('A8', 3000, 4800, 'AUDI');
+INSERT INTO TCAR (CAR, CAPACITY, PRICE, MAKER) VALUES ('SM5', 2000, 2600, '삼성');
 
-CREATE TABLE tMaker
+CREATE TABLE TMAKER
 (
-	maker VARCHAR(30) NOT NULL,		-- 회사
-	factory CHAR(10) NOT NULL,	    	-- 공장
-	domestic CHAR(1) NOT NULL		-- 국산 여부. Y/N
+	MAKER VARCHAR(30) NOT NULL,		-- 회사
+	FACTORY CHAR(10) NOT NULL,	    	-- 공장
+	DOMESTIC CHAR(1) NOT NULL		-- 국산 여부. Y/N
 );
 
-INSERT INTO tMaker (maker, factory, domestic) VALUES ('현대', '부산', 'y');
-INSERT INTO tMaker (maker, factory, domestic) VALUES ('쌍용', '청주', 'y');
-INSERT INTO tMaker (maker, factory, domestic) VALUES ('Audi', '독일', 'n');
-INSERT INTO tMaker (maker, factory, domestic) VALUES ('기아', '서울', 'y');
+INSERT INTO TMAKER (MAKER, FACTORY, DOMESTIC) VALUES ('현대', '부산', 'Y');
+INSERT INTO TMAKER (MAKER, FACTORY, DOMESTIC) VALUES ('쌍용', '청주', 'Y');
+INSERT INTO TMAKER (MAKER, FACTORY, DOMESTIC) VALUES ('AUDI', '독일', 'N');
+INSERT INTO TMAKER (MAKER, FACTORY, DOMESTIC) VALUES ('기아', '서울', 'Y');
 
-SELECT * FROM tCar, tMaker;
+SELECT * FROM TCAR, TMAKER;
 
-SELECT * FROM tCar CROSS JOIN tMaker;
+SELECT * FROM TCAR CROSS JOIN TMAKER;
 
-SELECT * FROM tCar, tMaker WHERE tCar.maker = tMaker.maker;
+SELECT * FROM TCAR, TMAKER WHERE TCAR.MAKER = TMAKER.MAKER;
 
-SELECT tCar.car, tCar.price, tMaker.maker, tMaker.factory FROM tCar, tMaker 
-WHERE tCar.maker = tMaker.maker;
+SELECT TCAR.CAR, TCAR.PRICE, TMAKER.MAKER, TMAKER.FACTORY FROM TCAR, TMAKER 
+WHERE TCAR.MAKER = TMAKER.MAKER;
 
-SELECT tCar.*, tMaker.factory FROM tCar, tMaker WHERE tCar.maker = tMaker.maker;
+SELECT TCAR.*, TMAKER.FACTORY FROM TCAR, TMAKER WHERE TCAR.MAKER = TMAKER.MAKER;
 
-SELECT car, price, tMaker.maker, factory FROM tCar, tMaker WHERE tCar.maker = tMaker.maker;
+SELECT CAR, PRICE, TMAKER.MAKER, FACTORY FROM TCAR, TMAKER WHERE TCAR.MAKER = TMAKER.MAKER;
 
-SELECT car, price, maker, factory FROM tCar, tMaker WHERE tCar.maker = tMaker.maker;
+SELECT CAR, PRICE, MAKER, FACTORY FROM TCAR, TMAKER WHERE TCAR.MAKER = TMAKER.MAKER;
 
-SELECT C.car, C.price, M.maker, M.factory FROM tCar C, tMaker M WHERE C.maker = M.maker;
+SELECT C.CAR, C.PRICE, M.MAKER, M.FACTORY FROM TCAR C, TMAKER M WHERE C.MAKER = M.MAKER;
 
-SELECT A.car, A.price, B.maker, B.factory FROM tCar A, tMaker B WHERE A.maker = B.maker;
+SELECT A.CAR, A.PRICE, B.MAKER, B.FACTORY FROM TCAR A, TMAKER B WHERE A.MAKER = B.MAKER;
 
-SELECT C.car, C.price, M.maker, M.factory FROM tCar C INNER JOIN tMaker M 
-ON C.maker = M.maker;
+SELECT C.CAR, C.PRICE, M.MAKER, M.FACTORY FROM TCAR C INNER JOIN TMAKER M 
+ON C.MAKER = M.MAKER;
 
-SELECT C.car, C.price, M.maker, M.factory FROM tMaker M INNER JOIN tCar C 
-ON M.maker = C.maker;
+SELECT C.CAR, C.PRICE, M.MAKER, M.FACTORY FROM TMAKER M INNER JOIN TCAR C 
+ON M.MAKER = C.MAKER;
 
-SELECT C.car, C.price, maker, M.factory FROM tCar C INNER JOIN tMaker M USING(maker);
+SELECT C.CAR, C.PRICE, MAKER, M.FACTORY FROM TCAR C INNER JOIN TMAKER M USING(MAKER);
 
-SELECT C.car, C.price, M.maker, M.factory FROM tCar C LEFT OUTER JOIN tMaker M 
-ON C.maker = M.maker;
+SELECT C.CAR, C.PRICE, M.MAKER, M.FACTORY FROM TCAR C LEFT OUTER JOIN TMAKER M 
+ON C.MAKER = M.MAKER;
 
-SELECT C.car, C.price, M.maker, M.factory FROM tCar C RIGHT OUTER JOIN tMaker M 
-ON C.maker = M.maker;
+SELECT C.CAR, C.PRICE, M.MAKER, M.FACTORY FROM TCAR C RIGHT OUTER JOIN TMAKER M 
+ON C.MAKER = M.MAKER;
 
-SELECT C.car, C.price, M.maker, M.factory FROM tMaker M LEFT OUTER JOIN tCar C 
-ON C.maker = M.maker;
+SELECT C.CAR, C.PRICE, M.MAKER, M.FACTORY FROM TMAKER M LEFT OUTER JOIN TCAR C 
+ON C.MAKER = M.MAKER;
 
-SELECT C.car, C.price, M.maker, M.factory FROM tCar C FULL OUTER JOIN tMaker M 
-ON C.maker = M.maker;
+SELECT C.CAR, C.PRICE, M.MAKER, M.FACTORY FROM TCAR C FULL OUTER JOIN TMAKER M 
+ON C.MAKER = M.MAKER;
 
-SELECT * FROM tCar C 
-INNER JOIN tMaker M ON C.maker = M.maker 
-INNER JOIN tCity T ON M.factory = T.name;
+SELECT * FROM TCAR C 
+INNER JOIN TMAKER M ON C.MAKER = M.MAKER 
+INNER JOIN TCITY T ON M.FACTORY = T.NAME;
 
-SELECT C.car, M.factory, T.area FROM tCar C 
-INNER JOIN tMaker M ON C.maker = M.maker 
-INNER JOIN tCity T ON M.factory = T.name;
+SELECT C.CAR, M.FACTORY, T.AREA FROM TCAR C 
+INNER JOIN TMAKER M ON C.MAKER = M.MAKER 
+INNER JOIN TCITY T ON M.FACTORY = T.NAME;
 
-SELECT * FROM tCar C 
-LEFT OUTER JOIN tMaker M ON C.maker = M.maker 
-LEFT OUTER JOIN tCity T ON M.factory = T.name;
+SELECT * FROM TCAR C 
+LEFT OUTER JOIN TMAKER M ON C.MAKER = M.MAKER 
+LEFT OUTER JOIN TCITY T ON M.FACTORY = T.NAME;
 
-SELECT * FROM tMaker M 
-INNER JOIN tCity T ON M.factory = T.name 
-INNER JOIN tCar C ON M.maker = C.maker;
+SELECT * FROM TMAKER M 
+INNER JOIN TCITY T ON M.FACTORY = T.NAME 
+INNER JOIN TCAR C ON M.MAKER = C.MAKER;
 
-SELECT * FROM tMaker M 
-LEFT OUTER JOIN tCity T ON M.factory = T.name 
-LEFT OUTER JOIN tCar C ON M.maker = C.maker;
+SELECT * FROM TMAKER M 
+LEFT OUTER JOIN TCITY T ON M.FACTORY = T.NAME 
+LEFT OUTER JOIN TCAR C ON M.MAKER = C.MAKER;
 
-SELECT maker FROM tCar WHERE car = '티볼리';
-SELECT factory FROM tMaker WHERE maker = '쌍용';
+SELECT MAKER FROM TCAR WHERE CAR = '티볼리';
+SELECT FACTORY FROM TMAKER WHERE MAKER = '쌍용';
 
-SELECT factory FROM tMaker WHERE maker = 
-(SELECT maker FROM tCar WHERE car = '티볼리');
+SELECT FACTORY FROM TMAKER WHERE MAKER = 
+(SELECT MAKER FROM TCAR WHERE CAR = '티볼리');
 
-SELECT * FROM tCar C INNER JOIN tMaker M ON M.maker = C.maker;
+SELECT * FROM TCAR C INNER JOIN TMAKER M ON M.MAKER = C.MAKER;
 
-SELECT * FROM tCar C INNER JOIN tMaker M ON M.maker = C.maker AND C.car = '티볼리';
+SELECT * FROM TCAR C INNER JOIN TMAKER M ON M.MAKER = C.MAKER AND C.CAR = '티볼리';
 
-SELECT M.factory FROM tCar C INNER JOIN tMaker M 
-ON M.maker = C.maker AND C.car = '티볼리';
+SELECT M.FACTORY FROM TCAR C INNER JOIN TMAKER M 
+ON M.MAKER = C.MAKER AND C.CAR = '티볼리';
 
-SELECT M.factory, C.price FROM tCar C INNER JOIN tMaker M 
-ON M.maker = C.maker AND C.car = '티볼리';
+SELECT M.FACTORY, C.PRICE FROM TCAR C INNER JOIN TMAKER M 
+ON M.MAKER = C.MAKER AND C.CAR = '티볼리';
 
-SELECT factory, price FROM tMaker WHERE maker = 
-(SELECT maker FROM tCar WHERE car = '티볼리');
+SELECT FACTORY, PRICE FROM TMAKER WHERE MAKER = 
+(SELECT MAKER FROM TCAR WHERE CAR = '티볼리');
 
-SELECT factory, (SELECT price FROM tCar WHERE car = '티볼리') AS price 
-FROM tMaker WHERE maker = (SELECT maker FROM tCar WHERE car = '티볼리');
+SELECT FACTORY, (SELECT PRICE FROM TCAR WHERE CAR = '티볼리') AS PRICE 
+FROM TMAKER WHERE MAKER = (SELECT MAKER FROM TCAR WHERE CAR = '티볼리');
 
-SELECT C.*, M.factory, M.domestic FROM tCar C INNER JOIN tMaker M 
-ON M.maker = C.maker AND C.car = '티볼리';
+SELECT C.*, M.FACTORY, M.DOMESTIC FROM TCAR C INNER JOIN TMAKER M 
+ON M.MAKER = C.MAKER AND C.CAR = '티볼리';
 
-INSERT INTO tCar (car, capacity, price, maker) VALUES ('티볼리', 1800, 2600, '쌍용');
+INSERT INTO TCAR (CAR, CAPACITY, PRICE, MAKER) VALUES ('티볼리', 1800, 2600, '쌍용');
 
-SELECT C.*, M.factory, M.domestic FROM tCar C LEFT OUTER JOIN tMaker M 
-ON C.maker = M.maker;
+SELECT C.*, M.FACTORY, M.DOMESTIC FROM TCAR C LEFT OUTER JOIN TMAKER M 
+ON C.MAKER = M.MAKER;
 
-INSERT INTO tCar (car, capacity, price, maker) VALUES ('소나타', 2400, 2900, '현대');
-INSERT INTO tMaker (maker, factory, domestic) VALUES ('현대', '울산', 'y');
-INSERT INTO tMaker (maker, factory, domestic) VALUES ('현대', '마산', 'y');
+INSERT INTO TCAR (CAR, CAPACITY, PRICE, MAKER) VALUES ('소나타', 2400, 2900, '현대');
+INSERT INTO TMAKER (MAKER, FACTORY, DOMESTIC) VALUES ('현대', '울산', 'Y');
+INSERT INTO TMAKER (MAKER, FACTORY, DOMESTIC) VALUES ('현대', '마산', 'Y');
 
-SELECT * FROM tCar C INNER JOIN tMaker M ON C.maker = M.maker;
+SELECT * FROM TCAR C INNER JOIN TMAKER M ON C.MAKER = M.MAKER;
 
-SELECT * FROM tCar C INNER JOIN tMaker M ON C.maker = M.maker WHERE C.capacity = 2000;
+SELECT * FROM TCAR C INNER JOIN TMAKER M ON C.MAKER = M.MAKER WHERE C.CAPACITY = 2000;
 
-SELECT * FROM tCar C INNER JOIN tMaker M ON C.maker = M.maker AND C.capacity = 2000;
+SELECT * FROM TCAR C INNER JOIN TMAKER M ON C.MAKER = M.MAKER AND C.CAPACITY = 2000;
 
-SELECT * FROM tCar C LEFT OUTER JOIN tMaker M ON C.maker = M.maker 
-WHERE C.capacity = 2000;
+SELECT * FROM TCAR C LEFT OUTER JOIN TMAKER M ON C.MAKER = M.MAKER 
+WHERE C.CAPACITY = 2000;
 
-SELECT * FROM tCar C LEFT OUTER JOIN tMaker M 
-ON C.maker = M.maker AND C.capacity = 2000;
+SELECT * FROM TCAR C LEFT OUTER JOIN TMAKER M 
+ON C.MAKER = M.MAKER AND C.CAPACITY = 2000;
 
-SELECT * FROM tCar C LEFT OUTER JOIN tMaker M 
-ON C.maker = M.maker AND C.capacity = 2000 WHERE C.price > 2800 ORDER BY price DESC;
+SELECT * FROM TCAR C LEFT OUTER JOIN TMAKER M 
+ON C.MAKER = M.MAKER AND C.CAPACITY = 2000 WHERE C.PRICE > 2800 ORDER BY PRICE DESC;
 
-SELECT * FROM tCar WHERE capacity > 2000 C LEFT JOIN tMaker M ON C.maker = M.maker;
+SELECT * FROM TCAR WHERE CAPACITY > 2000 C LEFT JOIN TMAKER M ON C.MAKER = M.MAKER;
 
-SELECT * FROM (SELECT * FROM tCar WHERE capacity > 2000) C 
-LEFT JOIN tMaker M ON C.maker = M.maker;
+SELECT * FROM (SELECT * FROM TCAR WHERE CAPACITY > 2000) C 
+LEFT JOIN TMAKER M ON C.MAKER = M.MAKER;
 
-SELECT * FROM tCar C LEFT JOIN tMaker M ON C.maker = M.maker WHERE C.capacity > 2000;
+SELECT * FROM TCAR C LEFT JOIN TMAKER M ON C.MAKER = M.MAKER WHERE C.CAPACITY > 2000;
 
-SELECT * FROM (SELECT * FROM tCar WHERE capacity > 2000) C LEFT JOIN 
-(SELECT * FROM tMaker WHERE factory = '울산') M ON C.maker = M.maker;
+SELECT * FROM (SELECT * FROM TCAR WHERE CAPACITY > 2000) C LEFT JOIN 
+(SELECT * FROM TMAKER WHERE FACTORY = '울산') M ON C.MAKER = M.MAKER;
 
-SELECT * FROM (SELECT * FROM tCar WHERE capacity > 2000) C LEFT JOIN 
-tMaker M ON C.maker = M.maker WHERE M.factory = '울산';
+SELECT * FROM (SELECT * FROM TCAR WHERE CAPACITY > 2000) C LEFT JOIN 
+TMAKER M ON C.MAKER = M.MAKER WHERE M.FACTORY = '울산';
 
-SELECT * FROM tMember, tOrder;
+SELECT * FROM TMEMBER, TORDER;
 
-SELECT * FROM tMember M, tOrder O WHERE M.member = O.member;
-SELECT * FROM tMember M INNER JOIN tOrder O ON M.member = O.member;
+SELECT * FROM TMEMBER M, TORDER O WHERE M.MEMBER = O.MEMBER;
+SELECT * FROM TMEMBER M INNER JOIN TORDER O ON M.MEMBER = O.MEMBER;
 
-SELECT M.addr, M.member, O.item, O.num, O.orderDate FROM tMember M 
-INNER JOIN tOrder O ON M.member = O.member;
+SELECT M.ADDR, M.MEMBER, O.ITEM, O.NUM, O.ORDERDATE FROM TMEMBER M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER;
 
-SELECT M.addr, M.member, O.item, O.num, O.orderDate FROM tMember M 
-LEFT OUTER JOIN tOrder O ON M.member = O.member;
+SELECT M.ADDR, M.MEMBER, O.ITEM, O.NUM, O.ORDERDATE FROM TMEMBER M 
+LEFT OUTER JOIN TORDER O ON M.MEMBER = O.MEMBER;
 
-SELECT M.addr, O.member, O.item, O.num, O.orderDate FROM tMember M 
-RIGHT OUTER JOIN tOrder O ON M.member = O.member;
+SELECT M.ADDR, O.MEMBER, O.ITEM, O.NUM, O.ORDERDATE FROM TMEMBER M 
+RIGHT OUTER JOIN TORDER O ON M.MEMBER = O.MEMBER;
 
-SELECT M.addr, M.member, O.member, O.item, O.num, O.orderDate FROM tMember M 
-FULL OUTER JOIN tOrder O ON M.member = O.member;
+SELECT M.ADDR, M.MEMBER, O.MEMBER, O.ITEM, O.NUM, O.ORDERDATE FROM TMEMBER M 
+FULL OUTER JOIN TORDER O ON M.MEMBER = O.MEMBER;
 
-SELECT item, price FROM tItem WHERE item = 
-(SELECT item FROM tOrder WHERE member='춘향');
+SELECT ITEM, PRICE FROM TITEM WHERE ITEM = 
+(SELECT ITEM FROM TORDER WHERE MEMBER='춘향');
 
-SELECT * FROM tItem I INNER JOIN tOrder O ON O.item = I.item;
+SELECT * FROM TITEM I INNER JOIN TORDER O ON O.ITEM = I.ITEM;
 
-SELECT * FROM tItem I INNER JOIN tOrder O ON O.item = I.item WHERE O.member = '춘향';
-SELECT * FROM tItem I INNER JOIN tOrder O ON O.item = I.item AND O.member = '춘향';
+SELECT * FROM TITEM I INNER JOIN TORDER O ON O.ITEM = I.ITEM WHERE O.MEMBER = '춘향';
+SELECT * FROM TITEM I INNER JOIN TORDER O ON O.ITEM = I.ITEM AND O.MEMBER = '춘향';
 
-SELECT O.item, I.price FROM tItem I 
-INNER JOIN tOrder O ON O.item = I.item WHERE O.member = '춘향';
+SELECT O.ITEM, I.PRICE FROM TITEM I 
+INNER JOIN TORDER O ON O.ITEM = I.ITEM WHERE O.MEMBER = '춘향';
 
-SELECT O.item, I.price, O.num FROM tItem I 
-INNER JOIN tOrder O ON O.item = I.item WHERE O.member = '향단';
+SELECT O.ITEM, I.PRICE, O.NUM FROM TITEM I 
+INNER JOIN TORDER O ON O.ITEM = I.ITEM WHERE O.MEMBER = '향단';
 
-SELECT item, price, num FROM tItem WHERE item IN 
-(SELECT item FROM tOrder WHERE member='향단');
+SELECT ITEM, PRICE, NUM FROM TITEM WHERE ITEM IN 
+(SELECT ITEM FROM TORDER WHERE MEMBER='향단');
 
-SELECT item, price, (SELECT num FROM tOrder O WHERE O.item = I.item) 
-FROM tItem I WHERE item IN (SELECT item FROM tOrder WHERE member='향단');
+SELECT ITEM, PRICE, (SELECT NUM FROM TORDER O WHERE O.ITEM = I.ITEM) 
+FROM TITEM I WHERE ITEM IN (SELECT ITEM FROM TORDER WHERE MEMBER='향단');
 
-SELECT * FROM tMember;
+SELECT * FROM TMEMBER;
 
-SELECT * FROM tMember M 
-INNER JOIN tOrder O ON M.member = O.member; 
+SELECT * FROM TMEMBER M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER; 
 
-SELECT * FROM tMember M 
-INNER JOIN tOrder O ON M.member = O.member 
-INNER JOIN tItem I ON I.item = O.item;
+SELECT * FROM TMEMBER M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER 
+INNER JOIN TITEM I ON I.ITEM = O.ITEM;
 
-SELECT * FROM tMember M 
-INNER JOIN tOrder O ON M.member = O.member 
-INNER JOIN tItem I ON I.item = O.item
-INNER JOIN tCategory C ON I.category = C.category;
+SELECT * FROM TMEMBER M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER 
+INNER JOIN TITEM I ON I.ITEM = O.ITEM
+INNER JOIN TCATEGORY C ON I.CATEGORY = C.CATEGORY;
 
-SELECT M.member, O.item, O.num, O.orderDate, I.price, C.delivery FROM tMember M 
-INNER JOIN tOrder O ON M.member = O.member 
-INNER JOIN tItem I ON I.item = O.item
-INNER JOIN tCategory C ON I.category = C.category;
+SELECT M.MEMBER, O.ITEM, O.NUM, O.ORDERDATE, I.PRICE, C.DELIVERY FROM TMEMBER M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER 
+INNER JOIN TITEM I ON I.ITEM = O.ITEM
+INNER JOIN TCATEGORY C ON I.CATEGORY = C.CATEGORY;
 
-SELECT M.member, O.item, O.num, O.orderDate, I.price, C.delivery 
-FROM (SELECT * FROM tMember WHERE age > 19) M 
-INNER JOIN tOrder O ON M.member = O.member 
-INNER JOIN tItem I ON I.item = O.item
-LEFT OUTER JOIN tCategory C ON I.category = C.category AND C.category != '성인'
-WHERE I.price * O.num > 100000 ORDER BY M.member;
+SELECT M.MEMBER, O.ITEM, O.NUM, O.ORDERDATE, I.PRICE, C.DELIVERY 
+FROM (SELECT * FROM TMEMBER WHERE AGE > 19) M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER 
+INNER JOIN TITEM I ON I.ITEM = O.ITEM
+LEFT OUTER JOIN TCATEGORY C ON I.CATEGORY = C.CATEGORY AND C.CATEGORY != '성인'
+WHERE I.PRICE * O.NUM > 100000 ORDER BY M.MEMBER;
 
-SELECT M.member, O.item, O.num, I.price FROM tMember M 
-INNER JOIN tOrder O ON M.member = O.MEMBER 
-INNER JOIN tItem I ON I.item = O.item;
+SELECT M.MEMBER, O.ITEM, O.NUM, I.PRICE FROM TMEMBER M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER 
+INNER JOIN TITEM I ON I.ITEM = O.ITEM;
 
-SELECT member, num * price AS total, item FROM
+SELECT MEMBER, NUM * PRICE AS TOTAL, ITEM FROM
 (
-    SELECT M.member, O.item, O.num, I.price FROM tMember M 
-    INNER JOIN tOrder O ON M.member = O.MEMBER 
-    INNER JOIN tItem I ON I.item = O.item
+    SELECT M.MEMBER, O.ITEM, O.NUM, I.PRICE FROM TMEMBER M 
+    INNER JOIN TORDER O ON M.MEMBER = O.MEMBER 
+    INNER JOIN TITEM I ON I.ITEM = O.ITEM
 ) A;
 
 SELECT * FROM
 (
-	SELECT M.member, M.addr, O.item, O.num, O.orderDate, I.price, C.delivery 
-	FROM (SELECT * FROM tMember WHERE age > 19) M 
-	INNER JOIN tOrder O ON M.member = O.member 
-	INNER JOIN tItem I ON I.item = O.item
-	LEFT OUTER JOIN tCategory C ON I.category = C.category AND C.category != '성인'
-	WHERE I.price * O.num > 100000
+	SELECT M.MEMBER, M.ADDR, O.ITEM, O.NUM, O.ORDERDATE, I.PRICE, C.DELIVERY 
+	FROM (SELECT * FROM TMEMBER WHERE AGE > 19) M 
+	INNER JOIN TORDER O ON M.MEMBER = O.MEMBER 
+	INNER JOIN TITEM I ON I.ITEM = O.ITEM
+	LEFT OUTER JOIN TCATEGORY C ON I.CATEGORY = C.CATEGORY AND C.CATEGORY != '성인'
+	WHERE I.PRICE * O.NUM > 100000
 ) A
-LEFT OUTER JOIN tCity T ON TRIM(T.name) = SUBSTR(A.addr, 0, 2);
+LEFT OUTER JOIN TCITY T ON TRIM(T.NAME) = SUBSTR(A.ADDR, 0, 2);
 
-MSSQL : LEFT OUTER JOIN tCity T ON T.name = SUBSTRING(A.addr, 0, 4);
-마리아 : LEFT OUTER JOIN tCity T ON T.name = SUBSTRING(addr, 1, 2);
+MSSQL : LEFT OUTER JOIN TCITY T ON T.NAME = SUBSTRING(A.ADDR, 0, 4);
+마리아 : LEFT OUTER JOIN TCITY T ON T.NAME = SUBSTRING(ADDR, 1, 2);
 
-CREATE TABLE tDirectory
+CREATE TABLE TDIRECTORY
 (
-	id INT PRIMARY KEY,
-	name VARCHAR(20) NOT NULL,
-	parent INT NOT NULL
+	ID INT PRIMARY KEY,
+	NAME VARCHAR(20) NOT NULL,
+	PARENT INT NOT NULL
 );
 
-INSERT INTO tDirectory (id, Name, parent) VALUES (1, 'Root', 0);
-INSERT INTO tDirectory (id, Name, parent) VALUES (2, 'Data', 1);
-INSERT INTO tDirectory (id, Name, parent) VALUES (3, 'Program', 1);
-INSERT INTO tDirectory (id, name, parent) VALUES (4, 'Sound', 2);
-INSERT INTO tDirectory (id, name, parent) VALUES (5, 'Picture', 2);
-INSERT INTO tDirectory (id, name, parent) VALUES (6, 'Game', 3);
-INSERT INTO tDirectory (id, name, parent) VALUES (7, 'StartCraft', 6);
+INSERT INTO TDIRECTORY (ID, NAME, PARENT) VALUES (1, 'ROOT', 0);
+INSERT INTO TDIRECTORY (ID, NAME, PARENT) VALUES (2, 'DATA', 1);
+INSERT INTO TDIRECTORY (ID, NAME, PARENT) VALUES (3, 'PROGRAM', 1);
+INSERT INTO TDIRECTORY (ID, NAME, PARENT) VALUES (4, 'SOUND', 2);
+INSERT INTO TDIRECTORY (ID, NAME, PARENT) VALUES (5, 'PICTURE', 2);
+INSERT INTO TDIRECTORY (ID, NAME, PARENT) VALUES (6, 'GAME', 3);
+INSERT INTO TDIRECTORY (ID, NAME, PARENT) VALUES (7, 'STARTCRAFT', 6);
 
-SELECT A.name 부모, B.name 자식 FROM tDirectory A 
-INNER JOIN tDirectory B ON A.id = B.parent;
+SELECT A.NAME 부모, B.NAME 자식 FROM TDIRECTORY A 
+INNER JOIN TDIRECTORY B ON A.ID = B.PARENT;
 
-SELECT A.name 부모, A.id, B.name, B.parent 자식 FROM tDirectory A CROSS JOIN tDirectory B;
+SELECT A.NAME 부모, A.ID, B.NAME, B.PARENT 자식 FROM TDIRECTORY A CROSS JOIN TDIRECTORY B;
 
-SELECT * FROM tCar, tMaker WHERE tCar.maker = tMaker.maker;
+SELECT * FROM TCAR, TMAKER WHERE TCAR.MAKER = TMAKER.MAKER;
 
-SELECT * FROM tCar INNER JOIN tMaker ON tCar.maker = tMaker.maker;
+SELECT * FROM TCAR INNER JOIN TMAKER ON TCAR.MAKER = TMAKER.MAKER;
 
-SELECT * FROM tCar LEFT OUTER JOIN tMaker ON tCar.maker = tMaker.maker;
+SELECT * FROM TCAR LEFT OUTER JOIN TMAKER ON TCAR.MAKER = TMAKER.MAKER;
 
-SELECT * FROM tCar, tMaker WHERE tCar.maker = tMaker.maker(+);
-SELECT * FROM tCar, tMaker WHERE tCar.maker(+) = tMaker.maker;
+SELECT * FROM TCAR, TMAKER WHERE TCAR.MAKER = TMAKER.MAKER(+);
+SELECT * FROM TCAR, TMAKER WHERE TCAR.MAKER(+) = TMAKER.MAKER;
 
-SELECT * FROM tCar, tMaker WHERE tCar.maker *= tMaker.maker;
+SELECT * FROM TCAR, TMAKER WHERE TCAR.MAKER *= TMAKER.MAKER;
 
 -------------------------------------------------
 -- 11장
 
-SELECT AVG(score) FROM tStaff WHERE depart = '영업부';
+SELECT AVG(SCORE) FROM TSTAFF WHERE DEPART = '영업부';
 
-SELECT ROUND(AVG(score), 2) FROM tStaff WHERE depart = '영업부';
+SELECT ROUND(AVG(SCORE), 2) FROM TSTAFF WHERE DEPART = '영업부';
 
-SELECT name, REPLACE(depart, '부', '팀') FROM tStaff;
+SELECT NAME, REPLACE(DEPART, '부', '팀') FROM TSTAFF;
 
-SELECT name, grade, salary FROM tStaff WHERE depart='인사과';
+SELECT NAME, GRADE, SALARY FROM TSTAFF WHERE DEPART='인사과';
 
-SELECT TRIM(name) || ' ' || grade, salary FROM tStaff WHERE depart='인사과';
+SELECT TRIM(NAME) || ' ' || GRADE, SALARY FROM TSTAFF WHERE DEPART='인사과';
 
-MSSQL : SELECT TRIM(name) + ' ' + grade, salary FROM tStaff WHERE depart='인사과';
-마리아 : SELECT CONCAT(name, ' ', grade), salary FROM tStaff WHERE depart='인사과';
+MSSQL : SELECT TRIM(NAME) + ' ' + GRADE, SALARY FROM TSTAFF WHERE DEPART='인사과';
+마리아 : SELECT CONCAT(NAME, ' ', GRADE), SALARY FROM TSTAFF WHERE DEPART='인사과';
 
-SELECT ROUND(1234.5678, 0) FROM dual;	-- 1235
-SELECT ROUND(1234.5678, 1) FROM dual;	-- 1234.6
-SELECT ROUND(1234.5678, 2) FROM dual; 	-- 1234.57
+SELECT ROUND(1234.5678, 0) FROM DUAL;	-- 1235
+SELECT ROUND(1234.5678, 1) FROM DUAL;	-- 1234.6
+SELECT ROUND(1234.5678, 2) FROM DUAL; 	-- 1234.57
 
-SELECT name, area, ROUND(area, -2) FROM tCity;
+SELECT NAME, AREA, ROUND(AREA, -2) FROM TCITY;
 
-SELECT LENGTH('korea대한민국') FROM dual;		-- 9
-SELECT LENGTHB('korea대한민국') FROM dual;		-- 17
+SELECT LENGTH('KOREA대한민국') FROM DUAL;		-- 9
+SELECT LENGTHB('KOREA대한민국') FROM DUAL;		-- 17
 
-SELECT * FROM tItem WHERE LENGTH(item) = 2;
+SELECT * FROM TITEM WHERE LENGTH(ITEM) = 2;
 
-SELECT CONCAT(region, name) FROM tCity;
+SELECT CONCAT(REGION, NAME) FROM TCITY;
 
-오라클 : SELECT region || name FROM tCity;
-MSSQL : SELECT region + name FROM tCity;
+오라클 : SELECT REGION || NAME FROM TCITY;
+MSSQL : SELECT REGION + NAME FROM TCITY;
 
-SELECT region || '도의 ' || name FROM tCity;
+SELECT REGION || '도의 ' || NAME FROM TCITY;
 
-SELECT CONCAT(CONCAT(region, '도의 '), name) FROM tCity;
-MSSQL, 마리아 : SELECT CONCAT(region, '도의 ' , name) FROM tCity;
+SELECT CONCAT(CONCAT(REGION, '도의 '), NAME) FROM TCITY;
+MSSQL, 마리아 : SELECT CONCAT(REGION, '도의 ' , NAME) FROM TCITY;
 
-SELECT INSTR('우리나라 대한민국', '나라') FROM dual;      -- 3
-SELECT INSTR('우리나라 대한민국', '민족') FROM dual;      -- 0
+SELECT INSTR('우리나라 대한민국', '나라') FROM DUAL;      -- 3
+SELECT INSTR('우리나라 대한민국', '민족') FROM DUAL;      -- 0
 
-SELECT INSTR('국민에 의한 국민을 위한 국민의 국민당', '국민', 3) FROM dual;     -- 8
-SELECT INSTR('국민에 의한 국민을 위한 국민의 국민당', '국민', 1, 3) FROM dual;  -- 15
-SELECT INSTR('국민에 의한 국민을 위한 국민의 국민당', '국민', -1) FROM dual;    -- 19
+SELECT INSTR('국민에 의한 국민을 위한 국민의 국민당', '국민', 3) FROM DUAL;     -- 8
+SELECT INSTR('국민에 의한 국민을 위한 국민의 국민당', '국민', 1, 3) FROM DUAL;  -- 15
+SELECT INSTR('국민에 의한 국민을 위한 국민의 국민당', '국민', -1) FROM DUAL;    -- 19
 
 MSSQL : SELECT CHARINDEX('국민', '국민에 의한 국민을 위한 국민의 국민당', 3);     -- 8
 마리아 : SELECT POSITION('국민' IN '국민에 의한 국민을 위한 국민의 국민당');     -- 1
 
-SELECT SUBSTR('아름다운 대한민국 금수강산', 6, 4) FROM dual;    -- 대한민국
-SELECT SUBSTR('아름다운 대한민국 금수강산', -4, 2) FROM dual;   -- 금수
+SELECT SUBSTR('아름다운 대한민국 금수강산', 6, 4) FROM DUAL;    -- 대한민국
+SELECT SUBSTR('아름다운 대한민국 금수강산', -4, 2) FROM DUAL;   -- 금수
 
-SELECT SUBSTR(name,1,1), COUNT(*) FROM tStaff GROUP BY SUBSTR(name,1,1) 
+SELECT SUBSTR(NAME,1,1), COUNT(*) FROM TSTAFF GROUP BY SUBSTR(NAME,1,1) 
 ORDER BY COUNT(*) DESC;
 
-SELECT SUBSTR('...이름:홍길동,...', INSTR('...이름:홍길동,...','이름') + 3, 3) FROM dual;
+SELECT SUBSTR('...이름:홍길동,...', INSTR('...이름:홍길동,...','이름') + 3, 3) FROM DUAL;
 
-SELECT LOWER('wonderful SQL') FROM dual; -- wonderful sql
-SELECT UPPER('wonderful SQL') FROM dual; -- WONDERFUL SQL
-SELECT INITCAP('wonderful SQL') FROM dual; -- Wonderful Sql
+SELECT LOWER('WONDERFUL SQL') FROM DUAL; -- WONDERFUL SQL
+SELECT UPPER('WONDERFUL SQL') FROM DUAL; -- WONDERFUL SQL
+SELECT INITCAP('WONDERFUL SQL') FROM DUAL; -- WONDERFUL SQL
 
-SELECT * FROM tCity WHERE metro = 'y';
+SELECT * FROM TCITY WHERE METRO = 'Y';
 
-SELECT * FROM tCity WHERE UPPER(metro) = 'Y';
-SELECT * FROM tCity WHERE LOWER(metro) = 'y';
+SELECT * FROM TCITY WHERE UPPER(METRO) = 'Y';
+SELECT * FROM TCITY WHERE LOWER(METRO) = 'Y';
 
-SELECT CONCAT(name, ' 사원님') FROM tStaff;
+SELECT CONCAT(NAME, ' 사원님') FROM TSTAFF;
 
-SELECT CONCAT(TRIM(name), ' 사원님') FROM tStaff;
+SELECT CONCAT(TRIM(NAME), ' 사원님') FROM TSTAFF;
 
-SELECT LPAD('SQL', 10, '>') FROM dual;  -- >>>>>>>SQL
-SELECT RPAD('SQL', 10, '<') FROM dual;  -- SQL<<<<<<<
+SELECT LPAD('SQL', 10, '>') FROM DUAL;  -- >>>>>>>SQL
+SELECT RPAD('SQL', 10, '<') FROM DUAL;  -- SQL<<<<<<<
 
-SELECT LPAD(RPAD('SQL', 10, '<'), 17, '>') FROM dual;	-- >>>>>>>SQL<<<<<<<
+SELECT LPAD(RPAD('SQL', 10, '<'), 17, '>') FROM DUAL;	-- >>>>>>>SQL<<<<<<<
 
-SELECT name, LPAD(area, 4, '0') FROM tCity;
+SELECT NAME, LPAD(AREA, 4, '0') FROM TCITY;
 
-SELECT REPLACE('독도는 일본땅이다', '일본', '한국') FROM dual;
+SELECT REPLACE('독도는 일본땅이다', '일본', '한국') FROM DUAL;
 
-SELECT REPLACE('구글에서 구글링한다.', '구글', '네이버') FROM dual; 	
+SELECT REPLACE('구글에서 구글링한다.', '구글', '네이버') FROM DUAL; 	
 -- 네이버에서 네이버링한다.
 
-SELECT REPLACE('Get_Total_Score', '_', '') FROM dual;   -- GetTotalScore
+SELECT REPLACE('GET_TOTAL_SCORE', '_', '') FROM DUAL;   -- GETTOTALSCORE
 
-SELECT REPLACE('독도는 일본땅이다. 대마도는 일본땅이다.', '일본', '한국') FROM dual;
+SELECT REPLACE('독도는 일본땅이다. 대마도는 일본땅이다.', '일본', '한국') FROM DUAL;
 
 SELECT STUFF('독도는 일본땅이다. 대마도는 일본땅이다.', 5, 2, '한국');
 
 SELECT SUBSTR('독도는 일본땅이다. 대마도는 일본땅이다.', 1, 
 INSTR('독도는 일본땅이다. 대마도는 일본땅이다.', '일본') - 1) || '한국' ||
 SUBSTR('독도는 일본땅이다. 대마도는 일본땅이다.', 
-INSTR('독도는 일본땅이다. 대마도는 일본땅이다.', '일본') + 2) FROM dual;
+INSTR('독도는 일본땅이다. 대마도는 일본땅이다.', '일본') + 2) FROM DUAL;
 
-SELECT SUBSTR(str, 1 , INSTR(str, '일본') - 1) || '한국' || SUBSTR(str, INSTR(str, '일본') + 2) 
-FROM tTable;
+SELECT SUBSTR(STR, 1 , INSTR(STR, '일본') - 1) || '한국' || SUBSTR(STR, INSTR(STR, '일본') + 2) 
+FROM TTABLE;
 
-pos = INSTR(str, '일본');
-SELECT SUBSTR(str, 1 , pos - 1) || '한국' || SUBSTR(str, pos + 2) FROM tTable;
+POS = INSTR(STR, '일본');
+SELECT SUBSTR(STR, 1 , POS - 1) || '한국' || SUBSTR(STR, POS + 2) FROM TTABLE;
 
-INSERT INTO tDate VALUES (TO_DATE('2021/12/25 12:34:56', 'yyyy/mm/dd hh24:mi:ss'));
+INSERT INTO TDATE VALUES (TO_DATE('2021/12/25 12:34:56', 'YYYY/MM/DD HH24:MI:SS'));
 
-SELECT AVG(popu) FROM tCity;
+SELECT AVG(POPU) FROM TCITY;
 
-오라클 : SELECT CAST(AVG(popu) AS INT) FROM tCity;		-- 193
-MSSQL : SELECT AVG(CAST(popu AS DECIMAL)) FROM tCity;	-- 193.25
+오라클 : SELECT CAST(AVG(POPU) AS INT) FROM TCITY;		-- 193
+MSSQL : SELECT AVG(CAST(POPU AS DECIMAL)) FROM TCITY;	-- 193.25
 
-SELECT '12' + 34 FROM dual;	-- 46
-SELECT '12' || 34 FROM dual;	-- 1234
+SELECT '12' + 34 FROM DUAL;	-- 46
+SELECT '12' || 34 FROM DUAL;	-- 1234
 
 SELECT '12' + 34;					-- 46
 SELECT '12' + CAST(34 AS VARCHAR(10));	-- 1234
@@ -1391,82 +1391,82 @@ SELECT '12' + CAST(34 AS VARCHAR(10));	-- 1234
 SELECT '응답하라 ' + 1989;				-- 에러
 SELECT '응답하라 ' + CAST(1989 AS VARCHAR(10));	-- 응답하라 1989
 
-SELECT '응답하라 ' || 1989 FROM dual;
+SELECT '응답하라 ' || 1989 FROM DUAL;
 
-SELECT TO_CHAR(12345) FROM dual;		-- 12345
-SELECT TO_CHAR(12345, '999,999') FROM dual;	--  12,345
-SELECT TO_CHAR(12345, 'FM999,999') FROM dual; 	-- 12,345
-SELECT TO_CHAR(12345, '000,999') FROM dual; 	-- 012,345
+SELECT TO_CHAR(12345) FROM DUAL;		-- 12345
+SELECT TO_CHAR(12345, '999,999') FROM DUAL;	--  12,345
+SELECT TO_CHAR(12345, 'FM999,999') FROM DUAL; 	-- 12,345
+SELECT TO_CHAR(12345, '000,999') FROM DUAL; 	-- 012,345
 
-SELECT TO_NUMBER('12345') FROM dual;		-- 12345
-SELECT TO_NUMBER('12,345') FROM dual;		-- 에러
-SELECT TO_NUMBER('12,345', '999,999') FROM dual;	-- 12345
+SELECT TO_NUMBER('12345') FROM DUAL;		-- 12345
+SELECT TO_NUMBER('12,345') FROM DUAL;		-- 에러
+SELECT TO_NUMBER('12,345', '999,999') FROM DUAL;	-- 12345
 
 SELECT '응답하라 ' + CONVERT(VARCHAR(10), 1989);		-- 응답하라 1989
 
-오라클 : SELECT name, NVL(score, 10) FROM tStaff;
-MSSQL : SELECT name, ISNULL(score, 10) FROM tStaff;
-마리아 : SELECT name, IFNULL(score, 10) FROM tStaff;
+오라클 : SELECT NAME, NVL(SCORE, 10) FROM TSTAFF;
+MSSQL : SELECT NAME, ISNULL(SCORE, 10) FROM TSTAFF;
+마리아 : SELECT NAME, IFNULL(SCORE, 10) FROM TSTAFF;
 
-SELECT name, NULLIF(score, 0) FROM tStaff;
+SELECT NAME, NULLIF(SCORE, 0) FROM TSTAFF;
 
-SELECT name, NVL(NULLIF(score, 0), 60) FROM tStaff;
+SELECT NAME, NVL(NULLIF(SCORE, 0), 60) FROM TSTAFF;
 
-SELECT name, NVL2(score, salary * score / 100, 50) FROM tStaff;
+SELECT NAME, NVL2(SCORE, SALARY * SCORE / 100, 50) FROM TSTAFF;
 
-SELECT name, DECODE(gender, '남', '멋쟁이', '여', '예쁜이', '몬난이') FROM tStaff;
+SELECT NAME, DECODE(GENDER, '남', '멋쟁이', '여', '예쁜이', '몬난이') FROM TSTAFF;
 
-SELECT SYSDATE FROM dual;  -- 20/10/17 12:21:42
+SELECT SYSDATE FROM DUAL;  -- 20/10/17 12:21:42
 
-INSERT INTO tStaff VALUES ('김한슬', '기획실', '여', SYSDATE, '수습', 480, 50);
+INSERT INTO TSTAFF VALUES ('김한슬', '기획실', '여', SYSDATE, '수습', 480, 50);
 
-SELECT SYSDATE + 12 FROM dual;
+SELECT SYSDATE + 12 FROM DUAL;
 
-SELECT SYSDATE + 5/24 FROM dual;
-SELECT SYSDATE - 30/1440 FROM dual;
-SELECT SYSDATE - 80/86400 FROM dual;
+SELECT SYSDATE + 5/24 FROM DUAL;
+SELECT SYSDATE - 30/1440 FROM DUAL;
+SELECT SYSDATE - 80/86400 FROM DUAL;
 
-SELECT name, sysdate - joindate FROM tStaff;
+SELECT NAME, SYSDATE - JOINDATE FROM TSTAFF;
 
-SELECT TO_CHAR(SYSDATE, 'yyyy/mm/dd hh24:mi:ss') FROM dual;	  -- 2020/10/17 12:18:51
-SELECT TO_CHAR(SYSDATE, 'yyyy/mm/dd AM hh:mi:ss') FROM dual; -- 2020/10/17 오후 12:20:35
+SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') FROM DUAL;	  -- 2020/10/17 12:18:51
+SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD AM HH:MI:SS') FROM DUAL; -- 2020/10/17 오후 12:20:35
 
-SELECT TO_CHAR(SYSDATE, 'yyyy"년" mm"월" dd"일" hh24"시" mi"분" ss"초"') FROM dual;
+SELECT TO_CHAR(SYSDATE, 'YYYY"년" MM"월" DD"일" HH24"시" MI"분" SS"초"') FROM DUAL;
 -- 2020년 10월 17일 12시 24분 44초
 
-SELECT name, TO_CHAR(joindate, 'yyyy') FROM tStaff;
+SELECT NAME, TO_CHAR(JOINDATE, 'YYYY') FROM TSTAFF;
 
-SELECT TO_CHAR(joindate, 'yyyy') AS 년, TO_CHAR(joindate, 'mm') AS 월, 
-TO_CHAR(joindate, 'dd') AS 일 FROM tStaff;
+SELECT TO_CHAR(JOINDATE, 'YYYY') AS 년, TO_CHAR(JOINDATE, 'MM') AS 월, 
+TO_CHAR(JOINDATE, 'DD') AS 일 FROM TSTAFF;
 
-SELECT TO_DATE('1919/3/1', 'yyyy/mm/dd') FROM dual;
+SELECT TO_DATE('1919/3/1', 'YYYY/MM/DD') FROM DUAL;
 
-SELECT TO_DATE('1919-3-1', 'yyyy-mm-dd') FROM dual;
-SELECT TO_DATE('19190301', 'yyyymmdd') FROM dual;
+SELECT TO_DATE('1919-3-1', 'YYYY-MM-DD') FROM DUAL;
+SELECT TO_DATE('19190301', 'YYYYMMDD') FROM DUAL;
 
-SELECT TO_DATE('1919/3/1') FROM dual;
-SELECT TO_DATE('1919-3-1') FROM dual;
-SELECT TO_DATE('19190301') FROM dual;
+SELECT TO_DATE('1919/3/1') FROM DUAL;
+SELECT TO_DATE('1919-3-1') FROM DUAL;
+SELECT TO_DATE('19190301') FROM DUAL;
 
-SELECT sysdate - '1919/3/1' FROM dual;	-- 에러
+SELECT SYSDATE - '1919/3/1' FROM DUAL;	-- 에러
 
-SELECT sysdate - TO_DATE('1919/3/1') FROM dual;
+SELECT SYSDATE - TO_DATE('1919/3/1') FROM DUAL;
 
-SELECT TO_CHAR(TO_DATE('2023/3/8', 'yyyy/mm/dd') + 99, 'yyyy"년" mm"월" dd"일"') FROM dual;
+SELECT TO_CHAR(TO_DATE('2023/3/8', 'YYYY/MM/DD') + 99, 'YYYY"년" MM"월" DD"일"') FROM DUAL;
 
 SELECT GETDATE();
 
-SELECT name, YEAR(joindate) AS 년, MONTH(joindate) AS 월, DAY(joindate) AS 일 FROM tStaff;
+SELECT NAME, YEAR(JOINDATE) AS 년, MONTH(JOINDATE) AS 월, DAY(JOINDATE) AS 일 FROM TSTAFF;
 
-SELECT YEAR(joindate), count(*) FROM tStaff GROUP BY YEAR(joindate) 
-ORDER BY YEAR(joindate);
+SELECT YEAR(JOINDATE), COUNT(*) FROM TSTAFF GROUP BY YEAR(JOINDATE) 
+ORDER BY YEAR(JOINDATE);
 
-SELECT DATEPART(dw, GETDATE());
-SELECT DATENAME(dw, GETDATE());
+SELECT DATEPART(DW, GETDATE());
+SELECT DATENAME(DW, GETDATE());
 
-SELECT name, DATEDIFF(day,joindate,GETDATE()) FROM tStaff;
+SELECT NAME, DATEDIFF(DAY,JOINDATE,GETDATE()) FROM TSTAFF;
 
-SELECT DATEDIFF(day, '1919/3/1', GETDATE());
+SELECT DATEDIFF(DAY, '1919/3/1', GETDATE());
 
 SELECT CONVERT(VARCHAR(20), GETDATE(),0);		-- 06 29 2021 10:43PM
 SELECT CONVERT(VARCHAR(20), GETDATE(),11);		-- 21/06/29
@@ -1476,698 +1476,698 @@ SELECT CONVERT(VARCHAR(20), GETDATE(),103); 		-- 29/06/2021
 
 SELECT NOW();
 
-SELECT DATE_FORMAT(NOW(), '%Y/%m/%d %H:%i:%s');
+SELECT DATE_FORMAT(NOW(), '%Y/%M/%D %H:%I:%S');
 
-SELECT DATE_FORMAT(joindate, '%Y'), count(*) FROM tStaff 
-GROUP BY DATE_FORMAT(joindate, '%Y') ORDER BY DATE_FORMAT(joindate, '%Y');
+SELECT DATE_FORMAT(JOINDATE, '%Y'), COUNT(*) FROM TSTAFF 
+GROUP BY DATE_FORMAT(JOINDATE, '%Y') ORDER BY DATE_FORMAT(JOINDATE, '%Y');
 
 SELECT DATE_ADD(NOW(), INTERVAL 12 DAY);		-- 12일 후
 SELECT DATE_ADD(NOW(), INTERVAL 5 HOUR);		-- 5시간 후
 SELECT DATE_SUB(NOW(), INTERVAL 30 MINUTE);		-- 30분 전
 
-SELECT name, DATEDIFF(NOW(), joindate) FROM tStaff;
+SELECT NAME, DATEDIFF(NOW(), JOINDATE) FROM TSTAFF;
 
 -------------------------------------------------
 -- 12장
 
-SELECT member, age, addr FROM tMember;
+SELECT MEMBER, AGE, ADDR FROM TMEMBER;
 
-CREATE VIEW vMember AS
-SELECT member, age, addr FROM tMember;
+CREATE VIEW VMEMBER AS
+SELECT MEMBER, AGE, ADDR FROM TMEMBER;
 
-SELECT * FROM vMember;
+SELECT * FROM VMEMBER;
 
-SELECT member, age FROM vMember;
-SELECT * FROM vMember WHERE addr LIKE '%서울%';
-SELECT * FROM vMember ORDER BY member;
+SELECT MEMBER, AGE FROM VMEMBER;
+SELECT * FROM VMEMBER WHERE ADDR LIKE '%서울%';
+SELECT * FROM VMEMBER ORDER BY MEMBER;
 
-SELECT name, email FROM vMember;
+SELECT NAME, EMAIL FROM VMEMBER;
 
-DROP VIEW vMember;
+DROP VIEW VMEMBER;
 
-CREATE VIEW vMember AS SELECT member, age, addr, email FROM tMember;
+CREATE VIEW VMEMBER AS SELECT MEMBER, AGE, ADDR, EMAIL FROM TMEMBER;
 
-오라클, 마리아 : CREATE OR REPLACE VIEW vMember AS SELECT member, age, addr, email FROM tMember;
-MSSQL : ALTER VIEW vMember AS SELECT member, age, addr, email FROM tMember;
+오라클, 마리아 : CREATE OR REPLACE VIEW VMEMBER AS SELECT MEMBER, AGE, ADDR, EMAIL FROM TMEMBER;
+MSSQL : ALTER VIEW VMEMBER AS SELECT MEMBER, AGE, ADDR, EMAIL FROM TMEMBER;
 
-CREATE VIEW vMemberMirror AS SELECT * FROM tMember;
+CREATE VIEW VMEMBERMIRROR AS SELECT * FROM TMEMBER;
 
-CREATE VIEW vStaffVirt AS SELECT depart, salary, name FROM tStaff;
+CREATE VIEW VSTAFFVIRT AS SELECT DEPART, SALARY, NAME FROM TSTAFF;
 
-CREATE VIEW vStaffHorz AS SELECT * FROM tStaff WHERE depart = '총무부';
+CREATE VIEW VSTAFFHORZ AS SELECT * FROM TSTAFF WHERE DEPART = '총무부';
 
-CREATE VIEW vStaffPart AS SELECT name, salary FROM tStaff WHERE depart = '총무부';
+CREATE VIEW VSTAFFPART AS SELECT NAME, SALARY FROM TSTAFF WHERE DEPART = '총무부';
 
-CREATE VIEW vStaffAlias(n, d, s) AS SELECT name, depart, salary FROM tStaff;
+CREATE VIEW VSTAFFALIAS(N, D, S) AS SELECT NAME, DEPART, SALARY FROM TSTAFF;
 
-CREATE OR REPLACE VIEW vStaffAlias AS SELECT name n, depart d , salary s FROM tStaff;
+CREATE OR REPLACE VIEW VSTAFFALIAS AS SELECT NAME N, DEPART D , SALARY S FROM TSTAFF;
 
-SELECT * FROM vStaffAlias ORDER BY s;           -- 맞음
-SELECT * FROM vStaffAlias ORDER BY salary;      -- 에러
+SELECT * FROM VSTAFFALIAS ORDER BY S;           -- 맞음
+SELECT * FROM VSTAFFALIAS ORDER BY SALARY;      -- 에러
 
-CREATE VIEW vStaffBonus AS SELECT name, salary * score / 100 AS bonus FROM tStaff;
+CREATE VIEW VSTAFFBONUS AS SELECT NAME, SALARY * SCORE / 100 AS BONUS FROM TSTAFF;
 
-SELECT * FROM vStaffBonus WHERE bonus > 300;
+SELECT * FROM VSTAFFBONUS WHERE BONUS > 300;
 
-CREATE VIEW vShopping AS
-SELECT M.member, M.addr, O.item, O.num, O.orderDate FROM tMember M 
-INNER JOIN tOrder O ON M.member = O.member;
+CREATE VIEW VSHOPPING AS
+SELECT M.MEMBER, M.ADDR, O.ITEM, O.NUM, O.ORDERDATE FROM TMEMBER M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER;
 
-CREATE VIEW vUnion AS
-SELECT name, salary FROM tStaff WHERE depart = '인사과'
+CREATE VIEW VUNION AS
+SELECT NAME, SALARY FROM TSTAFF WHERE DEPART = '인사과'
 UNION
-SELECT name, salary FROM tEmployee;
+SELECT NAME, SALARY FROM TEMPLOYEE;
 
-CREATE VIEW vvStaffHorz AS
-SELECT name, joindate, salary FROM vStaffHorz;
+CREATE VIEW VVSTAFFHORZ AS
+SELECT NAME, JOINDATE, SALARY FROM VSTAFFHORZ;
 
-CREATE VIEW vOriginal AS SELECT a, b, c FROM tOriginal;
+CREATE VIEW VORIGINAL AS SELECT A, B, C FROM TORIGINAL;
 
-CREATE VIEW vOriginal(a, b, c) AS SELECT x, y, c FROM tOriginal;
+CREATE VIEW VORIGINAL(A, B, C) AS SELECT X, Y, C FROM TORIGINAL;
 
-UPDATE vMember SET addr = '서울 신사동' WHERE member = '춘향';
+UPDATE VMEMBER SET ADDR = '서울 신사동' WHERE MEMBER = '춘향';
 
-UPDATE vStaffBonus SET bonus = 500 WHERE name = '유관순';
+UPDATE VSTAFFBONUS SET BONUS = 500 WHERE NAME = '유관순';
 
-INSERT INTO vStaffHorz VALUES ('김한슬', '총무부', '여', '2022/08/14', '사원', 520, 55);
+INSERT INTO VSTAFFHORZ VALUES ('김한슬', '총무부', '여', '2022/08/14', '사원', 520, 55);
 
-INSERT INTO vStaffHorz VALUES ('김한결', '영업부', '남', '2023/05/13', '사원', 490, 35);
+INSERT INTO VSTAFFHORZ VALUES ('김한결', '영업부', '남', '2023/05/13', '사원', 490, 35);
 
-CREATE VIEW vStaffHorzCheck AS 
-SELECT * FROM tStaff WHERE depart = '총무부' WITH CHECK OPTION;
+CREATE VIEW VSTAFFHORZCHECK AS 
+SELECT * FROM TSTAFF WHERE DEPART = '총무부' WITH CHECK OPTION;
 
-DELETE FROM tStaff WHERE name IN ('김한슬','김한결');
-INSERT INTO vStaffHorzCheck VALUES ('김한결', '영업부', '남', '2023/05/13', '사원', 490, 35);
+DELETE FROM TSTAFF WHERE NAME IN ('김한슬','김한결');
+INSERT INTO VSTAFFHORZCHECK VALUES ('김한결', '영업부', '남', '2023/05/13', '사원', 490, 35);
 
-UPDATE vStaffHorzCheck SET depart = '기획팀' WHERE name = '김유신';
+UPDATE VSTAFFHORZCHECK SET DEPART = '기획팀' WHERE NAME = '김유신';
 
-INSERT INTO vStaffVirt (name, depart, salary) VALUES ('이완용', '영업부', 99);
+INSERT INTO VSTAFFVIRT (NAME, DEPART, SALARY) VALUES ('이완용', '영업부', 99);
 
-CREATE VIEW vNotExist AS SELECT * FROM tNotExist;		-- 에러
-CREATE FORCE VIEW vNotExist AS SELECT * FROM tNotExist;	-- 가능
+CREATE VIEW VNOTEXIST AS SELECT * FROM TNOTEXIST;		-- 에러
+CREATE FORCE VIEW VNOTEXIST AS SELECT * FROM TNOTEXIST;	-- 가능
 
-CREATE VIEW vStaffReadOnly AS SELECT * FROM tStaff 
-WHERE depart = '인사과' WITH READ ONLY;
+CREATE VIEW VSTAFFREADONLY AS SELECT * FROM TSTAFF 
+WHERE DEPART = '인사과' WITH READ ONLY;
 
-CREATE VIEW vMemberEnc WITH ENCRYPTION AS
-SELECT member, age, addr FROM tMember;
+CREATE VIEW VMEMBERENC WITH ENCRYPTION AS
+SELECT MEMBER, AGE, ADDR FROM TMEMBER;
 
-CREATE GLOBAL TEMPORARY TABLE tGtt (
-	name VARCHAR(20) PRIMARY KEY,
-	score INT
+CREATE GLOBAL TEMPORARY TABLE TGTT (
+	NAME VARCHAR(20) PRIMARY KEY,
+	SCORE INT
 );
 
-INSERT INTO tGtt VALUES ('김한슬', 95);
-INSERT INTO tGtt VALUES ('김한결', 80);
-SELECT * FROM tGtt;
+INSERT INTO TGTT VALUES ('김한슬', 95);
+INSERT INTO TGTT VALUES ('김한결', 80);
+SELECT * FROM TGTT;
 
-DROP TABLE tGtt;
-CREATE GLOBAL TEMPORARY TABLE tGtt (
-	name VARCHAR(20) PRIMARY KEY,
-	score INT
+DROP TABLE TGTT;
+CREATE GLOBAL TEMPORARY TABLE TGTT (
+	NAME VARCHAR(20) PRIMARY KEY,
+	SCORE INT
 ) ON COMMIT PRESERVE ROWS;
 
-INSERT INTO tGtt VALUES ('김규민', 70);
-SELECT * FROM tGtt;
+INSERT INTO TGTT VALUES ('김규민', 70);
+SELECT * FROM TGTT;
 
-CREATE TABLE #tTemp (
-	name VARCHAR(20) PRIMARY KEY,
-	score INT
+CREATE TABLE #TTEMP (
+	NAME VARCHAR(20) PRIMARY KEY,
+	SCORE INT
 );
 
-INSERT INTO #tTemp VALUES ('김한슬', 95);
-INSERT INTO #tTemp VALUES ('김한결', 80);
-INSERT INTO #tTemp VALUES ('김규민', 70);
-SELECT * FROM #tTemp;
+INSERT INTO #TTEMP VALUES ('김한슬', 95);
+INSERT INTO #TTEMP VALUES ('김한결', 80);
+INSERT INTO #TTEMP VALUES ('김규민', 70);
+SELECT * FROM #TTEMP;
 
-CREATE TEMPORARY TABLE tTemp (
-	name VARCHAR(20) PRIMARY KEY,
-	score INT
+CREATE TEMPORARY TABLE TTEMP (
+	NAME VARCHAR(20) PRIMARY KEY,
+	SCORE INT
 );
 
-INSERT INTO tTemp VALUES ('김한슬', 95);
-INSERT INTO tTemp VALUES ('김한결', 80);
-INSERT INTO tTemp VALUES ('김규민', 70);
-SELECT * FROM tTemp;
+INSERT INTO TTEMP VALUES ('김한슬', 95);
+INSERT INTO TTEMP VALUES ('김한결', 80);
+INSERT INTO TTEMP VALUES ('김규민', 70);
+SELECT * FROM TTEMP;
 
-CREATE GLOBAL TEMPORARY TABLE tTaskForce AS SELECT * FROM tStaff;
+CREATE GLOBAL TEMPORARY TABLE TTASKFORCE AS SELECT * FROM TSTAFF;
 
-INSERT INTO tTaskForce SELECT * FROM (SELECT * FROM tStaff 
-WHERE joindate <= '20160101' ORDER BY salary DESC) WHERE rownum <= 10;
+INSERT INTO TTASKFORCE SELECT * FROM (SELECT * FROM TSTAFF 
+WHERE JOINDATE <= '20160101' ORDER BY SALARY DESC) WHERE ROWNUM <= 10;
 
-MSSQL : SELECT TOP 10 * INTO #tTaskForce FROM tStaff 
-WHERE joindate <= '20160101' ORDER BY salary DESC;
-마리아 : CREATE TEMPORARY TABLE tTaskForce AS SELECT * FROM tStaff 
-WHERE joindate <= '20160101' ORDER BY salary DESC LIMIT 10;
+MSSQL : SELECT TOP 10 * INTO #TTASKFORCE FROM TSTAFF 
+WHERE JOINDATE <= '20160101' ORDER BY SALARY DESC;
+마리아 : CREATE TEMPORARY TABLE TTASKFORCE AS SELECT * FROM TSTAFF 
+WHERE JOINDATE <= '20160101' ORDER BY SALARY DESC LIMIT 10;
 
-DELETE FROM tTaskForce WHERE score < (SELECT AVG(score) FROM tTaskForce 
-WHERE gender = '남') AND gender = '남';
+DELETE FROM TTASKFORCE WHERE SCORE < (SELECT AVG(SCORE) FROM TTASKFORCE 
+WHERE GENDER = '남') AND GENDER = '남';
 
-DELETE FROM tTaskForce WHERE salary < 
-(SELECT AVG(salary) FROM tStaff) AND gender = '여';
+DELETE FROM TTASKFORCE WHERE SALARY < 
+(SELECT AVG(SALARY) FROM TSTAFF) AND GENDER = '여';
 
-DELETE FROM tTaskForce WHERE salary > 300 AND grade = '대리';
-INSERT INTO tTaskForce SELECT * FROM tStaff WHERE salary > 380 AND grade = '과장';
+DELETE FROM TTASKFORCE WHERE SALARY > 300 AND GRADE = '대리';
+INSERT INTO TTASKFORCE SELECT * FROM TSTAFF WHERE SALARY > 380 AND GRADE = '과장';
 
-SELECT name, salary, score FROM tStaff WHERE depart = '영업부' AND gender = '남';
+SELECT NAME, SALARY, SCORE FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '남';
 
 SELECT * FROM 
 (
-	SELECT name, salary, score FROM tStaff WHERE depart = '영업부' AND gender = '남'
+	SELECT NAME, SALARY, SCORE FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '남'
 ) A
-WHERE salary >= (
-	SELECT avg(salary) FROM 
+WHERE SALARY >= (
+	SELECT AVG(SALARY) FROM 
 	(
-		SELECT name, salary, score FROM tStaff WHERE depart = '영업부' AND gender = '남'
+		SELECT NAME, SALARY, SCORE FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '남'
 	) B
 );
 
-CREATE GLOBAL TEMPORARY TABLE tBusiMan AS SELECT name, salary, score FROM tStaff;
-INSERT INTO tBusiMan SELECT name, salary, score FROM tStaff 
-WHERE depart = '영업부' AND gender = '남';
+CREATE GLOBAL TEMPORARY TABLE TBUSIMAN AS SELECT NAME, SALARY, SCORE FROM TSTAFF;
+INSERT INTO TBUSIMAN SELECT NAME, SALARY, SCORE FROM TSTAFF 
+WHERE DEPART = '영업부' AND GENDER = '남';
 
-MSSQL: SELECT name, salary, score INTO #tBusiMan FROM tStaff 
-WHERE depart = '영업부' AND gender = '남';
-마리아 : CREATE TEMPORARY TABLE tBusiMan AS 
-SELECT name, salary, score FROM tStaff WHERE depart = '영업부' AND gender = '남';
+MSSQL: SELECT NAME, SALARY, SCORE INTO #TBUSIMAN FROM TSTAFF 
+WHERE DEPART = '영업부' AND GENDER = '남';
+마리아 : CREATE TEMPORARY TABLE TBUSIMAN AS 
+SELECT NAME, SALARY, SCORE FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '남';
 
-SELECT * FROM tBusiMan WHERE salary >= (SELECT avg(salary) FROM tBusiMan);
+SELECT * FROM TBUSIMAN WHERE SALARY >= (SELECT AVG(SALARY) FROM TBUSIMAN);
 
-CREATE VIEW vBusiMan AS SELECT name, salary, score FROM tStaff 
-WHERE depart = '영업부' AND gender = '남';
-SELECT * FROM vBusiMan WHERE salary >= (SELECT avg(salary) FROM vBusiMan);
+CREATE VIEW VBUSIMAN AS SELECT NAME, SALARY, SCORE FROM TSTAFF 
+WHERE DEPART = '영업부' AND GENDER = '남';
+SELECT * FROM VBUSIMAN WHERE SALARY >= (SELECT AVG(SALARY) FROM VBUSIMAN);
 
-WITH tBusiMan AS 
-(SELECT name, salary, score FROM tStaff WHERE depart = '영업부' AND gender = '남')
-SELECT * FROM tBusiMan WHERE salary >= (SELECT avg(salary) FROM tBusiMan);
+WITH TBUSIMAN AS 
+(SELECT NAME, SALARY, SCORE FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '남')
+SELECT * FROM TBUSIMAN WHERE SALARY >= (SELECT AVG(SALARY) FROM TBUSIMAN);
 
-WITH tBusiMan(이름, 월급, 성취도) AS 
-(SELECT name, salary, score FROM tStaff WHERE depart = '영업부' AND gender = '남')
-SELECT * FROM tBusiMan WHERE 월급 >= (SELECT avg(월급) FROM tBusiMan);
+WITH TBUSIMAN(이름, 월급, 성취도) AS 
+(SELECT NAME, SALARY, SCORE FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '남')
+SELECT * FROM TBUSIMAN WHERE 월급 >= (SELECT AVG(월급) FROM TBUSIMAN);
 
-WITH tBusiMan AS 
-(SELECT name, salary, score FROM tStaff WHERE depart = '영업부' AND gender = '남'),
-tBusiGirl AS 
-(SELECT name, salary, score FROM tStaff WHERE depart = '영업부' AND gender = '여')
-SELECT * FROM tBusiGirl WHERE salary >= (SELECT avg(salary) FROM tBusiMan);
+WITH TBUSIMAN AS 
+(SELECT NAME, SALARY, SCORE FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '남'),
+TBUSIGIRL AS 
+(SELECT NAME, SALARY, SCORE FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '여')
+SELECT * FROM TBUSIGIRL WHERE SALARY >= (SELECT AVG(SALARY) FROM TBUSIMAN);
 
-WITH tBusiMan AS 
-(SELECT name, salary, score FROM tStaff WHERE depart = '영업부' AND gender = '남'),
-tBusiManGod AS 
-(SELECT name, salary, score FROM tBusiMan WHERE score > 70)
-SELECT * FROM tBusiManGod;
+WITH TBUSIMAN AS 
+(SELECT NAME, SALARY, SCORE FROM TSTAFF WHERE DEPART = '영업부' AND GENDER = '남'),
+TBUSIMANGOD AS 
+(SELECT NAME, SALARY, SCORE FROM TBUSIMAN WHERE SCORE > 70)
+SELECT * FROM TBUSIMANGOD;
 
-WITH Shopping AS
-(SELECT M.member, M.addr, O.item, O.num, O.orderDate FROM tMember M 
-INNER JOIN tOrder O ON M.member = O.member)
-SELECT * FROM Shopping WHERE num >= (SELECT AVG(num) FROM Shopping);
+WITH SHOPPING AS
+(SELECT M.MEMBER, M.ADDR, O.ITEM, O.NUM, O.ORDERDATE FROM TMEMBER M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER)
+SELECT * FROM SHOPPING WHERE NUM >= (SELECT AVG(NUM) FROM SHOPPING);
 
-CREATE VIEW vTemp AS
-(SELECT M.member, M.addr, O.item, O.num, O.orderDate FROM tMember M 
-INNER JOIN tOrder O ON M.member = O.member);
+CREATE VIEW VTEMP AS
+(SELECT M.MEMBER, M.ADDR, O.ITEM, O.NUM, O.ORDERDATE FROM TMEMBER M 
+INNER JOIN TORDER O ON M.MEMBER = O.MEMBER);
 
-SELECT * FROM vTemp WHERE num >= (SELECT AVG(num) FROM vTemp);
+SELECT * FROM VTEMP WHERE NUM >= (SELECT AVG(NUM) FROM VTEMP);
 
-WITH tFact(num, sum) AS (
-	SELECT 1 AS num, 1 AS sum FROM dual
+WITH TFACT(NUM, SUM) AS (
+	SELECT 1 AS NUM, 1 AS SUM FROM DUAL
 	UNION ALL
-	SELECT num + 1, sum * (num + 1) FROM tFact T WHERE T.num < 10
+	SELECT NUM + 1, SUM * (NUM + 1) FROM TFACT T WHERE T.NUM < 10
 )
-SELECT * FROM tFact;
+SELECT * FROM TFACT;
 
-WITH tTree(id, name, parent, depth) AS
+WITH TTREE(ID, NAME, PARENT, DEPTH) AS
 (
-	SELECT id, name, parent, 0 FROM tDirectory WHERE parent = 0
+	SELECT ID, NAME, PARENT, 0 FROM TDIRECTORY WHERE PARENT = 0
 	UNION ALL
-	SELECT D.id, D.name, D.parent, T.depth + 1 FROM tDirectory D 
-	INNER JOIN tTree T ON D.parent = T.id
+	SELECT D.ID, D.NAME, D.PARENT, T.DEPTH + 1 FROM TDIRECTORY D 
+	INNER JOIN TTREE T ON D.PARENT = T.ID
 )
-SELECT * FROM tTree;
+SELECT * FROM TTREE;
 
-WITH tTree(id, name, parent, depth, fullpath) AS
+WITH TTREE(ID, NAME, PARENT, DEPTH, FULLPATH) AS
 (
-	SELECT id, name, parent, 0, CAST(name AS VARCHAR(256)) 
-	FROM tDirectory WHERE parent = 0
+	SELECT ID, NAME, PARENT, 0, CAST(NAME AS VARCHAR(256)) 
+	FROM TDIRECTORY WHERE PARENT = 0
 	UNION ALL
-	SELECT D.id, D.name, D.parent, T.depth + 1, 
-	CAST(CONCAT(CONCAT(T.fullpath, '/'), D.name) AS VARCHAR(256)) 
-	FROM tDirectory D 
-	INNER JOIN tTree T ON D.parent = T.id
+	SELECT D.ID, D.NAME, D.PARENT, T.DEPTH + 1, 
+	CAST(CONCAT(CONCAT(T.FULLPATH, '/'), D.NAME) AS VARCHAR(256)) 
+	FROM TDIRECTORY D 
+	INNER JOIN TTREE T ON D.PARENT = T.ID
 )
-SELECT * FROM tTree;
+SELECT * FROM TTREE;
 
-WITH tTree(id, name, parent, depth, fullpath) AS
+WITH TTREE(ID, NAME, PARENT, DEPTH, FULLPATH) AS
 (
-	SELECT id, name, parent, 0, CAST(name AS VARCHAR(256)) 
-	FROM tDirectory WHERE parent = 0
+	SELECT ID, NAME, PARENT, 0, CAST(NAME AS VARCHAR(256)) 
+	FROM TDIRECTORY WHERE PARENT = 0
 	UNION ALL
-	SELECT D.id, D.name, D.parent, T.depth + 1, 
-	LPAD('L ', (T.depth + 1) * 4) || D.name 
-	FROM tDirectory D 
-	INNER JOIN tTree T ON D.parent = T.id
+	SELECT D.ID, D.NAME, D.PARENT, T.DEPTH + 1, 
+	LPAD('L ', (T.DEPTH + 1) * 4) || D.NAME 
+	FROM TDIRECTORY D 
+	INNER JOIN TTREE T ON D.PARENT = T.ID
 )
-SELECT fullpath FROM tTree;
+SELECT FULLPATH FROM TTREE;
 
-CAST(SPACE((T.depth + 1) * 4) + 'L ' + D.name AS VARCHAR(256))
+CAST(SPACE((T.DEPTH + 1) * 4) + 'L ' + D.NAME AS VARCHAR(256))
 
 -------------------------------------------------
 -- 13장
 
-CREATE TABLE tMonthSale
+CREATE TABLE TMONTHSALE
 (
-	year INT,
-	month INT,
-	sales	INT
+	YEAR INT,
+	MONTH INT,
+	SALES	INT
 );
 
-INSERT INTO tMonthSale VALUES(2021, 9, 3650);
-INSERT INTO tMonthSale VALUES(2021, 10, 4120);
-INSERT INTO tMonthSale VALUES(2021, 11, 5000);
-INSERT INTO tMonthSale VALUES(2021, 12, 4420);
-INSERT INTO tMonthSale VALUES(2022, 1, 3800);
-INSERT INTO tMonthSale VALUES(2022, 2, 4200);
-INSERT INTO tMonthSale VALUES(2022, 3, 4150);
+INSERT INTO TMONTHSALE VALUES(2021, 9, 3650);
+INSERT INTO TMONTHSALE VALUES(2021, 10, 4120);
+INSERT INTO TMONTHSALE VALUES(2021, 11, 5000);
+INSERT INTO TMONTHSALE VALUES(2021, 12, 4420);
+INSERT INTO TMONTHSALE VALUES(2022, 1, 3800);
+INSERT INTO TMONTHSALE VALUES(2022, 2, 4200);
+INSERT INTO TMONTHSALE VALUES(2022, 3, 4150);
 
-SELECT gender, SUM(salary) FROM tStaff GROUP BY gender;
-SELECT depart, SUM(salary) FROM tStaff GROUP BY depart;
-SELECT depart, gender, SUM(salary) FROM tStaff GROUP BY depart, gender;
+SELECT GENDER, SUM(SALARY) FROM TSTAFF GROUP BY GENDER;
+SELECT DEPART, SUM(SALARY) FROM TSTAFF GROUP BY DEPART;
+SELECT DEPART, GENDER, SUM(SALARY) FROM TSTAFF GROUP BY DEPART, GENDER;
 
-SELECT depart, SUM(salary) FROM tStaff GROUP BY ROLLUP(depart);
+SELECT DEPART, SUM(SALARY) FROM TSTAFF GROUP BY ROLLUP(DEPART);
 
-SELECT depart, gender, SUM(salary) FROM tStaff GROUP BY ROLLUP(depart, gender);
+SELECT DEPART, GENDER, SUM(SALARY) FROM TSTAFF GROUP BY ROLLUP(DEPART, GENDER);
 
-SELECT gender, depart, SUM(salary) FROM tStaff GROUP BY ROLLUP(gender, depart);
+SELECT GENDER, DEPART, SUM(SALARY) FROM TSTAFF GROUP BY ROLLUP(GENDER, DEPART);
 
-SELECT depart, gender, SUM(salary) FROM tStaff GROUP BY depart, ROLLUP(gender);
-SELECT gender, depart, SUM(salary) FROM tStaff GROUP BY gender, ROLLUP(depart);
+SELECT DEPART, GENDER, SUM(SALARY) FROM TSTAFF GROUP BY DEPART, ROLLUP(GENDER);
+SELECT GENDER, DEPART, SUM(SALARY) FROM TSTAFF GROUP BY GENDER, ROLLUP(DEPART);
 
-SELECT depart, gender, SUM(salary) FROM tStaff GROUP BY CUBE(depart, gender);
+SELECT DEPART, GENDER, SUM(SALARY) FROM TSTAFF GROUP BY CUBE(DEPART, GENDER);
 
-SELECT depart, gender, SUM(salary) FROM tStaff GROUP BY ROLLUP(depart, gender)
+SELECT DEPART, GENDER, SUM(SALARY) FROM TSTAFF GROUP BY ROLLUP(DEPART, GENDER)
 UNION
-SELECT depart, gender, SUM(salary) FROM tStaff GROUP BY ROLLUP(gender, depart);
+SELECT DEPART, GENDER, SUM(SALARY) FROM TSTAFF GROUP BY ROLLUP(GENDER, DEPART);
 
-SELECT depart, gender, SUM(salary) FROM tStaff GROUP BY CUBE(gender, depart);
+SELECT DEPART, GENDER, SUM(SALARY) FROM TSTAFF GROUP BY CUBE(GENDER, DEPART);
 
-SELECT depart, gender, SUM(salary) FROM tStaff GROUP BY GROUPING SETS(depart, gender);
+SELECT DEPART, GENDER, SUM(SALARY) FROM TSTAFF GROUP BY GROUPING SETS(DEPART, GENDER);
 
-SELECT GROUPING(depart), depart, SUM(salary) FROM tStaff GROUP BY ROLLUP(depart);
+SELECT GROUPING(DEPART), DEPART, SUM(SALARY) FROM TSTAFF GROUP BY ROLLUP(DEPART);
 
-SELECT CASE GROUPING(depart) WHEN 1 THEN '전체부서' ELSE depart END AS depart, 
-SUM(salary) FROM tStaff GROUP BY ROLLUP(depart);
+SELECT CASE GROUPING(DEPART) WHEN 1 THEN '전체부서' ELSE DEPART END AS DEPART, 
+SUM(SALARY) FROM TSTAFF GROUP BY ROLLUP(DEPART);
 
-SELECT CASE GROUPING(depart) WHEN 1 THEN '전체부서' ELSE depart END AS depart,
-	CASE GROUPING(gender) WHEN 1 THEN '전체성별' ELSE gender END AS gender, 
-	SUM(salary) FROM tStaff GROUP BY CUBE(depart, gender)
-	ORDER BY /*GROUPING(depart), GROUPING(gender),*/ depart, gender;
+SELECT CASE GROUPING(DEPART) WHEN 1 THEN '전체부서' ELSE DEPART END AS DEPART,
+	CASE GROUPING(GENDER) WHEN 1 THEN '전체성별' ELSE GENDER END AS GENDER, 
+	SUM(SALARY) FROM TSTAFF GROUP BY CUBE(DEPART, GENDER)
+	ORDER BY /*GROUPING(DEPART), GROUPING(GENDER),*/ DEPART, GENDER;
 
-SELECT name, depart, salary, SUM(salary) FROM tStaff;
+SELECT NAME, DEPART, SALARY, SUM(SALARY) FROM TSTAFF;
 
-SELECT depart, SUM(salary) FROM tStaff GROUP BY depart;
+SELECT DEPART, SUM(SALARY) FROM TSTAFF GROUP BY DEPART;
 
-SELECT name, depart, salary, (SELECT SUM(salary) FROM tStaff) AS 월급총합 FROM tStaff;
+SELECT NAME, DEPART, SALARY, (SELECT SUM(SALARY) FROM TSTAFF) AS 월급총합 FROM TSTAFF;
 
-SELECT name, depart, salary, SUM(salary) OVER() AS 월급총합 FROM tStaff;
+SELECT NAME, DEPART, SALARY, SUM(SALARY) OVER() AS 월급총합 FROM TSTAFF;
 
-SELECT name, depart, salary, ROUND(salary * 100.0 / SUM(salary) OVER(), 2) 
-AS 월급비율 FROM tStaff;
+SELECT NAME, DEPART, SALARY, ROUND(SALARY * 100.0 / SUM(SALARY) OVER(), 2) 
+AS 월급비율 FROM TSTAFF;
 
-SELECT name, depart, salary, (SELECT SUM(salary) FROM tStaff GROUP BY depart) 
-AS 부서월급총합 FROM tStaff;
+SELECT NAME, DEPART, SALARY, (SELECT SUM(SALARY) FROM TSTAFF GROUP BY DEPART) 
+AS 부서월급총합 FROM TSTAFF;
 
-SELECT name, depart, salary, (SELECT SUM(salary) FROM tStaff WHERE depart = A.depart) 
-AS 부서월급총합 FROM tStaff A ORDER BY depart;
+SELECT NAME, DEPART, SALARY, (SELECT SUM(SALARY) FROM TSTAFF WHERE DEPART = A.DEPART) 
+AS 부서월급총합 FROM TSTAFF A ORDER BY DEPART;
 
-SELECT name, depart, salary, SUM(salary) OVER(PARTITION BY depart) 
-AS 부서월급총합 FROM tStaff;
+SELECT NAME, DEPART, SALARY, SUM(SALARY) OVER(PARTITION BY DEPART) 
+AS 부서월급총합 FROM TSTAFF;
 
-SELECT name, depart, salary, SUM(salary) OVER(ORDER BY name) 
-AS 누적월급 FROM tStaff;
+SELECT NAME, DEPART, SALARY, SUM(SALARY) OVER(ORDER BY NAME) 
+AS 누적월급 FROM TSTAFF;
 
-SELECT name, depart, salary, SUM(salary) OVER(PARTITION BY depart ORDER BY name) 
-AS 부서누적월급 FROM tStaff;
+SELECT NAME, DEPART, SALARY, SUM(SALARY) OVER(PARTITION BY DEPART ORDER BY NAME) 
+AS 부서누적월급 FROM TSTAFF;
 
-SELECT name, depart, salary, (SELECT SUM(salary) FROM tStaff 
-WHERE name <= A.name) AS 누적월급 FROM tStaff A ORDER BY name;
-SELECT name, depart, salary, (SELECT SUM(salary) FROM tStaff 
-WHERE name <= A.name AND depart = A.depart) AS 부서누적월급 
-FROM tStaff A ORDER BY depart, name;
+SELECT NAME, DEPART, SALARY, (SELECT SUM(SALARY) FROM TSTAFF 
+WHERE NAME <= A.NAME) AS 누적월급 FROM TSTAFF A ORDER BY NAME;
+SELECT NAME, DEPART, SALARY, (SELECT SUM(SALARY) FROM TSTAFF 
+WHERE NAME <= A.NAME AND DEPART = A.DEPART) AS 부서누적월급 
+FROM TSTAFF A ORDER BY DEPART, NAME;
 
-SELECT name, depart, salary, SUM(salary) OVER(ORDER BY name 
-ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING) AS 누적월급 FROM tStaff;
+SELECT NAME, DEPART, SALARY, SUM(SALARY) OVER(ORDER BY NAME 
+ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING) AS 누적월급 FROM TSTAFF;
 
-SELECT name, depart, salary, SUM(salary) OVER(ORDER BY name 
-ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS 누적월급 FROM tStaff;
+SELECT NAME, DEPART, SALARY, SUM(SALARY) OVER(ORDER BY NAME 
+ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS 누적월급 FROM TSTAFF;
 
-SELECT name, depart, joindate, salary, 
-SUM(salary) OVER(PARTITION BY depart ORDER BY joindate 
-ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING) AS 누적월급 FROM tStaff;
+SELECT NAME, DEPART, JOINDATE, SALARY, 
+SUM(SALARY) OVER(PARTITION BY DEPART ORDER BY JOINDATE 
+ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING) AS 누적월급 FROM TSTAFF;
 
-SELECT name, depart, salary, SUM(salary) OVER(ORDER BY salary 
-ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS 누적월급 FROM tStaff;
+SELECT NAME, DEPART, SALARY, SUM(SALARY) OVER(ORDER BY SALARY 
+ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS 누적월급 FROM TSTAFF;
 
-SELECT name, depart, salary, SUM(salary) OVER(ORDER BY salary 
-RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS 누적월급 FROM tStaff;
+SELECT NAME, DEPART, SALARY, SUM(SALARY) OVER(ORDER BY SALARY 
+RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS 누적월급 FROM TSTAFF;
 
-SELECT RANK() OVER (ORDER BY salary DESC), tStaff.* FROM tStaff;
-MSSQL, 마리아 : SELECT RANK() OVER (ORDER BY salary DESC), * FROM tStaff;
+SELECT RANK() OVER (ORDER BY SALARY DESC), TSTAFF.* FROM TSTAFF;
+MSSQL, 마리아 : SELECT RANK() OVER (ORDER BY SALARY DESC), * FROM TSTAFF;
 
-SELECT RANK() OVER (ORDER BY salary DESC), tStaff.* FROM tStaff ORDER BY score;
+SELECT RANK() OVER (ORDER BY SALARY DESC), TSTAFF.* FROM TSTAFF ORDER BY SCORE;
 
-SELECT RANK() OVER (ORDER BY salary DESC) AS 순위, tStaff.* FROM tStaff 
-WHERE depart = '영업부';
+SELECT RANK() OVER (ORDER BY SALARY DESC) AS 순위, TSTAFF.* FROM TSTAFF 
+WHERE DEPART = '영업부';
 
-SELECT RANK() OVER (PARTITION BY depart ORDER BY salary DESC) 
-AS 순위, tStaff.* FROM tStaff;
+SELECT RANK() OVER (PARTITION BY DEPART ORDER BY SALARY DESC) 
+AS 순위, TSTAFF.* FROM TSTAFF;
 
-SELECT DENSE_RANK() OVER (ORDER BY salary DESC), tStaff.* FROM tStaff;
+SELECT DENSE_RANK() OVER (ORDER BY SALARY DESC), TSTAFF.* FROM TSTAFF;
 
-SELECT ROW_NUMBER() OVER (ORDER BY name), tStaff.* FROM tStaff;
+SELECT ROW_NUMBER() OVER (ORDER BY NAME), TSTAFF.* FROM TSTAFF;
 
-SELECT ROW_NUMBER() OVER (ORDER BY rownum) AS 순서, tStaff.* FROM tStaff;
+SELECT ROW_NUMBER() OVER (ORDER BY ROWNUM) AS 순서, TSTAFF.* FROM TSTAFF;
 
-SELECT ROW_NUMBER() OVER (ORDER BY name) AS 순서, tStaff.* FROM tStaff
+SELECT ROW_NUMBER() OVER (ORDER BY NAME) AS 순서, TSTAFF.* FROM TSTAFF
 ORDER BY 순서 OFFSET 2 * 5 ROWS FETCH NEXT 5 ROWS ONLY;
 
 SELECT * FROM
-(SELECT ROW_NUMBER() OVER (ORDER BY name) AS 순서, tStaff.* FROM tStaff) S
-WHERE S.순서 > 2 * 5 AND rownum <= 5;
+(SELECT ROW_NUMBER() OVER (ORDER BY NAME) AS 순서, TSTAFF.* FROM TSTAFF) S
+WHERE S.순서 > 2 * 5 AND ROWNUM <= 5;
 
 SELECT TOP(5) * FROM
-(SELECT ROW_NUMBER() OVER (ORDER BY name) AS 순서, tStaff.* FROM tStaff) S
+(SELECT ROW_NUMBER() OVER (ORDER BY NAME) AS 순서, TSTAFF.* FROM TSTAFF) S
 WHERE S.순서 > 2 * 5;
 
-SELECT ROW_NUMBER() OVER (ORDER BY name) AS 순서, tStaff.* FROM tStaff LIMIT 11, 5;
+SELECT ROW_NUMBER() OVER (ORDER BY NAME) AS 순서, TSTAFF.* FROM TSTAFF LIMIT 11, 5;
 
-SELECT NTILE(4) OVER (ORDER BY salary DESC) AS 구간, name, salary FROM tStaff;
-SELECT NTILE(4) OVER (PARTITION BY gender ORDER BY salary DESC) 
-AS 구간, name, gender, salary FROM tStaff;
+SELECT NTILE(4) OVER (ORDER BY SALARY DESC) AS 구간, NAME, SALARY FROM TSTAFF;
+SELECT NTILE(4) OVER (PARTITION BY GENDER ORDER BY SALARY DESC) 
+AS 구간, NAME, GENDER, SALARY FROM TSTAFF;
 
-SELECT name, score FROM 
-(SELECT NTILE(5) OVER (ORDER BY score DESC) AS 구간, tStaff.* FROM tStaff) S 
+SELECT NAME, SCORE FROM 
+(SELECT NTILE(5) OVER (ORDER BY SCORE DESC) AS 구간, TSTAFF.* FROM TSTAFF) S 
 WHERE S.구간 = 3;
 
-SELECT year, month, sales,
-	LAG(sales) OVER (ORDER BY year, month) AS priorMonth,
-	LEAD(sales) OVER (ORDER BY year, month) AS nextMonth
-FROM tMonthSale;
+SELECT YEAR, MONTH, SALES,
+	LAG(SALES) OVER (ORDER BY YEAR, MONTH) AS PRIORMONTH,
+	LEAD(SALES) OVER (ORDER BY YEAR, MONTH) AS NEXTMONTH
+FROM TMONTHSALE;
 
-SELECT year, month, sales,
-	sales - LAG(sales) OVER (ORDER BY year, month) AS incsales
-FROM tMonthSale;
+SELECT YEAR, MONTH, SALES,
+	SALES - LAG(SALES) OVER (ORDER BY YEAR, MONTH) AS INCSALES
+FROM TMONTHSALE;
 
-SELECT year, month, sales,
-	LAG(sales) OVER (PARTITION BY year ORDER by year, month) AS priorMonth,
-	LEAD(sales) OVER (PARTITION BY year ORDER by year, month) AS nextMonth
-FROM tMonthSale;
+SELECT YEAR, MONTH, SALES,
+	LAG(SALES) OVER (PARTITION BY YEAR ORDER BY YEAR, MONTH) AS PRIORMONTH,
+	LEAD(SALES) OVER (PARTITION BY YEAR ORDER BY YEAR, MONTH) AS NEXTMONTH
+FROM TMONTHSALE;
 
-SELECT year, month, sales,
-	ROUND(CUME_DIST() OVER (ORDER BY year, month) * 100, 2) AS cume,
-	ROUND(PERCENT_RANK() OVER (ORDER BY year, month) * 100, 2) AS rank
-FROM tMonthSale;
+SELECT YEAR, MONTH, SALES,
+	ROUND(CUME_DIST() OVER (ORDER BY YEAR, MONTH) * 100, 2) AS CUME,
+	ROUND(PERCENT_RANK() OVER (ORDER BY YEAR, MONTH) * 100, 2) AS RANK
+FROM TMONTHSALE;
 
-SELECT name, salary,
-	ROUND(CUME_DIST() OVER (ORDER BY salary) * 100, 2) AS cume,
-	ROUND(PERCENT_RANK() OVER (ORDER BY salary) * 100, 2) AS rank
-FROM tStaff;
+SELECT NAME, SALARY,
+	ROUND(CUME_DIST() OVER (ORDER BY SALARY) * 100, 2) AS CUME,
+	ROUND(PERCENT_RANK() OVER (ORDER BY SALARY) * 100, 2) AS RANK
+FROM TSTAFF;
 
-SELECT depart, name, salary,
-	ROUND(CUME_DIST() OVER (PARTITION BY depart ORDER BY salary) * 100, 2) AS cume,
-	ROUND(PERCENT_RANK() OVER (PARTITION BY depart ORDER BY salary) * 100, 2) AS rank
-FROM tStaff;
+SELECT DEPART, NAME, SALARY,
+	ROUND(CUME_DIST() OVER (PARTITION BY DEPART ORDER BY SALARY) * 100, 2) AS CUME,
+	ROUND(PERCENT_RANK() OVER (PARTITION BY DEPART ORDER BY SALARY) * 100, 2) AS RANK
+FROM TSTAFF;
 
-SELECT name, salary,
-	FIRST_VALUE(salary) OVER (ORDER BY salary) AS first,
-	LAST_VALUE(salary) OVER (ORDER BY salary) AS midlast,
-	LAST_VALUE(salary) OVER (ORDER BY salary ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS last
-FROM tStaff;
+SELECT NAME, SALARY,
+	FIRST_VALUE(SALARY) OVER (ORDER BY SALARY) AS FIRST,
+	LAST_VALUE(SALARY) OVER (ORDER BY SALARY) AS MIDLAST,
+	LAST_VALUE(SALARY) OVER (ORDER BY SALARY ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) AS LAST
+FROM TSTAFF;
 
-SELECT name, salary,
-	salary - FIRST_VALUE(salary) OVER (ORDER BY salary) AS 최저월급기준,
-	LAST_VALUE(salary) OVER (ORDER BY salary ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) - salary AS 최고월급기준
-FROM tStaff ORDER BY name;
+SELECT NAME, SALARY,
+	SALARY - FIRST_VALUE(SALARY) OVER (ORDER BY SALARY) AS 최저월급기준,
+	LAST_VALUE(SALARY) OVER (ORDER BY SALARY ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) - SALARY AS 최고월급기준
+FROM TSTAFF ORDER BY NAME;
 
-SELECT depart, name, salary,
-	salary - FIRST_VALUE(salary) OVER (PARTITION BY depart ORDER BY salary) AS 최저월급기준,
-	LAST_VALUE(salary) OVER (PARTITION BY depart ORDER BY salary ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) - salary AS 최고월급기준
-FROM tStaff ORDER BY depart, salary;
+SELECT DEPART, NAME, SALARY,
+	SALARY - FIRST_VALUE(SALARY) OVER (PARTITION BY DEPART ORDER BY SALARY) AS 최저월급기준,
+	LAST_VALUE(SALARY) OVER (PARTITION BY DEPART ORDER BY SALARY ROWS BETWEEN UNBOUNDED PRECEDING AND UNBOUNDED FOLLOWING) - SALARY AS 최고월급기준
+FROM TSTAFF ORDER BY DEPART, SALARY;
 
-SELECT year, month, sales,	
-PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY sales) 
-OVER (PARTITION BY year) AS cont,	
-PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY sales) 
-OVER (PARTITION BY year) AS disc
-FROM tMonthSale;
+SELECT YEAR, MONTH, SALES,	
+PERCENTILE_CONT(0.5) WITHIN GROUP (ORDER BY SALES) 
+OVER (PARTITION BY YEAR) AS CONT,	
+PERCENTILE_DISC(0.5) WITHIN GROUP (ORDER BY SALES) 
+OVER (PARTITION BY YEAR) AS DISC
+FROM TMONTHSALE;
 
-CREATE TABLE tSeason
+CREATE TABLE TSEASON
 (
-	item VARCHAR(10),
-	season VARCHAR(10),
-	sale INT
+	ITEM VARCHAR(10),
+	SEASON VARCHAR(10),
+	SALE INT
 );
 
-INSERT INTO tSeason VALUES ('냉면', '봄', 20);
-INSERT INTO tSeason VALUES ('냉면', '여름', 50);
-INSERT INTO tSeason VALUES ('냉면', '가을', 30);
-INSERT INTO tSeason VALUES ('냉면', '겨울', 10);
-INSERT INTO tSeason VALUES ('짬뽕', '봄', 30);
-INSERT INTO tSeason VALUES ('짬뽕', '여름', 10);
-INSERT INTO tSeason VALUES ('짬뽕', '가을', 20);
-INSERT INTO tSeason VALUES ('짬뽕', '겨울', 40);
+INSERT INTO TSEASON VALUES ('냉면', '봄', 20);
+INSERT INTO TSEASON VALUES ('냉면', '여름', 50);
+INSERT INTO TSEASON VALUES ('냉면', '가을', 30);
+INSERT INTO TSEASON VALUES ('냉면', '겨울', 10);
+INSERT INTO TSEASON VALUES ('짬뽕', '봄', 30);
+INSERT INTO TSEASON VALUES ('짬뽕', '여름', 10);
+INSERT INTO TSEASON VALUES ('짬뽕', '가을', 20);
+INSERT INTO TSEASON VALUES ('짬뽕', '겨울', 40);
 
-SELECT * FROM tSeason
-PIVOT (MAX(sale) FOR season IN ('봄', '여름', '가을', '겨울'));
+SELECT * FROM TSEASON
+PIVOT (MAX(SALE) FOR SEASON IN ('봄', '여름', '가을', '겨울'));
 
-SELECT * FROM tSeason
-PIVOT (MAX(sale) FOR season IN ('여름', '봄', '가을'));
+SELECT * FROM TSEASON
+PIVOT (MAX(SALE) FOR SEASON IN ('여름', '봄', '가을'));
 
-SELECT * FROM tSeason
-PIVOT (MAX(sale) FOR item IN ('냉면', '짬뽕'))
+SELECT * FROM TSEASON
+PIVOT (MAX(SALE) FOR ITEM IN ('냉면', '짬뽕'))
 
-SELECT * FROM tSeason
-PIVOT (sale FOR season IN ('봄', '여름', '가을', '겨울')) pvt;
+SELECT * FROM TSEASON
+PIVOT (SALE FOR SEASON IN ('봄', '여름', '가을', '겨울')) PVT;
 
-SELECT * FROM tSeason
-PIVOT (SUM(sale) FOR season IN ('봄', '여름', '가을', '겨울')) pvt;
+SELECT * FROM TSEASON
+PIVOT (SUM(SALE) FOR SEASON IN ('봄', '여름', '가을', '겨울')) PVT;
 
-INSERT INTO tSeason2 VALUES ('냉면', '봄', 20);
-INSERT INTO tSeason2 VALUES ('냉면', '여름', 50);
-INSERT INTO tSeason2 VALUES ('냉면', '가을', 30);
-INSERT INTO tSeason2 VALUES ('짬뽕', '봄', 30);
-INSERT INTO tSeason2 VALUES ('짬뽕', '가을', 20);
-INSERT INTO tSeason2 VALUES ('짬뽕', '겨울', 40);
-INSERT INTO tSeason2 VALUES ('짬뽕', '겨울', 30);
+INSERT INTO TSEASON2 VALUES ('냉면', '봄', 20);
+INSERT INTO TSEASON2 VALUES ('냉면', '여름', 50);
+INSERT INTO TSEASON2 VALUES ('냉면', '가을', 30);
+INSERT INTO TSEASON2 VALUES ('짬뽕', '봄', 30);
+INSERT INTO TSEASON2 VALUES ('짬뽕', '가을', 20);
+INSERT INTO TSEASON2 VALUES ('짬뽕', '겨울', 40);
+INSERT INTO TSEASON2 VALUES ('짬뽕', '겨울', 30);
 
-SELECT * FROM tSeason2 PIVOT (MAX(sale) FOR season IN ('봄', '여름', '가을', '겨울')) pvt;
-SELECT * FROM tSeason2 PIVOT (SUM(sale) FOR season IN ('봄', '여름', '가을', '겨울')) pvt;
+SELECT * FROM TSEASON2 PIVOT (MAX(SALE) FOR SEASON IN ('봄', '여름', '가을', '겨울')) PVT;
+SELECT * FROM TSEASON2 PIVOT (SUM(SALE) FOR SEASON IN ('봄', '여름', '가을', '겨울')) PVT;
 
-CREATE TABLE tTraffic
+CREATE TABLE TTRAFFIC
 (
-	line VARCHAR(10),
-	hour INT,
-	car VARCHAR(20),
-	traffic INT
+	LINE VARCHAR(10),
+	HOUR INT,
+	CAR VARCHAR(20),
+	TRAFFIC INT
 );
 
-INSERT INTO tTraffic VALUES ('경부', 1, '승용차', 40);
-INSERT INTO tTraffic VALUES ('경부', 2, '승용차', 41);
-INSERT INTO tTraffic VALUES ('경부', 3, '승용차', 42);
-INSERT INTO tTraffic VALUES ('경부', 1, '트럭', 30);
-INSERT INTO tTraffic VALUES ('경부', 3, '트럭', 32);
-INSERT INTO tTraffic VALUES ('호남', 1, '승용차', 20);
-INSERT INTO tTraffic VALUES ('호남', 2, '승용차', 10);
-INSERT INTO tTraffic VALUES ('호남', 2, '승용차', 11);
-INSERT INTO tTraffic VALUES ('호남', 3, '승용차', 22);
-INSERT INTO tTraffic VALUES ('호남', 1, '트럭', 10);
-INSERT INTO tTraffic VALUES ('호남', 2, '트럭', 11);
-INSERT INTO tTraffic VALUES ('호남', 3, '트럭', 12);
+INSERT INTO TTRAFFIC VALUES ('경부', 1, '승용차', 40);
+INSERT INTO TTRAFFIC VALUES ('경부', 2, '승용차', 41);
+INSERT INTO TTRAFFIC VALUES ('경부', 3, '승용차', 42);
+INSERT INTO TTRAFFIC VALUES ('경부', 1, '트럭', 30);
+INSERT INTO TTRAFFIC VALUES ('경부', 3, '트럭', 32);
+INSERT INTO TTRAFFIC VALUES ('호남', 1, '승용차', 20);
+INSERT INTO TTRAFFIC VALUES ('호남', 2, '승용차', 10);
+INSERT INTO TTRAFFIC VALUES ('호남', 2, '승용차', 11);
+INSERT INTO TTRAFFIC VALUES ('호남', 3, '승용차', 22);
+INSERT INTO TTRAFFIC VALUES ('호남', 1, '트럭', 10);
+INSERT INTO TTRAFFIC VALUES ('호남', 2, '트럭', 11);
+INSERT INTO TTRAFFIC VALUES ('호남', 3, '트럭', 12);
 
-SELECT * FROM tTraffic PIVOT (SUM(traffic) FOR line IN ('경부', '호남')) pvt;
-SELECT * FROM tTraffic PIVOT (SUM(traffic) FOR hour IN ('1', '2', '3')) pvt;
+SELECT * FROM TTRAFFIC PIVOT (SUM(TRAFFIC) FOR LINE IN ('경부', '호남')) PVT;
+SELECT * FROM TTRAFFIC PIVOT (SUM(TRAFFIC) FOR HOUR IN ('1', '2', '3')) PVT;
 
-SELECT line, car, traffic FROM tTraffic 
-PIVOT (SUM(traffic) FOR car IN ('승용차', '트럭')) pvt;
+SELECT LINE, CAR, TRAFFIC FROM TTRAFFIC 
+PIVOT (SUM(TRAFFIC) FOR CAR IN ('승용차', '트럭')) PVT;
 
 SELECT * FROM
 (
-	SELECT line, car, traffic FROM tTraffic
-) prepvt
-PIVOT (SUM(traffic) FOR car IN ('승용차', '트럭')) pvt;
+	SELECT LINE, CAR, TRAFFIC FROM TTRAFFIC
+) PREPVT
+PIVOT (SUM(TRAFFIC) FOR CAR IN ('승용차', '트럭')) PVT;
 
-SELECT line, SUM(승용차), SUM(트럭) FROM tTraffic
-PIVOT (SUM(traffic) FOR car IN ('승용차' AS 승용차, '트럭' AS 트럭)) pvt
-GROUP BY line;
-
-SELECT * FROM
-(
-	SELECT hour, car, traffic FROM tTraffic
-) prepvt
-PIVOT (SUM(traffic) FOR car IN ('승용차', '트럭')) pvt;
+SELECT LINE, SUM(승용차), SUM(트럭) FROM TTRAFFIC
+PIVOT (SUM(TRAFFIC) FOR CAR IN ('승용차' AS 승용차, '트럭' AS 트럭)) PVT
+GROUP BY LINE;
 
 SELECT * FROM
 (
-	SELECT car, traffic FROM tTraffic
-) prepvt
-PIVOT (SUM(traffic) FOR car IN ('승용차', '트럭')) pvt;
+	SELECT HOUR, CAR, TRAFFIC FROM TTRAFFIC
+) PREPVT
+PIVOT (SUM(TRAFFIC) FOR CAR IN ('승용차', '트럭')) PVT;
 
-SELECT line, 트럭, 승용차 FROM
+SELECT * FROM
 (
-	SELECT line, hour, car, traffic FROM tTraffic
-) prepvt
-PIVOT (SUM(traffic) FOR car IN ('승용차' AS 승용차, '트럭' AS 트럭)) pvt;
+	SELECT CAR, TRAFFIC FROM TTRAFFIC
+) PREPVT
+PIVOT (SUM(TRAFFIC) FOR CAR IN ('승용차', '트럭')) PVT;
 
-SELECT line || '선 ' || CAST(hour AS VARCHAR(10)) || '시' AS 구분, 트럭, 승용차 FROM
+SELECT LINE, 트럭, 승용차 FROM
 (
-	SELECT line, hour, car, traffic FROM tTraffic
-) prepvt
-PIVOT (SUM(traffic) FOR car IN ('승용차' AS 승용차, '트럭' AS 트럭)) pvt
-ORDER BY line;
+	SELECT LINE, HOUR, CAR, TRAFFIC FROM TTRAFFIC
+) PREPVT
+PIVOT (SUM(TRAFFIC) FOR CAR IN ('승용차' AS 승용차, '트럭' AS 트럭)) PVT;
 
-CREATE TABLE tCityStat
+SELECT LINE || '선 ' || CAST(HOUR AS VARCHAR(10)) || '시' AS 구분, 트럭, 승용차 FROM
 (
-	name CHAR(10),
-	attr CHAR(10),
-	value INT
+	SELECT LINE, HOUR, CAR, TRAFFIC FROM TTRAFFIC
+) PREPVT
+PIVOT (SUM(TRAFFIC) FOR CAR IN ('승용차' AS 승용차, '트럭' AS 트럭)) PVT
+ORDER BY LINE;
+
+CREATE TABLE TCITYSTAT
+(
+	NAME CHAR(10),
+	ATTR CHAR(10),
+	VALUE INT
 );
 
-INSERT INTO tCityStat VALUES ('서울', 'area', 605);
-INSERT INTO tCityStat VALUES ('서울', 'popu', 974);
-INSERT INTO tCityStat VALUES ('서울', 'gu', 25);
-INSERT INTO tCityStat VALUES ('인제', 'area', 1646);
-INSERT INTO tCityStat VALUES ('인제', 'popu', 3);
-INSERT INTO tCityStat VALUES ('인제', 'home', 15409);
-INSERT INTO tCityStat VALUES ('홍천', 'area', 1819);
+INSERT INTO TCITYSTAT VALUES ('서울', 'AREA', 605);
+INSERT INTO TCITYSTAT VALUES ('서울', 'POPU', 974);
+INSERT INTO TCITYSTAT VALUES ('서울', 'GU', 25);
+INSERT INTO TCITYSTAT VALUES ('인제', 'AREA', 1646);
+INSERT INTO TCITYSTAT VALUES ('인제', 'POPU', 3);
+INSERT INTO TCITYSTAT VALUES ('인제', 'HOME', 15409);
+INSERT INTO TCITYSTAT VALUES ('홍천', 'AREA', 1819);
 
-SELECT * FROM tCityStat
-PIVOT (MAX(value) FOR attr IN ('area' AS area, 'popu' AS popu)) pvt;
+SELECT * FROM TCITYSTAT
+PIVOT (MAX(VALUE) FOR ATTR IN ('AREA' AS AREA, 'POPU' AS POPU)) PVT;
 
-SELECT name, ROUND(popu * 10000 / area, 2) AS 인구밀도 FROM
+SELECT NAME, ROUND(POPU * 10000 / AREA, 2) AS 인구밀도 FROM
 (
-    SELECT * FROM tCityStat
-    PIVOT (MAX(value) FOR attr IN ('area' AS area, 'popu' AS popu)) pvt
+    SELECT * FROM TCITYSTAT
+    PIVOT (MAX(VALUE) FOR ATTR IN ('AREA' AS AREA, 'POPU' AS POPU)) PVT
 ) A;
 
-WHERE popu IS NOT NULL AND area IS NOT NULL
+WHERE POPU IS NOT NULL AND AREA IS NOT NULL
 
-CREATE TABLE tSeasonPivot AS 
-SELECT * FROM tSeason
-PIVOT (SUM(sale) FOR season IN ('봄' AS 봄, '여름' AS 여름, '가을' AS 가을, '겨울' AS 겨울));
+CREATE TABLE TSEASONPIVOT AS 
+SELECT * FROM TSEASON
+PIVOT (SUM(SALE) FOR SEASON IN ('봄' AS 봄, '여름' AS 여름, '가을' AS 가을, '겨울' AS 겨울));
 
-SELECT * INTO tSeasonPivot FROM tSeason
-PIVOT (SUM(sale) FOR season IN (봄, 여름, 가을, 겨울)) pvt;
+SELECT * INTO TSEASONPIVOT FROM TSEASON
+PIVOT (SUM(SALE) FOR SEASON IN (봄, 여름, 가을, 겨울)) PVT;
 
-SELECT * FROM tSeasonPivot
-UNPIVOT (sale FOR season IN (봄, 여름, 가을, 겨울)) unpvt;
+SELECT * FROM TSEASONPIVOT
+UNPIVOT (SALE FOR SEASON IN (봄, 여름, 가을, 겨울)) UNPVT;
 
 SELECT * FROM
 (
-    SELECT * FROM tSeason
-    PIVOT (SUM(sale) FOR season IN 
-    ('봄' AS 봄, '여름' AS 여름, '가을' AS 가을, '겨울' AS 겨울)) pvt
+    SELECT * FROM TSEASON
+    PIVOT (SUM(SALE) FOR SEASON IN 
+    ('봄' AS 봄, '여름' AS 여름, '가을' AS 가을, '겨울' AS 겨울)) PVT
 ) A
-UNPIVOT (sale FOR season IN (봄, 여름, 가을, 겨울)) unpvt;
+UNPIVOT (SALE FOR SEASON IN (봄, 여름, 가을, 겨울)) UNPVT;
 
 -------------------------------------------------
 -- 14장
 
-ALTER TABLE tCity ADD mayor CHAR(12) NULL;
+ALTER TABLE TCITY ADD MAYOR CHAR(12) NULL;
 
-UPDATE tCity SET mayor = '오륙도' WHERE name = '부산';
+UPDATE TCITY SET MAYOR = '오륙도' WHERE NAME = '부산';
 
-ALTER TABLE tCity ADD mayor CHAR(12) NOT NULL;
+ALTER TABLE TCITY ADD MAYOR CHAR(12) NOT NULL;
 
-ALTER TABLE tCity DROP COLUMN mayor;
+ALTER TABLE TCITY DROP COLUMN MAYOR;
 
-DROP TABLE tProject;
-CREATE TABLE tProject
+DROP TABLE TPROJECT;
+CREATE TABLE TPROJECT
 (
-	projectID INT,
-	employee CHAR(10),
-	project VARCHAR(30),
-	cost INT
+	PROJECTID INT,
+	EMPLOYEE CHAR(10),
+	PROJECT VARCHAR(30),
+	COST INT
 );
 
-INSERT INTO tProject VALUES (1, '김상형', '홍콩 수출건', 800);
-INSERT INTO tProject VALUES (1, '김상형', 'TV 광고건', 3400);
+INSERT INTO TPROJECT VALUES (1, '김상형', '홍콩 수출건', 800);
+INSERT INTO TPROJECT VALUES (1, '김상형', 'TV 광고건', 3400);
 
-TRUNCATE TABLE tProject;
-ALTER TABLE tProject ADD CONSTRAINT PK_projectID PRIMARY KEY(projectID);
+TRUNCATE TABLE TPROJECT;
+ALTER TABLE TPROJECT ADD CONSTRAINT PK_PROJECTID PRIMARY KEY(PROJECTID);
 
-오라클, MSSQL : ALTER TABLE tProject DROP CONSTRAINT PK_projectID;
-오라클, 마리아 : ALTER TABLE tProject DROP PRIMARY KEY;
+오라클, MSSQL : ALTER TABLE TPROJECT DROP CONSTRAINT PK_PROJECTID;
+오라클, 마리아 : ALTER TABLE TPROJECT DROP PRIMARY KEY;
 
-DELETE FROM tProject WHERE employee='바이든';
-ALTER TABLE tProject ADD CONSTRAINT FK_Project_Employee 
-FOREIGN KEY(employee) REFERENCES tEmployee(name);
+DELETE FROM TPROJECT WHERE EMPLOYEE='바이든';
+ALTER TABLE TPROJECT ADD CONSTRAINT FK_PROJECT_EMPLOYEE 
+FOREIGN KEY(EMPLOYEE) REFERENCES TEMPLOYEE(NAME);
 
-ALTER TABLE tProject DROP CONSTRAINT FK_Project_Employee;
+ALTER TABLE TPROJECT DROP CONSTRAINT FK_PROJECT_EMPLOYEE;
 
-오라클, 마리아 : ALTER TABLE tCity MODIFY region CHAR(30);
-MSSQL : ALTER TABLE tCity ALTER COLUMN region CHAR(30);
+오라클, 마리아 : ALTER TABLE TCITY MODIFY REGION CHAR(30);
+MSSQL : ALTER TABLE TCITY ALTER COLUMN REGION CHAR(30);
 
-INSERT INTO tCity VALUES ('제주',1849,67,'y','제주특별자치도');
+INSERT INTO TCITY VALUES ('제주',1849,67,'Y','제주특별자치도');
 
-오라클, 마리아 : ALTER TABLE tCity MODIFY region CHAR(1);
-MSSQL : ALTER TABLE tCity ALTER COLUMN region CHAR(1);
+오라클, 마리아 : ALTER TABLE TCITY MODIFY REGION CHAR(1);
+MSSQL : ALTER TABLE TCITY ALTER COLUMN REGION CHAR(1);
 
-오라클, 마리아 : ALTER TABLE tCity MODIFY popu DECIMAL(10,2);
-MSSQL : ALTER TABLE tCity ALTER COLUMN popu DECIMAL(10,2);
+오라클, 마리아 : ALTER TABLE TCITY MODIFY POPU DECIMAL(10,2);
+MSSQL : ALTER TABLE TCITY ALTER COLUMN POPU DECIMAL(10,2);
 
-UPDATE tCity SET popu = 21.2389 WHERE name = '오산';
+UPDATE TCITY SET POPU = 21.2389 WHERE NAME = '오산';
 
-CREATE TABLE tCityBackup AS SELECT * FROM tCity;		-- 백업
-TRUNCATE TABLE tCity;					-- 원본 비움
-ALTER TABLE tCity MODIFY popu DECIMAL(10,2);		-- 필드 타입 변경
-INSERT INTO tCity SELECT * FROM tCityBackup;		-- 백업 복원
-UPDATE tCity SET popu = 21.2389 WHERE name = '오산';		-- 필드값 변경
+CREATE TABLE TCITYBACKUP AS SELECT * FROM TCITY;		-- 백업
+TRUNCATE TABLE TCITY;					-- 원본 비움
+ALTER TABLE TCITY MODIFY POPU DECIMAL(10,2);		-- 필드 타입 변경
+INSERT INTO TCITY SELECT * FROM TCITYBACKUP;		-- 백업 복원
+UPDATE TCITY SET POPU = 21.2389 WHERE NAME = '오산';		-- 필드값 변경
 COMMIT;									-- 확정
-DROP TABLE tCityBackup;					-- 백업 삭제
+DROP TABLE TCITYBACKUP;					-- 백업 삭제
 
-DELETE FROM tProject WHERE employee='트럼프';
-오라클, 마리아 : ALTER TABLE tProject MODIFY project VARCHAR(30) NOT NULL;	
-MSSQL : ALTER TABLE tProject ALTER COLUMN project VARCHAR(30) NOT NULL;
+DELETE FROM TPROJECT WHERE EMPLOYEE='트럼프';
+오라클, 마리아 : ALTER TABLE TPROJECT MODIFY PROJECT VARCHAR(30) NOT NULL;	
+MSSQL : ALTER TABLE TPROJECT ALTER COLUMN PROJECT VARCHAR(30) NOT NULL;
 
-오라클 : ALTER TABLE tProject MODIFY cost DEFAULT 100;
-마리아 : ALTER TABLE tProject MODIFY cost VARCHAR(30) DEFAULT 100;
-MSSQL : ALTER TABLE tProject ALTER COLUMN project VARCHAR(30) DEFAULT 100 NOT NULL;
+오라클 : ALTER TABLE TPROJECT MODIFY COST DEFAULT 100;
+마리아 : ALTER TABLE TPROJECT MODIFY COST VARCHAR(30) DEFAULT 100;
+MSSQL : ALTER TABLE TPROJECT ALTER COLUMN PROJECT VARCHAR(30) DEFAULT 100 NOT NULL;
 
-INSERT INTO tProject (projectid, employee, project) VALUES (4, '오바마', '기후 변화 회의 참석');
+INSERT INTO TPROJECT (PROJECTID, EMPLOYEE, PROJECT) VALUES (4, '오바마', '기후 변화 회의 참석');
 
-INSERT INTO tProject VALUES (5, '클린턴', '북핵 제거', -100);
+INSERT INTO TPROJECT VALUES (5, '클린턴', '북핵 제거', -100);
 
-DELETE FROM tProject WHERE employee='클린턴';
-ALTER TABLE tProject ADD CONSTRAINT cost_check CHECK(cost > 0);
+DELETE FROM TPROJECT WHERE EMPLOYEE='클린턴';
+ALTER TABLE TPROJECT ADD CONSTRAINT COST_CHECK CHECK(COST > 0);
 
-CREATE TABLE tCityBackup AS SELECT * FROM tCity;
-DROP TABLE tCity;
-CREATE TABLE tCity
+CREATE TABLE TCITYBACKUP AS SELECT * FROM TCITY;
+DROP TABLE TCITY;
+CREATE TABLE TCITY
 (
-	name CHAR(10) PRIMARY KEY,
-	region CHAR(6) NOT NULL,
-	area INT NULL ,
-	popu INT NULL ,
-	metro CHAR(1) NOT NULL
+	NAME CHAR(10) PRIMARY KEY,
+	REGION CHAR(6) NOT NULL,
+	AREA INT NULL ,
+	POPU INT NULL ,
+	METRO CHAR(1) NOT NULL
 );
-INSERT INTO tCity (name, region, area, popu, metro) 
-    SELECT name, region, area, popu, metro FROM tCityBackup;
+INSERT INTO TCITY (NAME, REGION, AREA, POPU, METRO) 
+    SELECT NAME, REGION, AREA, POPU, METRO FROM TCITYBACKUP;
 COMMIT;
-DROP TABLE tCityBackup;
+DROP TABLE TCITYBACKUP;
 
-오라클 : ALTER TABLE tCity RENAME COLUMN popu TO ingu;
-MSSQL : sp_rename 'tCity.popu', 'ingu';
-마리아 : ALTER TABLE tCity CHANGE popu ingu INT NULL; 
+오라클 : ALTER TABLE TCITY RENAME COLUMN POPU TO INGU;
+MSSQL : SP_RENAME 'TCITY.POPU', 'INGU';
+마리아 : ALTER TABLE TCITY CHANGE POPU INGU INT NULL; 
 
-오라클, 마리아 : ALTER TABLE tCity RENAME TO tDosi;
-MSSQL : sp_rename 'tCity', 'tDosi';
+오라클, 마리아 : ALTER TABLE TCITY RENAME TO TDOSI;
+MSSQL : SP_RENAME 'TCITY', 'TDOSI';
 
-COMMENT ON TABLE tCity IS '도시 목록';
-COMMENT ON COLUMN tCity.popu IS '인구';
+COMMENT ON TABLE TCITY IS '도시 목록';
+COMMENT ON COLUMN TCITY.POPU IS '인구';
 
-SELECT COMMENTS FROM user_tab_comments where table_name = 'TCITY';
-SELECT * FROM user_col_comments where table_name = 'TCITY';
+SELECT COMMENTS FROM USER_TAB_COMMENTS WHERE TABLE_NAME = 'TCITY';
+SELECT * FROM USER_COL_COMMENTS WHERE TABLE_NAME = 'TCITY';
 
-sp_addextendedproperty 'MS_Description', '도시목록', 'USER', DBO, 'TABLE', tCity;
-sp_addextendedproperty 'MS_Description', '인구', 'USER', DBO, 'TABLE', tCity, 'COLUMN', popu;
+SP_ADDEXTENDEDPROPERTY 'MS_DESCRIPTION', '도시목록', 'USER', DBO, 'TABLE', TCITY;
+SP_ADDEXTENDEDPROPERTY 'MS_DESCRIPTION', '인구', 'USER', DBO, 'TABLE', TCITY, 'COLUMN', POPU;
 
 -------------------------------------------------
 -- 15장
@@ -2188,151 +2188,151 @@ BEGIN
 END;
 
 DECLARE
-    v_price INT := 1000;
-    v_num INT := 5;
-    v_total INT;
+    V_PRICE INT := 1000;
+    V_NUM INT := 5;
+    V_TOTAL INT;
 BEGIN
-    v_total := v_price * v_num;
-    DBMS_OUTPUT.PUT_LINE(v_total);
+    V_TOTAL := V_PRICE * V_NUM;
+    DBMS_OUTPUT.PUT_LINE(V_TOTAL);
 END;
 
-DECLARE v_price INT := 1000;v_num INT := 5;v_total INT;
-BEGIN v_total := v_price * v_num;DBMS_OUTPUT.PUT_LINE(v_total);END;
+DECLARE V_PRICE INT := 1000;V_NUM INT := 5;V_TOTAL INT;
+BEGIN V_TOTAL := V_PRICE * V_NUM;DBMS_OUTPUT.PUT_LINE(V_TOTAL);END;
 
 DECLARE
-    c_mile CONSTANT NUMBER := 1.609;
-    v_kilo INT;
+    C_MILE CONSTANT NUMBER := 1.609;
+    V_KILO INT;
 BEGIN
-    v_kilo := 400;
-    DBMS_OUTPUT.PUT_LINE(v_kilo * c_mile);
+    V_KILO := 400;
+    DBMS_OUTPUT.PUT_LINE(V_KILO * C_MILE);
 END;
 
 DECLARE
-    v_price tItem.price%TYPE := 1000;
-    v_num v_price%TYPE := 5;
-    v_total v_price%TYPE;
+    V_PRICE TITEM.PRICE%TYPE := 1000;
+    V_NUM V_PRICE%TYPE := 5;
+    V_TOTAL V_PRICE%TYPE;
 BEGIN
-    v_total := v_price * v_num;
-    DBMS_OUTPUT.PUT_LINE(v_total);
+    V_TOTAL := V_PRICE * V_NUM;
+    DBMS_OUTPUT.PUT_LINE(V_TOTAL);
 END;
 
 DECLARE 
-    v_isOk BOOLEAN;
+    V_ISOK BOOLEAN;
 BEGIN
-    v_isOk := (1 = 1);
-    IF v_isOK THEN
+    V_ISOK := (1 = 1);
+    IF V_ISOK THEN
         DBMS_OUTPUT.PUT_LINE('OK');
     END IF;
 END;
 
 DECLARE 
-    v_member tOrder.member%TYPE;
+    V_MEMBER TORDER.MEMBER%TYPE;
 BEGIN
-    SELECT member INTO v_member FROM tOrder WHERE orderID = 1;
-    DBMS_OUTPUT.PUT_LINE(v_member);
+    SELECT MEMBER INTO V_MEMBER FROM TORDER WHERE ORDERID = 1;
+    DBMS_OUTPUT.PUT_LINE(V_MEMBER);
 END;
 
 DECLARE 
-    v_member tOrder.member%TYPE;
-    v_item VARCHAR(20);
+    V_MEMBER TORDER.MEMBER%TYPE;
+    V_ITEM VARCHAR(20);
 BEGIN
-    SELECT member, item INTO v_member, v_item FROM tOrder WHERE orderID = 1;
-    DBMS_OUTPUT.PUT_LINE(v_member || '의 ' || v_item || ' 주문');
+    SELECT MEMBER, ITEM INTO V_MEMBER, V_ITEM FROM TORDER WHERE ORDERID = 1;
+    DBMS_OUTPUT.PUT_LINE(V_MEMBER || '의 ' || V_ITEM || ' 주문');
 END;
 
 DECLARE
-    v_row tCity%ROWTYPE;
+    V_ROW TCITY%ROWTYPE;
 BEGIN
-    SELECT * INTO v_row FROM tCity WHERE name = '부산';
-    DBMS_OUTPUT.PUT_LINE(TRIM(v_row.name) || ', ' || v_row.area || ', ' || v_row.popu);
+    SELECT * INTO V_ROW FROM TCITY WHERE NAME = '부산';
+    DBMS_OUTPUT.PUT_LINE(TRIM(V_ROW.NAME) || ', ' || V_ROW.AREA || ', ' || V_ROW.POPU);
 END;
 
 DECLARE
-    v_row tCity%ROWTYPE;
+    V_ROW TCITY%ROWTYPE;
 BEGIN
-    SELECT name, region INTO v_row.name, v_row.region FROM tCity WHERE name = '춘천';
-    DBMS_OUTPUT.PUT_LINE(v_row.region || '도의 ' || v_row.name);
+    SELECT NAME, REGION INTO V_ROW.NAME, V_ROW.REGION FROM TCITY WHERE NAME = '춘천';
+    DBMS_OUTPUT.PUT_LINE(V_ROW.REGION || '도의 ' || V_ROW.NAME);
 END;
 
 DECLARE
-    TYPE cap IS RECORD(area INT, popu INT);
-    city cap;
+    TYPE CAP IS RECORD(AREA INT, POPU INT);
+    CITY CAP;
 BEGIN
-    SELECT area, popu INTO city FROM tCity WHERE name = '부산';
-    DBMS_OUTPUT.PUT_LINE(city.area || ',' || city.popu);
+    SELECT AREA, POPU INTO CITY FROM TCITY WHERE NAME = '부산';
+    DBMS_OUTPUT.PUT_LINE(CITY.AREA || ',' || CITY.POPU);
 END;
 
-TYPE cap IS RECORD(area tCity.area%TYPE, popu tCity.popu%TYPE);
+TYPE CAP IS RECORD(AREA TCITY.AREA%TYPE, POPU TCITY.POPU%TYPE);
 
 DECLARE
-    v_maxPopu INT;
-    v_cityName VARCHAR(10);
+    V_MAXPOPU INT;
+    V_CITYNAME VARCHAR(10);
 BEGIN
-    SELECT MAX(popu) INTO v_maxPopu FROM tCity;
-    SELECT name INTO v_cityName FROM tCity WHERE popu = v_maxPopu;
-    DBMS_OUTPUT.PUT_LINE(v_cityName);
-END;
-
-DECLARE
-    v_popu INT;
-BEGIN
-    SELECT popu INTO v_popu FROM tCity WHERE name = '서울';
-    v_popu := v_popu * 2;
-    UPDATE tCity SET popu = v_popu WHERE name = '서울';
+    SELECT MAX(POPU) INTO V_MAXPOPU FROM TCITY;
+    SELECT NAME INTO V_CITYNAME FROM TCITY WHERE POPU = V_MAXPOPU;
+    DBMS_OUTPUT.PUT_LINE(V_CITYNAME);
 END;
 
 DECLARE
-    TYPE int_array IS VARRAY(5) OF NUMBER;
-    ar int_array;
+    V_POPU INT;
 BEGIN
-    ar := int_array(8, 9, 0, 6, 2);
-    FOR idx IN 1..5
+    SELECT POPU INTO V_POPU FROM TCITY WHERE NAME = '서울';
+    V_POPU := V_POPU * 2;
+    UPDATE TCITY SET POPU = V_POPU WHERE NAME = '서울';
+END;
+
+DECLARE
+    TYPE INT_ARRAY IS VARRAY(5) OF NUMBER;
+    AR INT_ARRAY;
+BEGIN
+    AR := INT_ARRAY(8, 9, 0, 6, 2);
+    FOR IDX IN 1..5
     LOOP
-        DBMS_OUTPUT.PUT_LINE(ar(idx));
+        DBMS_OUTPUT.PUT_LINE(AR(IDX));
     END LOOP;
 END;
 
 DECLARE
-    TYPE int_array IS VARRAY(3) OF NUMBER;
-    TYPE int_array2 IS VARRAY(3) OF int_array;
-    ar int_array2;
+    TYPE INT_ARRAY IS VARRAY(3) OF NUMBER;
+    TYPE INT_ARRAY2 IS VARRAY(3) OF INT_ARRAY;
+    AR INT_ARRAY2;
 BEGIN
-    ar := int_array2(int_array(1, 2, 3), int_array(4, 5, 6), int_array(7, 8, 9));
-    DBMS_OUTPUT.PUT_LINE(ar(2)(3));
+    AR := INT_ARRAY2(INT_ARRAY(1, 2, 3), INT_ARRAY(4, 5, 6), INT_ARRAY(7, 8, 9));
+    DBMS_OUTPUT.PUT_LINE(AR(2)(3));
 END;
 
 DECLARE
-    TYPE int_table IS TABLE OF NUMBER;
-    ar int_table;
+    TYPE INT_TABLE IS TABLE OF NUMBER;
+    AR INT_TABLE;
 BEGIN
-    ar := int_table(1, 2, 3, 4, 5, 6);
-    DBMS_OUTPUT.PUT_LINE(ar(4));
+    AR := INT_TABLE(1, 2, 3, 4, 5, 6);
+    DBMS_OUTPUT.PUT_LINE(AR(4));
 END;
 
 DECLARE
-    TYPE string_int_map IS TABLE OF NUMBER INDEX BY STRING(20);
-    score string_int_map;
+    TYPE STRING_INT_MAP IS TABLE OF NUMBER INDEX BY STRING(20);
+    SCORE STRING_INT_MAP;
 BEGIN
-    score('홍길동') := 80;
-    score('황진이') := 90;
-    score('어우동') := 90;
-    score.DELETE('황진이');
-    DBMS_OUTPUT.PUT_LINE(score.COUNT());
-    DBMS_OUTPUT.PUT_LINE(score('홍길동'));
+    SCORE('홍길동') := 80;
+    SCORE('황진이') := 90;
+    SCORE('어우동') := 90;
+    SCORE.DELETE('황진이');
+    DBMS_OUTPUT.PUT_LINE(SCORE.COUNT());
+    DBMS_OUTPUT.PUT_LINE(SCORE('홍길동'));
 END;
 
-DECLARE v_score INT := 12;
+DECLARE V_SCORE INT := 12;
 BEGIN
-    IF v_score = 12 THEN
+    IF V_SCORE = 12 THEN
         DBMS_OUTPUT.PUT_LINE('12입니다');
     ELSE
         DBMS_OUTPUT.PUT_LINE('12가 아닙니다');
     END IF;
 END;
 
-DECLARE v_score INT := 12;
+DECLARE V_SCORE INT := 12;
 BEGIN
-    IF v_score = 12 THEN
+    IF V_SCORE = 12 THEN
         DBMS_OUTPUT.PUT_LINE('12입니다');
         DBMS_OUTPUT.PUT_LINE('참 잘했어요.');
     ELSE
@@ -2342,85 +2342,85 @@ BEGIN
 END;
 
 DECLARE 
-    v_popu INT;
-    v_message VARCHAR(50);
+    V_POPU INT;
+    V_MESSAGE VARCHAR(50);
 BEGIN
-    SELECT popu INTO v_popu FROM tCity WHERE name = '부산';
-    IF v_popu > 100 THEN
-        v_message := '100만이 넘습니다';
+    SELECT POPU INTO V_POPU FROM TCITY WHERE NAME = '부산';
+    IF V_POPU > 100 THEN
+        V_MESSAGE := '100만이 넘습니다';
     ELSE
-        v_message := '100만보다 적습니다';
+        V_MESSAGE := '100만보다 적습니다';
     END IF;    
-    DBMS_OUTPUT.PUT_LINE('부산의 인구는 ' || v_message);
+    DBMS_OUTPUT.PUT_LINE('부산의 인구는 ' || V_MESSAGE);
 END;
 
 DECLARE 
-    v_num INT := 1;
-    v_total INT := 0;
+    V_NUM INT := 1;
+    V_TOTAL INT := 0;
 BEGIN
-    WHILE v_num <= 100
+    WHILE V_NUM <= 100
     LOOP
-        v_total := v_total + v_num;
-        v_num := v_num + 1;
+        V_TOTAL := V_TOTAL + V_NUM;
+        V_NUM := V_NUM + 1;
     END LOOP;
-    DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || v_total);
+    DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || V_TOTAL);
 END;
 
 DECLARE 
-    v_total INT := 0;
+    V_TOTAL INT := 0;
 BEGIN
-    FOR v_num IN 1 .. 100
+    FOR V_NUM IN 1 .. 100
     LOOP
-        v_total := v_total + v_num;
+        V_TOTAL := V_TOTAL + V_NUM;
     END LOOP;
-    DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || v_total);
+    DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || V_TOTAL);
 END;
 
 BEGIN
-    FOR v_cities IN (SELECT * FROM tCity WHERE region='경기')
+    FOR V_CITIES IN (SELECT * FROM TCITY WHERE REGION='경기')
     LOOP
-        DBMS_OUTPUT.PUT_LINE(TRIM(v_cities.name) || ' : ' || v_cities.area || ',' || v_cities.popu);
+        DBMS_OUTPUT.PUT_LINE(TRIM(V_CITIES.NAME) || ' : ' || V_CITIES.AREA || ',' || V_CITIES.POPU);
     END LOOP;
 END;
 
 DECLARE 
-    v_num INT := 1;
-    v_total INT := 0;
+    V_NUM INT := 1;
+    V_TOTAL INT := 0;
 BEGIN
     WHILE 1 = 1
     LOOP
-        v_total := v_total + v_num;
-        v_num := v_num + 1;
-        IF v_num > 100 THEN
+        V_TOTAL := V_TOTAL + V_NUM;
+        V_NUM := V_NUM + 1;
+        IF V_NUM > 100 THEN
             EXIT;
         END IF;
     END LOOP;
-    DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || v_total);
+    DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || V_TOTAL);
 END;
 
 DECLARE 
-    v_num INT := 1;
-    v_total INT := 0;
+    V_NUM INT := 1;
+    V_TOTAL INT := 0;
 BEGIN
     LOOP
-        v_total := v_total + v_num;
-        v_num := v_num + 1;
-        EXIT WHEN v_num > 100;
+        V_TOTAL := V_TOTAL + V_NUM;
+        V_NUM := V_NUM + 1;
+        EXIT WHEN V_NUM > 100;
     END LOOP;
-    DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || v_total);
+    DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || V_TOTAL);
 END;
 
 DECLARE 
-    v_num INT := 1;
-    v_total INT := 0;
+    V_NUM INT := 1;
+    V_TOTAL INT := 0;
 BEGIN
     <<HERE>>    
-    v_total := v_total + v_num;
-    v_num := v_num + 1;
-    IF v_num <= 100 THEN
+    V_TOTAL := V_TOTAL + V_NUM;
+    V_NUM := V_NUM + 1;
+    IF V_NUM <= 100 THEN
         GOTO HERE;
     END IF;
-   	DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || v_total);
+   	DBMS_OUTPUT.PUT_LINE('1~100까지의 합산 결과 = ' || V_TOTAL);
 END;
 
 BEGIN
@@ -2429,118 +2429,118 @@ BEGIN
 END;
 
 DECLARE 
-    v_num INT := 2;
-    v_numword CHAR(30);
+    V_NUM INT := 2;
+    V_NUMWORD CHAR(30);
 BEGIN
-    v_numword := 
-    CASE v_num
+    V_NUMWORD := 
+    CASE V_NUM
         WHEN 1 THEN '하나'
         WHEN 2 THEN '둘'
         WHEN 3 THEN '셋'
         WHEN 4 THEN '넷'
         ELSE '그외'
     END;
-    DBMS_OUTPUT.PUT_LINE(v_numword);
+    DBMS_OUTPUT.PUT_LINE(V_NUMWORD);
 END;
 
 DECLARE 
-    v_num INT := 6;
-    v_numword CHAR(30);
+    V_NUM INT := 6;
+    V_NUMWORD CHAR(30);
 BEGIN
-    v_numword := 
+    V_NUMWORD := 
     CASE 
-        WHEN v_num < 0 THEN '음수'
-        WHEN v_num IN (1, 2, 3) THEN '하나, 둘, 셋'
-        WHEN v_num > 4 THEN '넷보다 더 큼'
+        WHEN V_NUM < 0 THEN '음수'
+        WHEN V_NUM IN (1, 2, 3) THEN '하나, 둘, 셋'
+        WHEN V_NUM > 4 THEN '넷보다 더 큼'
         ELSE '그외'
     END;
-    DBMS_OUTPUT.PUT_LINE(v_numword);
+    DBMS_OUTPUT.PUT_LINE(V_NUMWORD);
 END;
 
-SELECT item, 
-    CASE category 
+SELECT ITEM, 
+    CASE CATEGORY 
         WHEN '패션' THEN '받자 마자 빨아서 입으세요.'
         WHEN '가전' THEN '충격을 주지 마세요.'
         WHEN '식품' THEN '냉장 보관하세요.'
         WHEN '성인' THEN '애들은 가라'
     END AS 주의사항
-FROM tItem
+FROM TITEM
 
-SELECT member, item,
-    CASE status
+SELECT MEMBER, ITEM,
+    CASE STATUS
         WHEN 1 THEN '주문'
         WHEN 2 THEN '배송중'
         WHEN 3 THEN '배송완료'
         ELSE '기타'
     END AS 상태
-FROM tOrder;
+FROM TORDER;
 
-SELECT member, item, DECODE(status, 1, '주문', 2, '배송중', 3, '배송완료', '기타') 
-AS 상태 FROM tOrder;
+SELECT MEMBER, ITEM, DECODE(STATUS, 1, '주문', 2, '배송중', 3, '배송완료', '기타') 
+AS 상태 FROM TORDER;
 
 DECLARE 
-    v_num INT := 2;
-    v_popu INT;
+    V_NUM INT := 2;
+    V_POPU INT;
 BEGIN
     CASE 
-        WHEN v_num = 1 THEN SELECT popu INTO v_popu FROM tCity WHERE name = '서울';
-        WHEN v_num = 2 THEN DBMS_OUTPUT.PUT_LINE('둘');
-        WHEN v_num = 3 THEN COMMIT;
-        WHEN v_num > 4 THEN ROLLBACK;
+        WHEN V_NUM = 1 THEN SELECT POPU INTO V_POPU FROM TCITY WHERE NAME = '서울';
+        WHEN V_NUM = 2 THEN DBMS_OUTPUT.PUT_LINE('둘');
+        WHEN V_NUM = 3 THEN COMMIT;
+        WHEN V_NUM > 4 THEN ROLLBACK;
         ELSE DBMS_OUTPUT.PUT_LINE('알 수 없는 명령');
     END CASE;
 END;
 
-DECLARE v_member CHAR(20);
+DECLARE V_MEMBER CHAR(20);
 BEGIN
-    SELECT member INTO v_member FROM tOrder WHERE orderID = 100;
-    DBMS_OUTPUT.PUT_LINE(v_member);
+    SELECT MEMBER INTO V_MEMBER FROM TORDER WHERE ORDERID = 100;
+    DBMS_OUTPUT.PUT_LINE(V_MEMBER);
 END;
 
-DECLARE v_member CHAR(20);
+DECLARE V_MEMBER CHAR(20);
 BEGIN
-    SELECT member INTO v_member FROM tOrder WHERE orderID = 100;
-    DBMS_OUTPUT.PUT_LINE(v_member);
+    SELECT MEMBER INTO V_MEMBER FROM TORDER WHERE ORDERID = 100;
+    DBMS_OUTPUT.PUT_LINE(V_MEMBER);
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
         DBMS_OUTPUT.PUT_LINE('주문 번호가 없습니다.');
 END;
 
-DECLARE v_member CHAR(20);
+DECLARE V_MEMBER CHAR(20);
 BEGIN
-    SELECT member INTO v_member FROM tOrder WHERE orderID > 1;
-    DBMS_OUTPUT.PUT_LINE(v_member);
+    SELECT MEMBER INTO V_MEMBER FROM TORDER WHERE ORDERID > 1;
+    DBMS_OUTPUT.PUT_LINE(V_MEMBER);
     EXCEPTION
         WHEN TOO_MANY_ROWS THEN
         DBMS_OUTPUT.PUT_LINE('하나의 주문만 선택하십시오.');
 END;
 
 DECLARE 
-    v_member CHAR(20);
-    v_orderID INT := -1;
-    negativeOrder EXCEPTION;
+    V_MEMBER CHAR(20);
+    V_ORDERID INT := -1;
+    NEGATIVEORDER EXCEPTION;
 BEGIN
-    IF (v_orderID < 0) THEN
-        RAISE negativeOrder;
+    IF (V_ORDERID < 0) THEN
+        RAISE NEGATIVEORDER;
     END IF;
-    SELECT member INTO v_member FROM tOrder WHERE orderID = v_orderID;
-    DBMS_OUTPUT.PUT_LINE(v_member);
+    SELECT MEMBER INTO V_MEMBER FROM TORDER WHERE ORDERID = V_ORDERID;
+    DBMS_OUTPUT.PUT_LINE(V_MEMBER);
     EXCEPTION
-        WHEN negativeOrder THEN
+        WHEN NEGATIVEORDER THEN
             DBMS_OUTPUT.PUT_LINE('주문 번호가 음수여서는 안됩니다.');
         WHEN OTHERS THEN
             DBMS_OUTPUT.PUT_LINE('원인을 알 수 없는 예외가 발생했습니다.');
 END;
 
 DECLARE 
-    v_member CHAR(20);
-    v_orderID INT := -1;
+    V_MEMBER CHAR(20);
+    V_ORDERID INT := -1;
 BEGIN
-    IF (v_orderID < 0) THEN
+    IF (V_ORDERID < 0) THEN
         RAISE_APPLICATION_ERROR(-20000, '주문 번호가 음수여서는 안됩니다.');
     END IF;
-    SELECT member INTO v_member FROM tOrder WHERE orderID = v_orderID;
-    DBMS_OUTPUT.PUT_LINE(v_member);
+    SELECT MEMBER INTO V_MEMBER FROM TORDER WHERE ORDERID = V_ORDERID;
+    DBMS_OUTPUT.PUT_LINE(V_MEMBER);
     EXCEPTION
         WHEN OTHERS THEN
             DBMS_OUTPUT.PUT_LINE(SQLCODE);
@@ -2551,67 +2551,67 @@ SELECT '안녕하세요';
 SELECT 2 + 3 * 4;
 SELECT POWER(2, 3);
 
-DECLARE @salary INT;			-- 정수형의 @salary 변수
-DECLARE @a INT, @b INT = 100;		-- 두 개의 정수형 변수. b는 100으로 초기화
-DECLARE @age INT, @name CHAR(5);	-- 정수형 변수와 문자열 변수 선언
+DECLARE @SALARY INT;			-- 정수형의 @SALARY 변수
+DECLARE @A INT, @B INT = 100;		-- 두 개의 정수형 변수. B는 100으로 초기화
+DECLARE @AGE INT, @NAME CHAR(5);	-- 정수형 변수와 문자열 변수 선언
 
-DECLARE @price INT;
-SET @price = 1000;
-SELECT @price;
+DECLARE @PRICE INT;
+SET @PRICE = 1000;
+SELECT @PRICE;
 
-DECLARE @name CHAR(20);
-SELECT @name = member FROM tOrder WHERE orderID=1;
-SELECT @name;
+DECLARE @NAME CHAR(20);
+SELECT @NAME = MEMBER FROM TORDER WHERE ORDERID=1;
+SELECT @NAME;
 
-SET @name = (SELECT member FROM tOrder WHERE orderID=1);
+SET @NAME = (SELECT MEMBER FROM TORDER WHERE ORDERID=1);
 
-DECLARE @score INT = 12;
-IF @score = 12
+DECLARE @SCORE INT = 12;
+IF @SCORE = 12
 	PRINT '12입니다.';
 ELSE
 	PRINT '12가 아닙니다.';
 
-DECLARE @message VARCHAR(50);
-IF (SELECT popu FROM tCity WHERE name = '부산') > 100
+DECLARE @MESSAGE VARCHAR(50);
+IF (SELECT POPU FROM TCITY WHERE NAME = '부산') > 100
 BEGIN	
-	SET @message='100만이 넘습니다';
+	SET @MESSAGE='100만이 넘습니다';
 	PRINT '많이도 낳았네요'
 END
 ELSE
 BEGIN
-	SET @message='100만보다 적습니다';
+	SET @MESSAGE='100만보다 적습니다';
 	PRINT '아직 더 많이 낳아야겠네요'
 END
-PRINT '부산의 인구는 ' + @message;
+PRINT '부산의 인구는 ' + @MESSAGE;
 
-DECLARE @num INT = 1, @sum INT = 0;
+DECLARE @NUM INT = 1, @SUM INT = 0;
 
-WHILE @num <= 100
+WHILE @NUM <= 100
 BEGIN
-	SET @sum = @sum + @num;
-	SET @num = @num + 1;
+	SET @SUM = @SUM + @NUM;
+	SET @NUM = @NUM + 1;
 END
-PRINT '1~100까지의 합산 결과 = ' + CONVERT(VARCHAR(10), @sum);
+PRINT '1~100까지의 합산 결과 = ' + CONVERT(VARCHAR(10), @SUM);
 
 WHILE 1=1
 BEGIN
-	SET @sum = @sum + @num;
-	SET @num = @num + 1;
-	IF @num > 100
+	SET @SUM = @SUM + @NUM;
+	SET @NUM = @NUM + 1;
+	IF @NUM > 100
 		BREAK;
 END
 
 HERE:
-SET @sum = @sum + @num;
-SET @num = @num + 1;
-IF @num <= 100
+SET @SUM = @SUM + @NUM;
+SET @NUM = @NUM + 1;
+IF @NUM <= 100
 	GOTO HERE;
 
 WAITFOR DELAY '00:00:05';		-- 5초간 대기
 WAITFOR TIME '02:20:00';			-- 2:20분까지 대기
 
 BEGIN TRY
-	INSERT INTO tCity VALUES ('서울',600,1000,'y','경기');
+	INSERT INTO TCITY VALUES ('서울',600,1000,'Y','경기');
 END TRY
 BEGIN CATCH
     PRINT '기본키가 같은 레코드를 삽입할 수 없습니다.';
@@ -2620,19 +2620,19 @@ BEGIN CATCH
 END CATCH
 
 BEGIN TRY
-    SELECT mayor FROM tCity;
+    SELECT MAYOR FROM TCITY;
 END TRY
 BEGIN CATCH
     PRINT '시장님에 대한 정보는 없습니다.'
 END CATCH
 
-DECLARE @popu INT = 12345;
+DECLARE @POPU INT = 12345;
 
 BEGIN TRY
-	IF @popu > 10000
+	IF @POPU > 10000
 		THROW 50001, '도시의 인구가 1억이 넘을 리가 없을텐데...', 1;
 	ELSE
-		INSERT INTO tCity VALUES ('광주',600,@popu,'y','전라');
+		INSERT INTO TCITY VALUES ('광주',600,@POPU,'Y','전라');
 END TRY
 BEGIN CATCH
     PRINT '에러 번호 : ' + CAST(ERROR_NUMBER() AS VARCHAR(10))
@@ -2642,116 +2642,116 @@ END CATCH
 -------------------------------------------------
 -- 16장
 
-CREATE PROCEDURE SP_GetPopu
+CREATE PROCEDURE SP_GETPOPU
 AS
-    v_popu INT;
+    V_POPU INT;
 BEGIN
-    SELECT popu INTO v_popu FROM tCity WHERE name = '서울';
-    DBMS_OUTPUT.PUT_LINE(v_popu);
+    SELECT POPU INTO V_POPU FROM TCITY WHERE NAME = '서울';
+    DBMS_OUTPUT.PUT_LINE(V_POPU);
 END;
 
-EXECUTE SP_GetPopu();
+EXECUTE SP_GETPOPU();
 
-SELECT * FROM user_objects WHERE object_type = 'PROCEDURE';
+SELECT * FROM USER_OBJECTS WHERE OBJECT_TYPE = 'PROCEDURE';
 
-SELECT * FROM user_source WHERE name = 'SP_GETPOPU';
+SELECT * FROM USER_SOURCE WHERE NAME = 'SP_GETPOPU';
 
-CREATE PROCEDURE SP_GetPopu
+CREATE PROCEDURE SP_GETPOPU
 ...
-    SELECT popu INTO v_popu FROM tCity WHERE name = '부산';
+    SELECT POPU INTO V_POPU FROM TCITY WHERE NAME = '부산';
 
-DROP PROCEDURE SP_GetPopu;
+DROP PROCEDURE SP_GETPOPU;
 
-CREATE OR REPLACE PROCEDURE SP_GetPopu
+CREATE OR REPLACE PROCEDURE SP_GETPOPU
 AS
-    v_popu INT;
+    V_POPU INT;
 BEGIN
-    SELECT popu INTO v_popu FROM tCity WHERE name = '부산';
-    DBMS_OUTPUT.PUT_LINE(v_popu);
+    SELECT POPU INTO V_POPU FROM TCITY WHERE NAME = '부산';
+    DBMS_OUTPUT.PUT_LINE(V_POPU);
 END;
 
-CREATE OR REPLACE PROCEDURE SP_GetPopu
+CREATE OR REPLACE PROCEDURE SP_GETPOPU
 AS
-    v_popu INT;
+    V_POPU INT;
 BEGIN
-    SELECT population INTO v_popu FROM tCity WHERE name = '부산';
-    DBMS_OUTPUT.PUT_LINE(v_popu);
+    SELECT POPULATION INTO V_POPU FROM TCITY WHERE NAME = '부산';
+    DBMS_OUTPUT.PUT_LINE(V_POPU);
 END;
 
-DROP TABLE tCity;
+DROP TABLE TCITY;
 
-CREATE OR REPLACE PROCEDURE SP_GetCityPopu(p_name IN CHAR)
+CREATE OR REPLACE PROCEDURE SP_GETCITYPOPU(P_NAME IN CHAR)
 AS
-    v_popu INT;
+    V_POPU INT;
 BEGIN
-    SELECT popu INTO v_popu FROM tCity WHERE name = p_name;
-    DBMS_OUTPUT.PUT_LINE(p_name || '의 인구는 ' || v_popu || '만명입니다.');
+    SELECT POPU INTO V_POPU FROM TCITY WHERE NAME = P_NAME;
+    DBMS_OUTPUT.PUT_LINE(P_NAME || '의 인구는 ' || V_POPU || '만명입니다.');
 END;
 
-EXEC SP_GetCityPopu('오산');		-- 오산의 인구는 21만명입니다.
-EXEC SP_GetCityPopu('청주');		-- 청주의 인구는 83만명입니다.
+EXEC SP_GETCITYPOPU('오산');		-- 오산의 인구는 21만명입니다.
+EXEC SP_GETCITYPOPU('청주');		-- 청주의 인구는 83만명입니다.
 
-EXEC SP_GetCityPopu();      		-- 에러
-EXEC SP_GetCityPopu('서울', '부산');    	-- 에러
+EXEC SP_GETCITYPOPU();      		-- 에러
+EXEC SP_GETCITYPOPU('서울', '부산');    	-- 에러
 
-CREATE OR REPLACE PROCEDURE SP_GetCityPopu(p_name IN tCity.name%TYPE := '서울')
+CREATE OR REPLACE PROCEDURE SP_GETCITYPOPU(P_NAME IN TCITY.NAME%TYPE := '서울')
 ....
 
-CREATE OR REPLACE PROCEDURE SP_GrantBonus(p_member CHAR, p_bonus INT)
+CREATE OR REPLACE PROCEDURE SP_GRANTBONUS(P_MEMBER CHAR, P_BONUS INT)
 AS
 BEGIN
-    UPDATE tMember SET money = money + p_bonus WHERE member = p_member;
+    UPDATE TMEMBER SET MONEY = MONEY + P_BONUS WHERE MEMBER = P_MEMBER;
     COMMIT;
 END;
 
-EXEC SP_GrantBonus('춘향', 123);
+EXEC SP_GRANTBONUS('춘향', 123);
 
-EXEC SP_GrantBonus(p_member=>'춘향', p_bonus=>123);
-EXEC SP_GrantBonus(p_bonus=>123, p_member=>'춘향');
+EXEC SP_GRANTBONUS(P_MEMBER=>'춘향', P_BONUS=>123);
+EXEC SP_GRANTBONUS(P_BONUS=>123, P_MEMBER=>'춘향');
 
-CREATE OR REPLACE PROCEDURE SP_OutCityPopu(p_name IN CHAR, o_popu OUT INT)
+CREATE OR REPLACE PROCEDURE SP_OUTCITYPOPU(P_NAME IN CHAR, O_POPU OUT INT)
 AS
 BEGIN
-    SELECT popu INTO o_popu FROM tCity WHERE name = p_name;
+    SELECT POPU INTO O_POPU FROM TCITY WHERE NAME = P_NAME;
 END;
 
 DECLARE 
-    v_popu INT;
+    V_POPU INT;
 BEGIN
-    SP_OutCityPopu('서울', v_popu);
-    DBMS_OUTPUT.PUT_LINE(v_popu);
+    SP_OUTCITYPOPU('서울', V_POPU);
+    DBMS_OUTPUT.PUT_LINE(V_POPU);
 END; 
 
-CREATE OR REPLACE PROCEDURE SP_OutCityAreaPopu(p_name IN CHAR, o_area OUT INT, o_popu OUT INT)
+CREATE OR REPLACE PROCEDURE SP_OUTCITYAREAPOPU(P_NAME IN CHAR, O_AREA OUT INT, O_POPU OUT INT)
 AS
 BEGIN
-    SELECT area, popu INTO o_area, o_popu FROM tCity WHERE name = p_name;
+    SELECT AREA, POPU INTO O_AREA, O_POPU FROM TCITY WHERE NAME = P_NAME;
 END;
 
 DECLARE 
-    v_area INT;
-    v_popu INT;
+    V_AREA INT;
+    V_POPU INT;
 BEGIN
-    SP_OutCityAreaPopu('부산', v_area, v_popu);
-    DBMS_OUTPUT.PUT_LINE(v_area || ' ,' || v_popu);
+    SP_OUTCITYAREAPOPU('부산', V_AREA, V_POPU);
+    DBMS_OUTPUT.PUT_LINE(V_AREA || ' ,' || V_POPU);
 END;
 
-CREATE OR REPLACE PROCEDURE SP_GetCityPopu(p_name IN tCity.name%TYPE := '서울')
+CREATE OR REPLACE PROCEDURE SP_GETCITYPOPU(P_NAME IN TCITY.NAME%TYPE := '서울')
 AS
-    v_popu INT;
+    V_POPU INT;
 BEGIN
-    SP_OutCityPopu(p_name, v_popu);
-    DBMS_OUTPUT.PUT_LINE(p_name || '의 인구는 ' || v_popu || '만명입니다.');
+    SP_OUTCITYPOPU(P_NAME, V_POPU);
+    DBMS_OUTPUT.PUT_LINE(P_NAME || '의 인구는 ' || V_POPU || '만명입니다.');
 END;
 
-EXECUTE SP_GetCityPopu('평양');
+EXECUTE SP_GETCITYPOPU('평양');
 
-CREATE OR REPLACE PROCEDURE SP_GetCityPopu(p_name IN tCity.name%TYPE := '서울')
+CREATE OR REPLACE PROCEDURE SP_GETCITYPOPU(P_NAME IN TCITY.NAME%TYPE := '서울')
 AS
-    v_popu INT;
+    V_POPU INT;
 BEGIN
-    SELECT popu INTO v_popu FROM tCity WHERE name = p_name;
-    DBMS_OUTPUT.PUT_LINE(p_name || '의 인구는 ' || v_popu || '만명입니다.');
+    SELECT POPU INTO V_POPU FROM TCITY WHERE NAME = P_NAME;
+    DBMS_OUTPUT.PUT_LINE(P_NAME || '의 인구는 ' || V_POPU || '만명입니다.');
     EXCEPTION
         WHEN NO_DATA_FOUND THEN
             DBMS_OUTPUT.PUT_LINE('없는 도시입니다.');
@@ -2761,158 +2761,158 @@ BEGIN
             DBMS_OUTPUT.PUT_LINE('알 수 없는 예외입니다.');
 END;
 
-SELECT popu INTO v_popu FROM tCity WHERE name = p_name;
-IF v_popu IS NULL THEN
+SELECT POPU INTO V_POPU FROM TCITY WHERE NAME = P_NAME;
+IF V_POPU IS NULL THEN
     DBMS_OUTPUT.PUT_LINE('없는 도시입니다.');
 END IF;
 
-CREATE OR REPLACE FUNCTION FN_AddInt(a INT, b INT) 
+CREATE OR REPLACE FUNCTION FN_ADDINT(A INT, B INT) 
 RETURN INT
 AS
 BEGIN
-	RETURN a + b;
+	RETURN A + B;
 END;
 
-SELECT FN_AddInt(2, 3) FROM dual;
-SELECT * FROM tCity WHERE popu > FN_AddInt(10, 20);
+SELECT FN_ADDINT(2, 3) FROM DUAL;
+SELECT * FROM TCITY WHERE POPU > FN_ADDINT(10, 20);
 
-DECLARE v_sum INT;
+DECLARE V_SUM INT;
 BEGIN
-    v_sum := FN_AddInt(2, 3);
-    DBMS_OUTPUT.PUT_LINE(v_sum);
+    V_SUM := FN_ADDINT(2, 3);
+    DBMS_OUTPUT.PUT_LINE(V_SUM);
 END;
 
-CREATE OR REPLACE FUNCTION FN_GetSum(p_upBound INT)
+CREATE OR REPLACE FUNCTION FN_GETSUM(P_UPBOUND INT)
 RETURN INT
 AS
-    v_total INT := 0;
+    V_TOTAL INT := 0;
 BEGIN
-    FOR v_num IN 1 .. p_upBound
+    FOR V_NUM IN 1 .. P_UPBOUND
     LOOP
-        v_total := v_total + v_num;
+        V_TOTAL := V_TOTAL + V_NUM;
     END LOOP;
-    RETURN v_total;
+    RETURN V_TOTAL;
 END;
 
-SELECT FN_GetSum(10) FROM dual;
+SELECT FN_GETSUM(10) FROM DUAL;
 
-CREATE OR REPLACE TYPE gu_row AS OBJECT
+CREATE OR REPLACE TYPE GU_ROW AS OBJECT
 (
-    dan INT, 
-    num INT, 
-    multi INT
+    DAN INT, 
+    NUM INT, 
+    MULTI INT
 );
 
-CREATE OR REPLACE TYPE gu_table AS TABLE OF gu_row;
+CREATE OR REPLACE TYPE GU_TABLE AS TABLE OF GU_ROW;
 
-CREATE OR REPLACE FUNCTION makeDan(p_dan INT)
-RETURN gu_table PIPELINED
+CREATE OR REPLACE FUNCTION MAKEDAN(P_DAN INT)
+RETURN GU_TABLE PIPELINED
 AS
-    v_row gu_row;
+    V_ROW GU_ROW;
 BEGIN
-    FOR v_num IN 1..9
+    FOR V_NUM IN 1..9
     LOOP
-        v_row := gu_row(p_dan, v_num, p_dan * v_num);
-        PIPE ROW(v_row);
+        V_ROW := GU_ROW(P_DAN, V_NUM, P_DAN * V_NUM);
+        PIPE ROW(V_ROW);
     END LOOP;
     RETURN;
 END;
 
-SELECT * FROM TABLE(makeDan(5));
-SELECT * FROM TABLE(makeDan(7));
+SELECT * FROM TABLE(MAKEDAN(5));
+SELECT * FROM TABLE(MAKEDAN(7));
 
-CREATE PROCEDURE PROC_GetCityPopu
-	@p_name CHAR(10)
+CREATE PROCEDURE PROC_GETCITYPOPU
+	@P_NAME CHAR(10)
 AS
 BEGIN
-	SELECT popu FROM tCity WHERE name = @p_name;
+	SELECT POPU FROM TCITY WHERE NAME = @P_NAME;
 END
 
-EXEC PROC_GetCityPopu @p_name = '서울';
-EXEC PROC_GetCityPopu '서울';
-PROC_GetCityPopu '서울';
+EXEC PROC_GETCITYPOPU @P_NAME = '서울';
+EXEC PROC_GETCITYPOPU '서울';
+PROC_GETCITYPOPU '서울';
 
-ALTER PROCEDURE PROC_GetCityPopu
-	@p_name CHAR(10)
+ALTER PROCEDURE PROC_GETCITYPOPU
+	@P_NAME CHAR(10)
 AS
 DECLARE
-	@popu INT
+	@POPU INT
 BEGIN
-	SELECT @popu = popu FROM tCity WHERE name = @p_name;
-	PRINT @popu
+	SELECT @POPU = POPU FROM TCITY WHERE NAME = @P_NAME;
+	PRINT @POPU
 END
 
-ALTER PROCEDURE PROC_GetCityPopu
-	@p_name CHAR(10)
+ALTER PROCEDURE PROC_GETCITYPOPU
+	@P_NAME CHAR(10)
 AS
 BEGIN
-	SELECT popu FROM tCity2 WHERE name = @p_name;
+	SELECT POPU FROM TCITY2 WHERE NAME = @P_NAME;
 END
 
-CREATE PROCEDURE PROC_GrantBonus
-	@p_member CHAR(20),
-	@p_bonus INT = 100
+CREATE PROCEDURE PROC_GRANTBONUS
+	@P_MEMBER CHAR(20),
+	@P_BONUS INT = 100
 AS
 BEGIN
-    UPDATE tMember SET money = money + @p_bonus WHERE member = @p_member;
+    UPDATE TMEMBER SET MONEY = MONEY + @P_BONUS WHERE MEMBER = @P_MEMBER;
 END;
 
-PROC_GrantBonus '춘향', 2000;
-PROC_GrantBonus '춘향';
+PROC_GRANTBONUS '춘향', 2000;
+PROC_GRANTBONUS '춘향';
 
-PROC_GrantBonus @p_member = '춘향', @p_bonus = 2000;
-PROC_GrantBonus @p_bonus = 2000, @p_member = '춘향';
+PROC_GRANTBONUS @P_MEMBER = '춘향', @P_BONUS = 2000;
+PROC_GRANTBONUS @P_BONUS = 2000, @P_MEMBER = '춘향';
 
-CREATE PROCEDURE PROC_OutCityPopu
-	@p_name CHAR(10), 
-	@o_popu INT OUTPUT
+CREATE PROCEDURE PROC_OUTCITYPOPU
+	@P_NAME CHAR(10), 
+	@O_POPU INT OUTPUT
 AS
 BEGIN
-    SELECT @o_popu = popu FROM tCity WHERE name = @p_name;
+    SELECT @O_POPU = POPU FROM TCITY WHERE NAME = @P_NAME;
 END;
 
-DECLARE @popu INT;
-EXECUTE PROC_OutCityPopu '서울', @popu OUTPUT;
-PRINT '서울의 인구는 ' + CAST(@popu AS VARCHAR(10)) + '만명입니다.';
+DECLARE @POPU INT;
+EXECUTE PROC_OUTCITYPOPU '서울', @POPU OUTPUT;
+PRINT '서울의 인구는 ' + CAST(@POPU AS VARCHAR(10)) + '만명입니다.';
 
-CREATE PROCEDURE PROC_RetCityPopu
-	@p_name CHAR(10)
+CREATE PROCEDURE PROC_RETCITYPOPU
+	@P_NAME CHAR(10)
 AS
 DECLARE
-	@popu INT;
+	@POPU INT;
 BEGIN
-    SELECT @popu = popu FROM tCity WHERE name = @p_name;
-    RETURN @popu;
+    SELECT @POPU = POPU FROM TCITY WHERE NAME = @P_NAME;
+    RETURN @POPU;
 END;
 
-DECLARE @popu INT;
-EXECUTE @popu = PROC_RetCityPopu '서울';
-PRINT '서울의 인구는 ' + CAST(@popu AS VARCHAR(10)) + '만명입니다.';
+DECLARE @POPU INT;
+EXECUTE @POPU = PROC_RETCITYPOPU '서울';
+PRINT '서울의 인구는 ' + CAST(@POPU AS VARCHAR(10)) + '만명입니다.';
 
-PRINT '서울의 인구는 ' + CAST(PROC_RetCityPopu '서울' AS VARCHAR(10)) + '만명입니다';
-SELECT PROC_RetCityPopu '서울';
+PRINT '서울의 인구는 ' + CAST(PROC_RETCITYPOPU '서울' AS VARCHAR(10)) + '만명입니다';
+SELECT PROC_RETCITYPOPU '서울';
 
-CREATE PROCEDURE PROC_InsertSeoul
+CREATE PROCEDURE PROC_INSERTSEOUL
 AS
 BEGIN
-	INSERT INTO tCity VALUES ('서울',605,974,'y','경기');
+	INSERT INTO TCITY VALUES ('서울',605,974,'Y','경기');
 END
 
-ALTER PROCEDURE PROC_InsertSeoul
+ALTER PROCEDURE PROC_INSERTSEOUL
 AS
 BEGIN
-	INSERT INTO tCity VALUES ('서울',605,974,'y','경기');
+	INSERT INTO TCITY VALUES ('서울',605,974,'Y','경기');
 	IF @@ERROR != 0
 	BEGIN
 		PRINT('새 레코드를 삽입하지 못했습니다.');
 	END
 END
 
-ALTER PROCEDURE PROC_InsertSeoul
+ALTER PROCEDURE PROC_INSERTSEOUL
 AS
 BEGIN
 	BEGIN TRY
-		INSERT INTO tCity VALUES ('서울',605,974,'y','경기');
+		INSERT INTO TCITY VALUES ('서울',605,974,'Y','경기');
 	END TRY
 
 	BEGIN CATCH
@@ -2921,317 +2921,317 @@ BEGIN
 	END CATCH
 END
 
-CREATE FUNCTION FN_AddInt(@a INT, @b INT) RETURNS INT
+CREATE FUNCTION FN_ADDINT(@A INT, @B INT) RETURNS INT
 AS
 BEGIN
-	RETURN @a + @b;
+	RETURN @A + @B;
 END
 
-SELECT Study.dbo.FN_AddInt(2, 3);
+SELECT STUDY.DBO.FN_ADDINT(2, 3);
 
-CREATE FUNCTION FN_GetCity(@region CHAR(10))
+CREATE FUNCTION FN_GETCITY(@REGION CHAR(10))
 RETURNS TABLE
 AS
-RETURN SELECT * FROM tCity WHERE region = @region;
+RETURN SELECT * FROM TCITY WHERE REGION = @REGION;
 
-SELECT * FROM dbo.FN_GetCity('강원');
+SELECT * FROM DBO.FN_GETCITY('강원');
 
-SELECT * FROM dbo.FN_GetCity('강원') WHERE popu > 10;
+SELECT * FROM DBO.FN_GETCITY('강원') WHERE POPU > 10;
 
-CREATE FUNCTION FN_GetCityTable(@region CHAR(10))
-RETURNS @result TABLE
-	(name VARCHAR(10),popu INT)
+CREATE FUNCTION FN_GETCITYTABLE(@REGION CHAR(10))
+RETURNS @RESULT TABLE
+	(NAME VARCHAR(10),POPU INT)
 AS
 BEGIN
-	INSERT INTO @result SELECT name, popu FROM tCity WHERE region = @region;
+	INSERT INTO @RESULT SELECT NAME, POPU FROM TCITY WHERE REGION = @REGION;
 	RETURN;
 END
 
-SELECT * FROM dbo.FN_GetCityTable('경기');
+SELECT * FROM DBO.FN_GETCITYTABLE('경기');
 
 -------------------------------------------------
 -- 17장
 
 DECLARE
-    CURSOR v_cursor IS SELECT name FROM tCity;
-    v_name CHAR(10);
+    CURSOR V_CURSOR IS SELECT NAME FROM TCITY;
+    V_NAME CHAR(10);
 BEGIN
-    OPEN v_cursor;
+    OPEN V_CURSOR;
     LOOP
-        FETCH v_cursor INTO v_name;
-        EXIT WHEN v_cursor%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE(v_name);
+        FETCH V_CURSOR INTO V_NAME;
+        EXIT WHEN V_CURSOR%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE(V_NAME);
     END LOOP;
-    CLOSE v_cursor;
+    CLOSE V_CURSOR;
 END;
 
 DECLARE
-    CURSOR v_cursor IS SELECT * FROM tCity;
-    v_city tCity%ROWTYPE;
+    CURSOR V_CURSOR IS SELECT * FROM TCITY;
+    V_CITY TCITY%ROWTYPE;
 BEGIN
-    OPEN v_cursor;
+    OPEN V_CURSOR;
     LOOP
-        FETCH v_cursor INTO v_city;
-        EXIT WHEN v_cursor%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE(v_city.region || v_city.name || v_city.area);
+        FETCH V_CURSOR INTO V_CITY;
+        EXIT WHEN V_CURSOR%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE(V_CITY.REGION || V_CITY.NAME || V_CITY.AREA);
     END LOOP;
-    CLOSE v_cursor;
+    CLOSE V_CURSOR;
 END;
 
 DECLARE
 BEGIN
-    FOR v_cursor IN (SELECT name FROM tCity)
+    FOR V_CURSOR IN (SELECT NAME FROM TCITY)
     LOOP
-        DBMS_OUTPUT.PUT_LINE(v_cursor.name);
+        DBMS_OUTPUT.PUT_LINE(V_CURSOR.NAME);
     END LOOP;
 END;
 
 BEGIN
-    UPDATE tCity SET popu = popu WHERE region = '강원';
+    UPDATE TCITY SET POPU = POPU WHERE REGION = '강원';
     IF SQL%FOUND THEN DBMS_OUTPUT.PUT_LINE('결과셋이 있음'); END IF;
     DBMS_OUTPUT.PUT_LINE(SQL%ROWCOUNT || '개의 행이 바뀜');
 END;
 
 DECLARE
-    v_cursor SYS_REFCURSOR;
-    v_name CHAR(10);
+    V_CURSOR SYS_REFCURSOR;
+    V_NAME CHAR(10);
 BEGIN
-    OPEN v_cursor FOR SELECT name FROM tCity;
+    OPEN V_CURSOR FOR SELECT NAME FROM TCITY;
     LOOP
-        FETCH v_cursor INTO v_name;
-        EXIT WHEN v_cursor%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE(v_name);
+        FETCH V_CURSOR INTO V_NAME;
+        EXIT WHEN V_CURSOR%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE(V_NAME);
     END LOOP;
-    CLOSE v_cursor;
+    CLOSE V_CURSOR;
 END;
 
-CREATE OR REPLACE PROCEDURE SP_OutCityName(p_region IN CHAR, o_cursor OUT SYS_REFCURSOR)
+CREATE OR REPLACE PROCEDURE SP_OUTCITYNAME(P_REGION IN CHAR, O_CURSOR OUT SYS_REFCURSOR)
 AS
 BEGIN
-    OPEN o_cursor FOR SELECT name FROM tCity WHERE region = p_region;
+    OPEN O_CURSOR FOR SELECT NAME FROM TCITY WHERE REGION = P_REGION;
 END;
 
 DECLARE
-    v_cursor SYS_REFCURSOR;
-    v_name CHAR(10);
+    V_CURSOR SYS_REFCURSOR;
+    V_NAME CHAR(10);
 BEGIN
-    SP_OutCityName('전라', v_cursor);
+    SP_OUTCITYNAME('전라', V_CURSOR);
     LOOP
-        FETCH v_cursor INTO v_name;
-        EXIT WHEN v_cursor%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE(v_name);
+        FETCH V_CURSOR INTO V_NAME;
+        EXIT WHEN V_CURSOR%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE(V_NAME);
     END LOOP;
 END;
 
 DECLARE
-    CURSOR v_cursor IS SELECT * FROM tCity FOR UPDATE;
-    v_city tCity%ROWTYPE;
+    CURSOR V_CURSOR IS SELECT * FROM TCITY FOR UPDATE;
+    V_CITY TCITY%ROWTYPE;
 BEGIN
-    OPEN v_cursor;
+    OPEN V_CURSOR;
     LOOP
-        FETCH v_cursor INTO v_city;
-        EXIT WHEN v_cursor%NOTFOUND;
-        IF v_city.metro = 'y' THEN
-            UPDATE tCity SET area = area + 10 WHERE CURRENT OF v_cursor;
+        FETCH V_CURSOR INTO V_CITY;
+        EXIT WHEN V_CURSOR%NOTFOUND;
+        IF V_CITY.METRO = 'Y' THEN
+            UPDATE TCITY SET AREA = AREA + 10 WHERE CURRENT OF V_CURSOR;
         END IF;
     END LOOP;
-    CLOSE v_cursor;
+    CLOSE V_CURSOR;
 END;
 
-DECLARE @name CHAR(10)
-DECLARE testcursor CURSOR FOR SELECT name FROM tCity
-OPEN testcursor
-FETCH NEXT FROM testcursor INTO @name
+DECLARE @NAME CHAR(10)
+DECLARE TESTCURSOR CURSOR FOR SELECT NAME FROM TCITY
+OPEN TESTCURSOR
+FETCH NEXT FROM TESTCURSOR INTO @NAME
 WHILE @@FETCH_STATUS = 0
 BEGIN
-	PRINT @name
-	FETCH NEXT FROM testcursor INTO @name
+	PRINT @NAME
+	FETCH NEXT FROM TESTCURSOR INTO @NAME
 END
-CLOSE testcursor
-DEALLOCATE testcursor
+CLOSE TESTCURSOR
+DEALLOCATE TESTCURSOR
 
 START:
-FETCH NEXT FROM testcursor INTO @name
+FETCH NEXT FROM TESTCURSOR INTO @NAME
 IF @@FETCH_STATUS = 0
 BEGIN
-	PRINT @name
+	PRINT @NAME
 	GOTO START
 END
 
-DECLARE @name CHAR(10)
-DECLARE @varCur CURSOR
-SET @varCur = CURSOR FOR SELECT name FROM tCity;
-OPEN @varCur
-FETCH NEXT FROM @varCur INTO @name
+DECLARE @NAME CHAR(10)
+DECLARE @VARCUR CURSOR
+SET @VARCUR = CURSOR FOR SELECT NAME FROM TCITY;
+OPEN @VARCUR
+FETCH NEXT FROM @VARCUR INTO @NAME
 WHILE @@FETCH_STATUS = 0
 BEGIN
-	PRINT @name
-	FETCH NEXT FROM @varCur INTO @name
+	PRINT @NAME
+	FETCH NEXT FROM @VARCUR INTO @NAME
 END
-CLOSE @varCur
-DEALLOCATE @VarCur
+CLOSE @VARCUR
+DEALLOCATE @VARCUR
 
-DECLARE testcursor CURSOR LOCAL SCROLL FOR SELECT name FROM tCity;
-OPEN testcursor;
+DECLARE TESTCURSOR CURSOR LOCAL SCROLL FOR SELECT NAME FROM TCITY;
+OPEN TESTCURSOR;
 
-FETCH NEXT FROM testcursor;
-FETCH NEXT FROM testcursor;
-FETCH PRIOR FROM testcursor;
-FETCH LAST FROM testcursor;
+FETCH NEXT FROM TESTCURSOR;
+FETCH NEXT FROM TESTCURSOR;
+FETCH PRIOR FROM TESTCURSOR;
+FETCH LAST FROM TESTCURSOR;
 
-DECLARE testcursor CURSOR LOCAL FOR SELECT * FROM tCity;
-OPEN testcursor;
+DECLARE TESTCURSOR CURSOR LOCAL FOR SELECT * FROM TCITY;
+OPEN TESTCURSOR;
 
-FETCH NEXT FROM testcursor;
-UPDATE tCity SET popu=1234 WHERE CURRENT OF testcursor;
+FETCH NEXT FROM TESTCURSOR;
+UPDATE TCITY SET POPU=1234 WHERE CURRENT OF TESTCURSOR;
 
-CLOSE testcursor;
-DEALLOCATE testcursor;
+CLOSE TESTCURSOR;
+DEALLOCATE TESTCURSOR;
 
-DECLARE testcursor CURSOR LOCAL STATIC FOR SELECT name, popu FROM tCity;
-OPEN testcursor;
+DECLARE TESTCURSOR CURSOR LOCAL STATIC FOR SELECT NAME, POPU FROM TCITY;
+OPEN TESTCURSOR;
 
-DECLARE @name CHAR(10);
-DECLARE @popu INT;
-FETCH NEXT FROM testcursor INTO @name, @popu;
-PRINT @name + ':' + CONVERT(VARCHAR(12), @popu);
+DECLARE @NAME CHAR(10);
+DECLARE @POPU INT;
+FETCH NEXT FROM TESTCURSOR INTO @NAME, @POPU;
+PRINT @NAME + ':' + CONVERT(VARCHAR(12), @POPU);
 WAITFOR DELAY '00:00:10';
-FETCH NEXT FROM testcursor INTO @name, @popu;
-PRINT @name + ':' + CONVERT(VARCHAR(12), @popu);
+FETCH NEXT FROM TESTCURSOR INTO @NAME, @POPU;
+PRINT @NAME + ':' + CONVERT(VARCHAR(12), @POPU);
 
-UPDATE tCity SET popu = 500 WHERE name = '부산';
+UPDATE TCITY SET POPU = 500 WHERE NAME = '부산';
 
-DECLARE testcursor CURSOR LOCAL DYNAMIC FOR SELECT name, popu FROM tCity;
-OPEN testcursor;
+DECLARE TESTCURSOR CURSOR LOCAL DYNAMIC FOR SELECT NAME, POPU FROM TCITY;
+OPEN TESTCURSOR;
 
-DECLARE @name CHAR(10);
-DECLARE @popu INT;
-FETCH NEXT FROM testcursor INTO @name, @popu;
+DECLARE @NAME CHAR(10);
+DECLARE @POPU INT;
+FETCH NEXT FROM TESTCURSOR INTO @NAME, @POPU;
 WHILE @@FETCH_STATUS = 0
 BEGIN
-	PRINT @name + ':' + CONVERT(NVARCHAR(12), @popu);
+	PRINT @NAME + ':' + CONVERT(NVARCHAR(12), @POPU);
 	WAITFOR DELAY '00:00:01';
-	FETCH NEXT FROM testcursor INTO @name, @popu;
+	FETCH NEXT FROM TESTCURSOR INTO @NAME, @POPU;
 END
 
-INSERT INTO tCity VALUES ('평택',453,51,'n','경기');
+INSERT INTO TCITY VALUES ('평택',453,51,'N','경기');
 
 DECLARE 
-    v_orderID INT := 1;
-    v_sql VARCHAR(100);
-    v_member CHAR(20);
+    V_ORDERID INT := 1;
+    V_SQL VARCHAR(100);
+    V_MEMBER CHAR(20);
 BEGIN
-    v_sql := 'SELECT member FROM tOrder WHERE orderID = ' || v_orderID;
-    EXECUTE IMMEDIATE v_sql INTO v_member;
-    DBMS_OUTPUT.PUT_LINE(v_member);
+    V_SQL := 'SELECT MEMBER FROM TORDER WHERE ORDERID = ' || V_ORDERID;
+    EXECUTE IMMEDIATE V_SQL INTO V_MEMBER;
+    DBMS_OUTPUT.PUT_LINE(V_MEMBER);
 END;
 
 DECLARE
-    v_area INT := 0;
-    v_op CHAR(10) := '크다';
-    v_sql VARCHAR(100);
-    v_name CHAR(10);
+    V_AREA INT := 0;
+    V_OP CHAR(10) := '크다';
+    V_SQL VARCHAR(100);
+    V_NAME CHAR(10);
 BEGIN
-    v_sql := 'SELECT name FROM tCity WHERE ';
-    IF v_area != 0 THEN
-        v_sql := v_sql || 'area ';
-        IF v_op = '같다' THEN v_sql := v_sql || '= '; END IF;
-        IF v_op = '크다' THEN v_sql := v_sql || '> '; END IF;
-        IF v_op = '작다' THEN v_sql := v_sql || '< '; END IF;
-        v_sql := v_sql || v_area || ' AND ';
+    V_SQL := 'SELECT NAME FROM TCITY WHERE ';
+    IF V_AREA != 0 THEN
+        V_SQL := V_SQL || 'AREA ';
+        IF V_OP = '같다' THEN V_SQL := V_SQL || '= '; END IF;
+        IF V_OP = '크다' THEN V_SQL := V_SQL || '> '; END IF;
+        IF V_OP = '작다' THEN V_SQL := V_SQL || '< '; END IF;
+        V_SQL := V_SQL || V_AREA || ' AND ';
     END IF;
-    v_sql := v_sql || ' rownum = 1';
-    EXECUTE IMMEDIATE v_sql INTO v_name;
-    DBMS_OUTPUT.PUT_LINE(v_name);
+    V_SQL := V_SQL || ' ROWNUM = 1';
+    EXECUTE IMMEDIATE V_SQL INTO V_NAME;
+    DBMS_OUTPUT.PUT_LINE(V_NAME);
 END;
 
-SELECT member INTO v_member FROM tOrder WHERE orderID = v_orderID;
+SELECT MEMBER INTO V_MEMBER FROM TORDER WHERE ORDERID = V_ORDERID;
 
-v_table VARCHAR(10) := 'tCity';
-SELECT name INTO v_name FROM v_table WHERE rownum = 1;
+V_TABLE VARCHAR(10) := 'TCITY';
+SELECT NAME INTO V_NAME FROM V_TABLE WHERE ROWNUM = 1;
 
 DECLARE 
-    v_table VARCHAR(10) := 'tCity';
-    v_sql VARCHAR(100);
-    v_name CHAR(20);
+    V_TABLE VARCHAR(10) := 'TCITY';
+    V_SQL VARCHAR(100);
+    V_NAME CHAR(20);
 BEGIN
-    v_sql := 'SELECT name FROM ' || v_table || ' WHERE rownum = 1';
-    EXECUTE IMMEDIATE v_sql INTO v_name;
-    DBMS_OUTPUT.PUT_LINE(v_name);
+    V_SQL := 'SELECT NAME FROM ' || V_TABLE || ' WHERE ROWNUM = 1';
+    EXECUTE IMMEDIATE V_SQL INTO V_NAME;
+    DBMS_OUTPUT.PUT_LINE(V_NAME);
 END;
 
-DECLARE @area INT = 1000;
-DECLARE @op CHAR(10) = '크다';
-DECLARE @sql VARCHAR(100);
+DECLARE @AREA INT = 1000;
+DECLARE @OP CHAR(10) = '크다';
+DECLARE @SQL VARCHAR(100);
 
-SET @sql = 'SELECT TOP 1 name FROM tCity';
-IF @area != 0
+SET @SQL = 'SELECT TOP 1 NAME FROM TCITY';
+IF @AREA != 0
 BEGIN
-	SET @sql += ' WHERE area ';
-	IF @op = '같다' SET @sql += '=';
-	IF @op = '크다' SET @sql += '>';
-	IF @op = '작다' SET @sql += '<';
-	SET @sql = @sql + CAST(@area AS VARCHAR(10));
+	SET @SQL += ' WHERE AREA ';
+	IF @OP = '같다' SET @SQL += '=';
+	IF @OP = '크다' SET @SQL += '>';
+	IF @OP = '작다' SET @SQL += '<';
+	SET @SQL = @SQL + CAST(@AREA AS VARCHAR(10));
 END
-EXECUTE(@sql);
+EXECUTE(@SQL);
 
 DECLARE 
-    hour_begin INT := 1;
-    hour_end INT := 2;
-    hour_now INT := hour_begin;
-    v_sql VARCHAR(1000);
-    v_cursor SYS_REFCURSOR;
-    TYPE linecar IS RECORD(line VARCHAR(100), car VARCHAR(100), t1 VARCHAR(100), t2 VARCHAR(100));
-    v_lc linecar;
+    HOUR_BEGIN INT := 1;
+    HOUR_END INT := 2;
+    HOUR_NOW INT := HOUR_BEGIN;
+    V_SQL VARCHAR(1000);
+    V_CURSOR SYS_REFCURSOR;
+    TYPE LINECAR IS RECORD(LINE VARCHAR(100), CAR VARCHAR(100), T1 VARCHAR(100), T2 VARCHAR(100));
+    V_LC LINECAR;
 BEGIN
-    v_sql := 'SELECT * FROM tTraffic PIVOT (SUM(traffic) FOR hour IN (';
-    WHILE hour_now <= hour_end
+    V_SQL := 'SELECT * FROM TTRAFFIC PIVOT (SUM(TRAFFIC) FOR HOUR IN (';
+    WHILE HOUR_NOW <= HOUR_END
     LOOP
-        v_sql := v_sql || hour_now;
-        IF hour_now != hour_end THEN v_sql := v_sql || ', '; END IF;
-        hour_now := hour_now + 1;
+        V_SQL := V_SQL || HOUR_NOW;
+        IF HOUR_NOW != HOUR_END THEN V_SQL := V_SQL || ', '; END IF;
+        HOUR_NOW := HOUR_NOW + 1;
     END LOOP;
-    v_sql := v_sql || '))'; 
+    V_SQL := V_SQL || '))'; 
     
-    OPEN v_cursor FOR v_sql;
+    OPEN V_CURSOR FOR V_SQL;
     LOOP
         -- INTO 절에 레코드 타입을 적으면 되는데 타입을 미리 결정할 수 없다.
-        FETCH v_cursor INTO v_lc;
-        EXIT WHEN v_cursor%NOTFOUND;
-        DBMS_OUTPUT.PUT_LINE(v_lc.line || v_lc.car || v_lc.t1 || ',' || v_lc.t2);
+        FETCH V_CURSOR INTO V_LC;
+        EXIT WHEN V_CURSOR%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE(V_LC.LINE || V_LC.CAR || V_LC.T1 || ',' || V_LC.T2);
     END LOOP;
 END;
 
-DECLARE @hour_begin INT = 1;
-DECLARE @hour_end INT = 2;
-DECLARE @hour INT = @hour_begin;
-DECLARE @sql VARCHAR(1000);
+DECLARE @HOUR_BEGIN INT = 1;
+DECLARE @HOUR_END INT = 2;
+DECLARE @HOUR INT = @HOUR_BEGIN;
+DECLARE @SQL VARCHAR(1000);
 
-SET @sql = 'SELECT * FROM tTraffic PIVOT (SUM(traffic) FOR hour IN (';
-WHILE @hour <= @hour_end
+SET @SQL = 'SELECT * FROM TTRAFFIC PIVOT (SUM(TRAFFIC) FOR HOUR IN (';
+WHILE @HOUR <= @HOUR_END
 BEGIN
-	SET @sql += '[' + CAST(@hour AS VARCHAR) + ']';
-	IF @hour != @hour_end SET @sql += ', ';
-	SET @hour += 1;
+	SET @SQL += '[' + CAST(@HOUR AS VARCHAR) + ']';
+	IF @HOUR != @HOUR_END SET @SQL += ', ';
+	SET @HOUR += 1;
 END
-SET @sql += ')) as pvt';
+SET @SQL += ')) AS PVT';
 
-EXEC(@sql);
+EXEC(@SQL);
 
 -------------------------------------------------
 -- 18장
 
-CREATE OR REPLACE TRIGGER TR_Message
-AFTER UPDATE ON tCity
+CREATE OR REPLACE TRIGGER TR_MESSAGE
+AFTER UPDATE ON TCITY
 BEGIN
     DBMS_OUTPUT.PUT_LINE('도시 정보를 갱신하였습니다.');
 END;
 
-UPDATE tCity SET popu = popu + 1 WHERE name = '서울';
+UPDATE TCITY SET POPU = POPU + 1 WHERE NAME = '서울';
 
 
-CREATE OR REPLACE TRIGGER TR_Message
-AFTER INSERT OR UPDATE OR DELETE ON tCity
+CREATE OR REPLACE TRIGGER TR_MESSAGE
+AFTER INSERT OR UPDATE OR DELETE ON TCITY
 BEGIN
     IF INSERTING THEN
         DBMS_OUTPUT.PUT_LINE('새로운 도시를 삽입하였습니다.');
@@ -3244,344 +3244,344 @@ BEGIN
     END IF;
 END;
 
-INSERT INTO tCity VALUES ('여주',608,11,'n','경기');
-UPDATE tCity SET popu = 12 WHERE name = '여주';
-DELETE FROM tCity WHERE NAME = '여주';
+INSERT INTO TCITY VALUES ('여주',608,11,'N','경기');
+UPDATE TCITY SET POPU = 12 WHERE NAME = '여주';
+DELETE FROM TCITY WHERE NAME = '여주';
 
-UPDATE tCity SET popu = popu + 1 WHERE region = '경기';
+UPDATE TCITY SET POPU = POPU + 1 WHERE REGION = '경기';
 
-CREATE OR REPLACE TRIGGER TR_Message
-AFTER UPDATE ON tCity
+CREATE OR REPLACE TRIGGER TR_MESSAGE
+AFTER UPDATE ON TCITY
 FOR EACH ROW
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(:OLD.name || ':' || :OLD.popu || '->' || :NEW.popu);
+    DBMS_OUTPUT.PUT_LINE(:OLD.NAME || ':' || :OLD.POPU || '->' || :NEW.POPU);
 END;
 
-REFERENCING OLD AS pre_rec NEW AS post_rec
+REFERENCING OLD AS PRE_REC NEW AS POST_REC
 
-UPDATE tCity SET area = area + 1 WHERE name = '서울';
+UPDATE TCITY SET AREA = AREA + 1 WHERE NAME = '서울';
 
-CREATE OR REPLACE TRIGGER TR_Message
-AFTER UPDATE OF popu ON tCity 
+CREATE OR REPLACE TRIGGER TR_MESSAGE
+AFTER UPDATE OF POPU ON TCITY 
 FOR EACH ROW
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(:OLD.name || ':' || :OLD.popu || '->' || :NEW.popu);
+    DBMS_OUTPUT.PUT_LINE(:OLD.NAME || ':' || :OLD.POPU || '->' || :NEW.POPU);
 END;
 
-CREATE OR REPLACE TRIGGER TR_Message
-AFTER UPDATE ON tCity 
+CREATE OR REPLACE TRIGGER TR_MESSAGE
+AFTER UPDATE ON TCITY 
 FOR EACH ROW
-WHEN (NEW.popu > 10)
+WHEN (NEW.POPU > 10)
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(:OLD.name || ':' || :OLD.popu || '->' || :NEW.popu);
+    DBMS_OUTPUT.PUT_LINE(:OLD.NAME || ':' || :OLD.POPU || '->' || :NEW.POPU);
 END;
 
-UPDATE tCity SET popu = popu + 1 WHERE region = '강원';
+UPDATE TCITY SET POPU = POPU + 1 WHERE REGION = '강원';
 
-CREATE OR REPLACE TRIGGER TR_Message
-AFTER UPDATE ON tCity
+CREATE OR REPLACE TRIGGER TR_MESSAGE
+AFTER UPDATE ON TCITY
 FOR EACH ROW
 BEGIN
-    IF :NEW.popu > 10000 THEN
+    IF :NEW.POPU > 10000 THEN
         RAISE_APPLICATION_ERROR(-20000, '인구가 1억을 넘을 수는 없습니다.');
     END IF;
-    DBMS_OUTPUT.PUT_LINE(:OLD.name || ':' || :OLD.popu || '->' || :NEW.popu);
+    DBMS_OUTPUT.PUT_LINE(:OLD.NAME || ':' || :OLD.POPU || '->' || :NEW.POPU);
 END;
 
-UPDATE tCity SET popu = 12345 WHERE name = '서울';
+UPDATE TCITY SET POPU = 12345 WHERE NAME = '서울';
 
-CREATE OR REPLACE TRIGGER TR_PreventChoi
-AFTER INSERT ON tStaff
+CREATE OR REPLACE TRIGGER TR_PREVENTCHOI
+AFTER INSERT ON TSTAFF
 FOR EACH ROW
 BEGIN
-    IF SUBSTR(:NEW.name,1,1) = '최' THEN
+    IF SUBSTR(:NEW.NAME,1,1) = '최' THEN
         RAISE_APPLICATION_ERROR(-20000, '최가는 안되!');
     END IF;
 END;
 
-INSERT INTO tStaff VALUES ('최무선','총무부','남','2021-6-25','사원',280,0);
+INSERT INTO TSTAFF VALUES ('최무선','총무부','남','2021-6-25','사원',280,0);
 
-CREATE OR REPLACE TRIGGER TR_PreventChoi
-BEFORE INSERT ON tStaff
+CREATE OR REPLACE TRIGGER TR_PREVENTCHOI
+BEFORE INSERT ON TSTAFF
 FOR EACH ROW
 BEGIN
-    IF SUBSTR(:NEW.name,1,1) = '최' THEN
+    IF SUBSTR(:NEW.NAME,1,1) = '최' THEN
         DBMS_OUTPUT.PUT_LINE('최가는 안되');
-        :NEW.name := '김' || SUBSTR(:NEW.name, 2);
+        :NEW.NAME := '김' || SUBSTR(:NEW.NAME, 2);
     END IF;
 END;
 
-CREATE OR REPLACE TRIGGER TR_DoubleMoney
-BEFORE INSERT ON tMember
+CREATE OR REPLACE TRIGGER TR_DOUBLEMONEY
+BEFORE INSERT ON TMEMBER
 FOR EACH ROW
 BEGIN
-    IF :NEW.age = 18 THEN
-        :NEW.money := :NEW.money * 2;
+    IF :NEW.AGE = 18 THEN
+        :NEW.MONEY := :NEW.MONEY * 2;
     END IF;
 END;
 
-INSERT INTO tMember (member, age, email, addr, money) VALUES 
-('신입생', 18, 'fresher@kyunghee.ac.kr', '서울 회기동', 8000);
+INSERT INTO TMEMBER (MEMBER, AGE, EMAIL, ADDR, MONEY) VALUES 
+('신입생', 18, 'FRESHER@KYUNGHEE.AC.KR', '서울 회기동', 8000);
 
-CREATE VIEW vCarMaker AS
-SELECT tCar.*, factory, domestic FROM tCar INNER JOIN tMaker ON
-tCar.maker = tMaker.maker;
+CREATE VIEW VCARMAKER AS
+SELECT TCAR.*, FACTORY, DOMESTIC FROM TCAR INNER JOIN TMAKER ON
+TCAR.MAKER = TMAKER.MAKER;
 
-INSERT INTO vCarMaker VALUES('티코', 800, 900, '대우', '울릉', 'y');
+INSERT INTO VCARMAKER VALUES('티코', 800, 900, '대우', '울릉', 'Y');
 
-CREATE OR REPLACE TRIGGER TR_AddNewCar
-INSTEAD OF INSERT ON vCarMaker
+CREATE OR REPLACE TRIGGER TR_ADDNEWCAR
+INSTEAD OF INSERT ON VCARMAKER
 FOR EACH ROW
 BEGIN
-	INSERT INTO tCar (car, capacity, price, maker) VALUES 
-        (:NEW.car, :NEW.capacity, :NEW.price, :NEW.maker);
-	INSERT INTO tMaker (maker, factory, domestic) VALUES 
-        (:NEW.maker, :NEW.factory, :NEW.domestic);
+	INSERT INTO TCAR (CAR, CAPACITY, PRICE, MAKER) VALUES 
+        (:NEW.CAR, :NEW.CAPACITY, :NEW.PRICE, :NEW.MAKER);
+	INSERT INTO TMAKER (MAKER, FACTORY, DOMESTIC) VALUES 
+        (:NEW.MAKER, :NEW.FACTORY, :NEW.DOMESTIC);
 END;
 
-CREATE OR REPLACE TRIGGER TR_Message2
-AFTER UPDATE ON tCity
+CREATE OR REPLACE TRIGGER TR_MESSAGE2
+AFTER UPDATE ON TCITY
 FOR EACH ROW
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(:OLD.name || '면적:' || :OLD.area || '->' || :NEW.area);
+    DBMS_OUTPUT.PUT_LINE(:OLD.NAME || '면적:' || :OLD.AREA || '->' || :NEW.AREA);
 END;
 
-CREATE OR REPLACE TRIGGER TR_Message3
-AFTER UPDATE ON tCity
+CREATE OR REPLACE TRIGGER TR_MESSAGE3
+AFTER UPDATE ON TCITY
 FOR EACH ROW
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(:OLD.name || '지역:' || :OLD.region || '->' || :NEW.region);
+    DBMS_OUTPUT.PUT_LINE(:OLD.NAME || '지역:' || :OLD.REGION || '->' || :NEW.REGION);
 END;
 
-CREATE OR REPLACE TRIGGER TR_Message3
-AFTER UPDATE ON tCity
+CREATE OR REPLACE TRIGGER TR_MESSAGE3
+AFTER UPDATE ON TCITY
 FOR EACH ROW
-FOLLOWS TR_Message
+FOLLOWS TR_MESSAGE
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(:OLD.name || '지역:' || :OLD.region || '->' || :NEW.region);
+    DBMS_OUTPUT.PUT_LINE(:OLD.NAME || '지역:' || :OLD.REGION || '->' || :NEW.REGION);
 END;
 
-UPDATE tCity SET area = 1000, popu = 12345 WHERE name = '서울';
+UPDATE TCITY SET AREA = 1000, POPU = 12345 WHERE NAME = '서울';
 
-CREATE OR REPLACE TRIGGER TR_OnNewCar
-AFTER INSERT ON tCar
+CREATE OR REPLACE TRIGGER TR_ONNEWCAR
+AFTER INSERT ON TCAR
 FOR EACH ROW
 BEGIN
     DBMS_OUTPUT.PUT_LINE('신차가 출시되었습니다.');
 END;
 
-INSERT INTO vCarMaker VALUES('티코', 800, 900, '대우', '울릉', 'y');
+INSERT INTO VCARMAKER VALUES('티코', 800, 900, '대우', '울릉', 'Y');
 
-CREATE OR REPLACE TRIGGER TR_Change
+CREATE OR REPLACE TRIGGER TR_CHANGE
 AFTER DDL ON DATABASE
 BEGIN
-    DBMS_OUTPUT.PUT_LINE('명령 : ' || ora_sysevent);
-    DBMS_OUTPUT.PUT_LINE('타입 : ' || ora_dict_obj_type);
-    DBMS_OUTPUT.PUT_LINE('이름 : ' || ora_dict_obj_name);
+    DBMS_OUTPUT.PUT_LINE('명령 : ' || ORA_SYSEVENT);
+    DBMS_OUTPUT.PUT_LINE('타입 : ' || ORA_DICT_OBJ_TYPE);
+    DBMS_OUTPUT.PUT_LINE('이름 : ' || ORA_DICT_OBJ_NAME);
 END;
 
-CREATE TABLE tTemp ( id INT );
-DROP TABLE tTemp;
+CREATE TABLE TTEMP ( ID INT );
+DROP TABLE TTEMP;
 
-CREATE TABLE tCityHistory
+CREATE TABLE TCITYHISTORY
 (
-    dt DATE,
-    suser VARCHAR(20),
-    ip VARCHAR(20),
-    action VARCHAR(10),
-    name CHAR(10),
-    area VARCHAR(30) NULL,
-    popu VARCHAR(30) NULL
+    DT DATE,
+    SUSER VARCHAR(20),
+    IP VARCHAR(20),
+    ACTION VARCHAR(10),
+    NAME CHAR(10),
+    AREA VARCHAR(30) NULL,
+    POPU VARCHAR(30) NULL
 );
 
-CREATE OR REPLACE TRIGGER TR_History
-AFTER INSERT OR UPDATE OR DELETE ON tCity
+CREATE OR REPLACE TRIGGER TR_HISTORY
+AFTER INSERT OR UPDATE OR DELETE ON TCITY
 FOR EACH ROW
 DECLARE
-    areaChange VARCHAR(30);
-    popuChange VARCHAR(30);
-    suser VARCHAR(20);
-    ip VARCHAR(20);
+    AREACHANGE VARCHAR(30);
+    POPUCHANGE VARCHAR(30);
+    SUSER VARCHAR(20);
+    IP VARCHAR(20);
 BEGIN
-    SELECT SYS_CONTEXT('USERENV', 'SESSION_USER') INTO suser FROM DUAL;
-    SELECT SYS_CONTEXT('USERENV', 'IP_ADDRESS') INTO ip FROM DUAL;
+    SELECT SYS_CONTEXT('USERENV', 'SESSION_USER') INTO SUSER FROM DUAL;
+    SELECT SYS_CONTEXT('USERENV', 'IP_ADDRESS') INTO IP FROM DUAL;
     
     IF INSERTING THEN
-        INSERT INTO tCityHistory VALUES 
-            (SYSDATE, suser, ip, 'INSERT', :NEW.name, :NEW.area, :NEW.popu);
+        INSERT INTO TCITYHISTORY VALUES 
+            (SYSDATE, SUSER, IP, 'INSERT', :NEW.NAME, :NEW.AREA, :NEW.POPU);
     END IF;
     IF UPDATING THEN
-        IF :OLD.area = :NEW.area THEN
-            areaChange := :OLD.area;
+        IF :OLD.AREA = :NEW.AREA THEN
+            AREACHANGE := :OLD.AREA;
         ELSE
-            areaChange := :OLD.area || '->' || :NEW.area;
+            AREACHANGE := :OLD.AREA || '->' || :NEW.AREA;
         END IF;
-        IF :OLD.popu = :NEW.popu THEN
-            popuChange := :OLD.popu;
+        IF :OLD.POPU = :NEW.POPU THEN
+            POPUCHANGE := :OLD.POPU;
         ELSE
-            popuChange := :OLD.popu || '->' || :NEW.popu;
+            POPUCHANGE := :OLD.POPU || '->' || :NEW.POPU;
         END IF;
-        INSERT INTO tCityHistory VALUES 
-            (SYSDATE, suser, ip, 'UPDATE', :NEW.name, areaChange, popuChange);
+        INSERT INTO TCITYHISTORY VALUES 
+            (SYSDATE, SUSER, IP, 'UPDATE', :NEW.NAME, AREACHANGE, POPUCHANGE);
     END IF;
     IF DELETING THEN
-        INSERT INTO tCityHistory VALUES 
-            (SYSDATE, suser, ip, 'DELETE', :OLD.name, :OLD.area, :OLD.popu);
+        INSERT INTO TCITYHISTORY VALUES 
+            (SYSDATE, SUSER, IP, 'DELETE', :OLD.NAME, :OLD.AREA, :OLD.POPU);
     END IF;
 END;
 
-CREATE TRIGGER TR_Message
-ON tCity AFTER UPDATE 
+CREATE TRIGGER TR_MESSAGE
+ON TCITY AFTER UPDATE 
 AS
 BEGIN
     PRINT('도시 정보를 갱신하였습니다.');
 END;
 
-UPDATE tCity SET popu = popu + 1 WHERE name = '서울';
-UPDATE tCity SET popu = popu + 1 WHERE region = '경기';
+UPDATE TCITY SET POPU = POPU + 1 WHERE NAME = '서울';
+UPDATE TCITY SET POPU = POPU + 1 WHERE REGION = '경기';
 
-ALTER TRIGGER TR_Message
-ON tCity AFTER UPDATE 
+ALTER TRIGGER TR_MESSAGE
+ON TCITY AFTER UPDATE 
 AS
 BEGIN
-	SELECT * FROM deleted;
-	SELECT * FROM inserted;
+	SELECT * FROM DELETED;
+	SELECT * FROM INSERTED;
 END;
 
-ALTER TRIGGER TR_Message
-ON tCity AFTER UPDATE 
+ALTER TRIGGER TR_MESSAGE
+ON TCITY AFTER UPDATE 
 AS
 BEGIN
-	SELECT name, popu, ' => ', (SELECT popu FROM inserted WHERE name = D.name) FROM deleted D;
+	SELECT NAME, POPU, ' => ', (SELECT POPU FROM INSERTED WHERE NAME = D.NAME) FROM DELETED D;
 END;
 
-ALTER TABLE tCity DISABLE TRIGGER TR_Message;
+ALTER TABLE TCITY DISABLE TRIGGER TR_MESSAGE;
 
-ALTER TRIGGER TR_Message
-ON tCity AFTER UPDATE 
+ALTER TRIGGER TR_MESSAGE
+ON TCITY AFTER UPDATE 
 AS
 BEGIN
-	IF (SELECT popu FROM inserted) > 10000
+	IF (SELECT POPU FROM INSERTED) > 10000
 	BEGIN
 		PRINT('인구가 1억을 넘을 수는 없습니다.');
 		ROLLBACK;
 	END
 END;
 
-CREATE TRIGGER TR_PreventChoi
-ON tStaff AFTER INSERT
+CREATE TRIGGER TR_PREVENTCHOI
+ON TSTAFF AFTER INSERT
 AS
-IF EXISTS (SELECT * FROM inserted WHERE name LIKE '최%')
+IF EXISTS (SELECT * FROM INSERTED WHERE NAME LIKE '최%')
 BEGIN
 	PRINT '최가는 안되!';
 	ROLLBACK TRANSACTION;
 END
 
-CREATE TRIGGER TR_AddNewCar
-ON vCarMaker INSTEAD OF INSERT
+CREATE TRIGGER TR_ADDNEWCAR
+ON VCARMAKER INSTEAD OF INSERT
 AS
 BEGIN
-	INSERT INTO tCar (car, capacity, price, maker) SELECT car, capacity, price, maker FROM inserted;
-	INSERT INTO tMaker (maker, factory, domestic) SELECT maker, factory, domestic FROM inserted;
+	INSERT INTO TCAR (CAR, CAPACITY, PRICE, MAKER) SELECT CAR, CAPACITY, PRICE, MAKER FROM INSERTED;
+	INSERT INTO TMAKER (MAKER, FACTORY, DOMESTIC) SELECT MAKER, FACTORY, DOMESTIC FROM INSERTED;
 END
 
-CREATE TRIGGER TR_DoubleMoney
-ON tMember AFTER INSERT
+CREATE TRIGGER TR_DOUBLEMONEY
+ON TMEMBER AFTER INSERT
 AS
-DECLARE @name CHAR(20)
-DECLARE @age INT
-SELECT @name = member, @age = age FROM inserted;
-IF @age = 18
-	UPDATE tMember SET money = money * 2 WHERE member = @name;
+DECLARE @NAME CHAR(20)
+DECLARE @AGE INT
+SELECT @NAME = MEMBER, @AGE = AGE FROM INSERTED;
+IF @AGE = 18
+	UPDATE TMEMBER SET MONEY = MONEY * 2 WHERE MEMBER = @NAME;
 
-CREATE TRIGGER TR_MoneyChange
-ON tMember
+CREATE TRIGGER TR_MONEYCHANGE
+ON TMEMBER
 AFTER UPDATE
 AS
-DECLARE @name CHAR(20)
-IF UPDATE(money)
+DECLARE @NAME CHAR(20)
+IF UPDATE(MONEY)
 BEGIN
-	SELECT @name = member FROM inserted;
-	PRINT @name + '의 예치금이 갱신되었습니다. 부정이 아닌지 확인해 보십시오';
+	SELECT @NAME = MEMBER FROM INSERTED;
+	PRINT @NAME + '의 예치금이 갱신되었습니다. 부정이 아닌지 확인해 보십시오';
 END;
 
-CREATE TRIGGER NewDataBase
+CREATE TRIGGER NEWDATABASE
 ON ALL SERVER
 AFTER CREATE_DATABASE, DROP_DATABASE
 AS
 PRINT '새로운 DB가 생성 또는 파괴되었습니다.';
 
-CREATE DATABASE NewDB
-DROP DATABASE NewDB
+CREATE DATABASE NEWDB
+DROP DATABASE NEWDB
 
-DROP TRIGGER NewDataBase ON ALL SERVER
+DROP TRIGGER NEWDATABASE ON ALL SERVER
 
 -------------------------------------------------
 -- 19장
 
-INSERT INTO tCity VALUES ('평택',453,51,'n','경기');
-SELECT * FROM tCity;
+INSERT INTO TCITY VALUES ('평택',453,51,'N','경기');
+SELECT * FROM TCITY;
 
-SELECT * FROM v$transaction;
+SELECT * FROM V$TRANSACTION;
 
-DELETE FROM tCity WHERE metro = 'n';
-SELECT * FROM tCity;
+DELETE FROM TCITY WHERE METRO = 'N';
+SELECT * FROM TCITY;
 
-UPDATE tMember SET money = money + 100 WHERE member='춘향';
-APDATE tMember SET money = money - 100 WHERE member='이도령';
+UPDATE TMEMBER SET MONEY = MONEY + 100 WHERE MEMBER='춘향';
+APDATE TMEMBER SET MONEY = MONEY - 100 WHERE MEMBER='이도령';
 
-UPDATE tMember SET money = money + 100 WHERE member='춘향';
-UPDATE tMember2 SET money = money - 100 WHERE member='이도령';
+UPDATE TMEMBER SET MONEY = MONEY + 100 WHERE MEMBER='춘향';
+UPDATE TMEMBER2 SET MONEY = MONEY - 100 WHERE MEMBER='이도령';
 
 BEGIN TRANSACTION
-UPDATE tMember SET money = money + 100 WHERE member='춘향';
-UPDATE tMember SET money = money - 100 WHERE member='이도령';
+UPDATE TMEMBER SET MONEY = MONEY + 100 WHERE MEMBER='춘향';
+UPDATE TMEMBER SET MONEY = MONEY - 100 WHERE MEMBER='이도령';
 ROLLBACK;
 
 BEGIN TRAN
-UPDATE tMember SET money = money + 10000 WHERE member = '춘향';
-DECLARE @remain INT
-SELECT @remain = money FROM tMember WHERE member = '이도령';
-IF @remain < 10000 
+UPDATE TMEMBER SET MONEY = MONEY + 10000 WHERE MEMBER = '춘향';
+DECLARE @REMAIN INT
+SELECT @REMAIN = MONEY FROM TMEMBER WHERE MEMBER = '이도령';
+IF @REMAIN < 10000 
 BEGIN
 	ROLLBACK
 END
 ELSE
 BEGIN
-	UPDATE tMember SET money = money - 10000 WHERE member = '이도령';
+	UPDATE TMEMBER SET MONEY = MONEY - 10000 WHERE MEMBER = '이도령';
 	COMMIT
 END
-SELECT * FROM tMember WHERE member IN ('춘향', '이도령');
+SELECT * FROM TMEMBER WHERE MEMBER IN ('춘향', '이도령');
 
-UPDATE tCity SET popu = 1000 WHERE name = '서울';
-SAVEPOINT p1000;
-UPDATE tCity SET popu = 1100 WHERE name = '서울';
-SAVEPOINT p1100;
-UPDATE tCity SET popu = 1200 WHERE name = '서울';
-SAVEPOINT p1200;
-ROLLBACK TO SAVEPOINT p1100;
+UPDATE TCITY SET POPU = 1000 WHERE NAME = '서울';
+SAVEPOINT P1000;
+UPDATE TCITY SET POPU = 1100 WHERE NAME = '서울';
+SAVEPOINT P1100;
+UPDATE TCITY SET POPU = 1200 WHERE NAME = '서울';
+SAVEPOINT P1200;
+ROLLBACK TO SAVEPOINT P1100;
 
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 
 오라클 : ALTER PROFILE DEFAULT LIMIT IDLE_TIME 1;
 MSSQL : SET LOCK_TIMEOUT 60000
 
-UPDATE tMember SET age=25 WHERE member='향단';
-UPDATE tItem SET num=10 WHERE item='두부';
+UPDATE TMEMBER SET AGE=25 WHERE MEMBER='향단';
+UPDATE TITEM SET NUM=10 WHERE ITEM='두부';
 COMMIT
 
-UPDATE tItem SET num=5 WHERE item='두부';
-UPDATE tMember SET age=18 WHERE member='향단';
+UPDATE TITEM SET NUM=5 WHERE ITEM='두부';
+UPDATE TMEMBER SET AGE=18 WHERE MEMBER='향단';
 COMMIT
 
 -------------------------------------------------
 -- 부록
 
-SET @score = 123;
-SELECT @score;
+SET @SCORE = 123;
+SELECT @SCORE;
 
-SELECT @maxnum := MAX(num) FROM tItem;
-SELECT item FROM tItem WHERE num = @maxnum;
+SELECT @MAXNUM := MAX(NUM) FROM TITEM;
+SELECT ITEM FROM TITEM WHERE NUM = @MAXNUM;
 
 DELIMITER $$
 CREATE [OR REPLACE] PROCEDURE 프로시저 이름()
@@ -3591,23 +3591,23 @@ END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_proc()
+CREATE OR REPLACE PROCEDURE SP_PROC()
 BEGIN
-	DECLARE score INT DEFAULT 123;
-	SELECT score;
-	SET score = score + 1;
-	SELECT score;
+	DECLARE SCORE INT DEFAULT 123;
+	SELECT SCORE;
+	SET SCORE = SCORE + 1;
+	SELECT SCORE;
 END $$
 DELIMITER ;
 
-CALL SP_proc();
+CALL SP_PROC();
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_proc()
+CREATE OR REPLACE PROCEDURE SP_PROC()
 BEGIN
-	DECLARE score INT;
-	SET score = 12;
-	IF score = 12 THEN
+	DECLARE SCORE INT;
+	SET SCORE = 12;
+	IF SCORE = 12 THEN
 		SELECT '12입니다';
 	ELSE
 		SELECT '12가 아닙니다.';
@@ -3616,138 +3616,138 @@ END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_proc()
+CREATE OR REPLACE PROCEDURE SP_PROC()
 BEGIN
-	DECLARE score INT DEFAULT 86;
+	DECLARE SCORE INT DEFAULT 86;
 	CASE
-		WHEN score > 95 THEN SELECT 'A+';
-		WHEN score > 90 THEN SELECT 'A';
-		WHEN score > 85 THEN SELECT 'B+';
-		WHEN score > 80 THEN SELECT 'B';
+		WHEN SCORE > 95 THEN SELECT 'A+';
+		WHEN SCORE > 90 THEN SELECT 'A';
+		WHEN SCORE > 85 THEN SELECT 'B+';
+		WHEN SCORE > 80 THEN SELECT 'B';
 		ELSE SELECT 'C';
 	END CASE;
 END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_proc()
+CREATE OR REPLACE PROCEDURE SP_PROC()
 BEGIN
-	DECLARE score INT DEFAULT 86;
-	DECLARE grade CHAR(2);
-	SET grade = CASE
-		WHEN score > 95 THEN 'A+'
-		WHEN score > 90 THEN 'A'
-		WHEN score > 85 THEN 'B+'
-		WHEN score > 80 THEN 'B'
+	DECLARE SCORE INT DEFAULT 86;
+	DECLARE GRADE CHAR(2);
+	SET GRADE = CASE
+		WHEN SCORE > 95 THEN 'A+'
+		WHEN SCORE > 90 THEN 'A'
+		WHEN SCORE > 85 THEN 'B+'
+		WHEN SCORE > 80 THEN 'B'
 		ELSE 'C'
 	END;
-	SELECT grade;
+	SELECT GRADE;
 END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_proc()
+CREATE OR REPLACE PROCEDURE SP_PROC()
 BEGIN
-	DECLARE num INT DEFAULT 1;
-	DECLARE sum INT DEFAULT 0;
-	WHILE (num <= 100) DO
-		SET sum = sum + num;
-		SET num = num + 1;
+	DECLARE NUM INT DEFAULT 1;
+	DECLARE SUM INT DEFAULT 0;
+	WHILE (NUM <= 100) DO
+		SET SUM = SUM + NUM;
+		SET NUM = NUM + 1;
 	END WHILE;
 
-	SELECT sum;
+	SELECT SUM;
 END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_proc()
+CREATE OR REPLACE PROCEDURE SP_PROC()
 BEGIN
-	DECLARE num INT DEFAULT 1;
-	DECLARE sum INT DEFAULT 0;
+	DECLARE NUM INT DEFAULT 1;
+	DECLARE SUM INT DEFAULT 0;
 	REPEAT
-		SET sum = sum + num;
-		SET num = num + 1;
-		UNTIL num > 100
+		SET SUM = SUM + NUM;
+		SET NUM = NUM + 1;
+		UNTIL NUM > 100
 	END REPEAT;
 
-	SELECT sum;
+	SELECT SUM;
 END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_proc()
+CREATE OR REPLACE PROCEDURE SP_PROC()
 BEGIN
-	DECLARE num INT DEFAULT 1;
-	DECLARE sum INT DEFAULT 0;
-	sumloop: LOOP
-		SET sum = sum + num;
-		SET num = num + 1;
-		IF num > 100 THEN
-			LEAVE sumloop;
+	DECLARE NUM INT DEFAULT 1;
+	DECLARE SUM INT DEFAULT 0;
+	SUMLOOP: LOOP
+		SET SUM = SUM + NUM;
+		SET NUM = NUM + 1;
+		IF NUM > 100 THEN
+			LEAVE SUMLOOP;
 		END IF;
 	END LOOP;
 
-	SELECT sum;
+	SELECT SUM;
 END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_GrantBonus(IN p_member CHAR(20))
+CREATE OR REPLACE PROCEDURE SP_GRANTBONUS(IN P_MEMBER CHAR(20))
 BEGIN
-	UPDATE tMember SET money = money + 1000 WHERE member = p_member;
+	UPDATE TMEMBER SET MONEY = MONEY + 1000 WHERE MEMBER = P_MEMBER;
 END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_GetMemberNum(OUT o_member_num INT)
+CREATE OR REPLACE PROCEDURE SP_GETMEMBERNUM(OUT O_MEMBER_NUM INT)
 BEGIN
-	SELECT COUNT(*) INTO o_member_num FROM tMember;
+	SELECT COUNT(*) INTO O_MEMBER_NUM FROM TMEMBER;
 END $$
 DELIMITER ;
 
-CALL SP_GetMemberNum(@num);
-SELECT @num;
+CALL SP_GETMEMBERNUM(@NUM);
+SELECT @NUM;
 
 DELIMITER $$
-CREATE OR REPLACE FUNCTION FN_AddInt(a INT, b INT) RETURNS INT
+CREATE OR REPLACE FUNCTION FN_ADDINT(A INT, B INT) RETURNS INT
 BEGIN
-	RETURN a + b;
+	RETURN A + B;
 END $$
 DELIMITER ;
 
-SELECT FN_AddInt(2, 3);
+SELECT FN_ADDINT(2, 3);
 
 DELIMITER $$
-CREATE OR REPLACE PROCEDURE SP_dumpCity()
+CREATE OR REPLACE PROCEDURE SP_DUMPCITY()
 BEGIN
-	DECLARE city_name CHAR(10);
-	DECLARE eof INT DEFAULT 0;
+	DECLARE CITY_NAME CHAR(10);
+	DECLARE EOF INT DEFAULT 0;
 
-	DECLARE testcursor CURSOR FOR SELECT name FROM tCity;
-	DECLARE CONTINUE HANDLER FOR NOT FOUND SET eof = 1; 
-	OPEN testcursor;
+	DECLARE TESTCURSOR CURSOR FOR SELECT NAME FROM TCITY;
+	DECLARE CONTINUE HANDLER FOR NOT FOUND SET EOF = 1; 
+	OPEN TESTCURSOR;
 
-	fetch_loop: LOOP
-		FETCH testcursor INTO city_name;
-		IF eof THEN 
-			LEAVE fetch_loop;
+	FETCH_LOOP: LOOP
+		FETCH TESTCURSOR INTO CITY_NAME;
+		IF EOF THEN 
+			LEAVE FETCH_LOOP;
 		END IF;
-		SELECT city_name;
+		SELECT CITY_NAME;
 	END LOOP;
-	CLOSE testcursor;
+	CLOSE TESTCURSOR;
 END $$
 DELIMITER ;
 
 DELIMITER $$
-CREATE OR REPLACE TRIGGER TR_Message
-AFTER UPDATE ON tCity
+CREATE OR REPLACE TRIGGER TR_MESSAGE
+AFTER UPDATE ON TCITY
 FOR EACH ROW
 BEGIN
-	SET @result = CONCAT(OLD.popu, '->', NEW.popu);
+	SET @RESULT = CONCAT(OLD.POPU, '->', NEW.POPU);
 END $$
 DELIMITER ;
 
-UPDATE tCity SET popu = popu + 1 WHERE name = '서울';
+UPDATE TCITY SET POPU = POPU + 1 WHERE NAME = '서울';
 
-SELECT @result;
+SELECT @RESULT;
 
