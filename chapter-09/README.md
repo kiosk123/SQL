@@ -2,7 +2,7 @@
 
 많은 DB에서 사용하는 주요함수들 정리함
 
-## 1. AVG  
+## 1. AVG(평균), MOD(나머지)  
 평균을 구한다.
 
 ```SQL
@@ -11,11 +11,20 @@ FROM TSTAFF
 WHERE DEPART = '영업부';
 ```
 
-## 2. ROUND  
+나머지를 구한다.
+```SQL
+SELECT MOD(10, 3) FROM DUAL;
+```
+
+## 2. ROUND, TRUNC  
 소수점 N자리까지만 남기고 N자리 다음 자리를 반올림하여 소수점 N자리를 표시한다.  
 ```SQL
 -- ROUND(값 또는 컬럼, 표시할 소수점 N자리) - 예) 52.23
 SELECT ROUND(AVG(SCORE),2) FROM TSTAFF WHERE DEPART = '영업부'
+```
+소수점 N자리까지만 남기고 N자리 다음 자리를 반올림하지 않고 소수점 N자리를 표시한다.(N+1까지 자리 버림)
+```SQL
+SELECT TRUNC(867.567, 1) FROM DUAL; -- 867.5
 ```
 
 ## 3. REPLACE, REGEXP_REPLACE  - 치환과, 정규식을 통한 치환
