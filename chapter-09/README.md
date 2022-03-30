@@ -18,11 +18,16 @@ WHERE DEPART = '영업부';
 SELECT ROUND(AVG(SCORE),2) FROM TSTAFF WHERE DEPART = '영업부'
 ```
 
-## 3. REPLACE  
+## 3. REPLACE, REGEXP_REPLACE  - 치환과, 정규식을 통한 치환
 문자열 내의 특정 글자를 찾아 다른 글자로 치환
 ```SQL
 -- 부를 팀이라는 글자로 치환
 SELECT NAME, REPLACE(DEPART, '부', '팀') FROM TSTAFF
+```
+정규식 패턴을 통한 치환도 가능하다
+```SQL
+SELECT ENAME, REGEXP_REPLACE(SAL, '[0-3]', '*')
+FROM EMP;
 ```
 
 ## 4. 문자열 연결  
