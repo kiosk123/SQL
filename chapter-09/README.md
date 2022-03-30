@@ -84,7 +84,7 @@ SELECT SUBSTR('아름다운 대한민국 금수강산', 6, 4) FROM DUAL; -- 대�
 SELECT SUBSTR('아름다운 대한민국 금수강산', -4, 2) FROM DUAL; -- 금수
 ```
 
-7. NULL 관련  
+## 7. NULL 관련  
 NULL값일 경우 디폴트 값으로 변환하는 방법
 ```SQL
 --오라클
@@ -125,4 +125,57 @@ SELECT NAME, DECODE(GENDER, '남', '멋쟁이', '여', '예쁜이', '몬난이')
 -- GENDER 컬럼의 값이 남이면 멋쟁이로 변환 그외는 보통사람으로 변환
 SELECT NAME, DECODE(GENDER, '남', '멋쟁이', '보통사람') FROM TSTAFF; 
 
+```
+
+## 8. 날짜와 시간
+### 오라클
+|함수|설명|
+|------|------|
+|SYSDATE|현재 날짜를 조사. 운영체제 기준, 초단위|
+|CURRENT_DATE|접속 세션의 현재 날짜를 조사한다. 초단위|
+|SYSTIMESTAMP|시간대를 기준으로 한 현재 시간을 구한다. 나노초 단위|
+|TRUNC|시간 단위를 버림한다.|
+|ROUND|정오를  기준으로 반올림한다|
+|LAST_DAY(d)|지정한 날짜가 속한 월의 마지막 날을 구한다.|
+|ADD_MONTH(date, n)|n개월을 더한다.|
+|MONTHS_BETWEEN(d1, d2)|두 날짜의 개월수 차이를 구한다.|
+|NEXT_DAY(d, c)|d 날짜의 다음 c요일을 찾는다. `NEXT_DAY('2022-03-31', '월요일')`|
+|EXTRACT(what FROM d)|d날짜의 요소를 조사한다. YEAR, MONTH, DAY, HOUR, NINUTE, SECOND등의 요소를 지정한다.|
+
+```SQL
+SELECT SYSDATE + 12 FROM DUAL; -- 현재 시간에서 12일을 더한다
+SELECT SYSDATE + 5/24 FROM DUAL; -- 현재 시간에 5시간을 더한다. 
+SELECT SYSDATE - 30/1440 FROM DUAL; -- 현재 시간에 30분을 뺀다
+SELECT SYSDATE - 80/86400 FROM DUAL; -- 현재 시간에 80초를 뺀다
+```
+### SQL Server의 날짜 함수
+|함수|설명|
+|------|------|
+|GETDATE()|현재 날짜를 구한다|
+|GETUTCDATE()|현재 날짜와 시간을 국제 표준시로 구한다. 우리나라보다 9시간 느리다|
+|DATEPART(요소, 날짜)|날짜에서 요소를 분리한다.|
+|DATENAME(요소, 날짜)|날짜에서 요소를 문자열로 분리한다.|
+|YEAR(날짜)|날짜값에서 연도만 분리한다. YEAR(GETDATE())는 현재 년도만 출력한다.|
+|MONTH(날짜)|날짜값에서 달만 분리한다.|
+|DAY(날짜)|날짜값에서 날짜만 분리한다|
+|DATEADD(요소,값,날짜)|날짜에서 특정 요소를 더한다.|
+|DATEDIFF(요소, 날1, 날2)|두 날짜 사이의 차이를 요소 단위로 구한다|
+
+### MariaDB의 날짜 함수
+|함수|설명|
+|------|------|
+|CURDATE|현재 날짜를 조사한다.|
+|CURTIME|현재 시간을 조사한다.|
+|NOW, SYSDATE|현재 날짜와 시간을 조사한다.|
+|DATE_FORMAT|날짜를 원하는 형식으로 포매팅한다.|
+|STR_TO_DATE|문자열을 날짜 타입으로 변환한다.|
+|UNIX_TIMESTAMP|1970.1.1 자정 이후 경과 초, 에폭타임|
+|FROM_UNIXTIME|에폭타임을 날짜 포맷으로 변환|
+|DATE_ADD|날짜 더하기|
+|DATE_SUB|날짜 빼기|
+|DATE_DIFF|날짜 차이 구하기|
+
+```SQL
+SELECT DATE_FORMAT(NOW(), '%Y%m%d %H:%i:%s'); -- 20220331 01:39:05
+SELECT DATE_DIFF(NOW(), JOINDATE) FROM TSTAFF; -- 두날짜간의 사이를 구함
 ```
