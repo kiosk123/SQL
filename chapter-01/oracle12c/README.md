@@ -181,6 +181,6 @@ sqlplus / as sysdba
 startup
 
 # 디비 셧다운
-shutdown
+shutdown [immediate | normal | abort]
 ```
 
