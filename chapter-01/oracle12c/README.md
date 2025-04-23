@@ -10,6 +10,9 @@ CentOS7을 기준으로 하여 오라클을 설치한다.
 필요한 패키지들을 설치한다.
 
 ```bash
+# 아래 dnf 명령어와 yum 명령어 둘 중 하나 실행행 
+dnf group install "Development Tools"
+
 yum install -y binutils.x86_64 compat-libcap1.x86_64 gcc.x86_64 gcc-c++.x86_64 glibc.i686 glibc.x86_64 \
 glibc-devel.i686 glibc-devel.x86_64 ksh compat-libstdc++-33 libaio.i686 libaio.x86_64 libaio-devel.i686 libaio-devel.x86_64 \
 libgcc.i686 libgcc.x86_64 libstdc++.i686 libstdc++.x86_64 libstdc++-devel.i686 libstdc++-devel.x86_64 libXi.i686 libXi.x86_64 \
